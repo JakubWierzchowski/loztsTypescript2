@@ -1,0 +1,33 @@
+@import "../../../app/variable.scss";
+
+.modalButton {
+  color: $white;
+  background-color: $dark;
+  display: flex;
+  border: 0;
+  margin: 40px auto;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  font-size: $size-modalButtonMobile;
+  border: 3px solid $primary;
+}
+
+@media #{$tablet} {
+  .modalButton {
+    font-size: $size-modalButtonMobileTablet;
+  }
+}
+
+@media #{$desktop} {
+  .modalButton {
+    font-size: $size-modalButtonMobileDesktop;
+  }
+}
+@media #{$bigDesktop} {
+  .modalButton {
+    font-size: $size-modalButtonMobileBigDesktop;
+  }
+}

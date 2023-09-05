@@ -1,0 +1,25 @@
+{
+  "kontakt": [
+    {
+      "title": "Title",
+      "subtitle": "Address",
+      "subtitle1": "Telephone",
+      "subtitle2": "Email"
+    },
+    {
+      "title": "Bank Account Details",
+      "subtitle": "Bank Spółdzielczy",
+      "subtitle1": "Account Number"
+    },
+    {
+      "title": "Contact Details",
+      "subtitle1": "Telephone",
+      "subtitle2": "Email: lozts.poczta@onet.pl"
+    },
+    {
+      "title": "Alternate Contact Details",
+      "subtitle1": "Contact",
+      "subtitle2": "Email: lozts.poczta@onet.pl"
+    }
+  ]
+}

@@ -1,0 +1,35 @@
+.navBarWrapper {
+  //   animation: 0.3s ease-in 1 forwards ${showBox};
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 1rem;
+}
+
+.imageWrapper {
+  position: relative;
+  text-align: center;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.imageBackground {
+  width: 320px;
+  height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  filter: brightness(40%);
+}
+.leagueTitle {
+  position: absolute;
+  width: 80%;
+  font-size: 2rem;
+  font-weight: 400;
+  color: rgb(255, 255, 255);
+}
+.categorylist > a {
+  text-decoration: none;
+  cursor: pointer;
+  color: #000000;
+}

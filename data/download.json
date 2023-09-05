@@ -1,0 +1,135 @@
+[
+  {
+    "month": "Losowania",
+    "apiLink": "Losowania",
+    "categories": "Losowania",
+    "img": "/images/communicats/kadet.jpeg",
+    "details": []
+  },
+  {
+    "month": "Dokumenty",
+    "apiLink": "Dokumenty",
+    "categories": "Dokumenty",
+    "img": "/images/communicats/regulaminy.jpeg",
+    "details": [
+      {
+        "id": "dc695c9a-3e60-484f-b35d-c206dc7b519d",
+        "fileName": "NOWY STATUT LOZTS 03.07.2021R..doc",
+        "link": "/Sezon22-23/NOWY STATUT LOZTS 03.07.2021R..doc"
+      },
+      {
+        "id": "e0fae10e-711e-4cb0-98a7-cd650ea4dcb0",
+        "fileName": "Regulamin ligowy 2022-202322.docx",
+        "link": "/Sezon22-23/Rugulamin ligowy 2022-202322.docx"
+      },
+      {
+        "id": "3095b3ee-725d-4d45-b1cb-9c5de84cb002",
+        "fileName": "Regulamin rozgrywek 2022-2023.docx",
+        "link": "/Sezon22-23/Rugulamin rozgrywek 2022-2023.docx"
+      },
+      {
+        "id": "3095b3ee-725d-4d45-b1cb-9c5de84cb002",
+        "fileName": "Rodo 2023.doc",
+        "link": "/Sezon22-23/Rodo 2023.doc"
+      }
+    ]
+  },
+  {
+    "month": "Skrzaci",
+    "apiLink": "Skrzaci",
+    "categories": "Skrzaci",
+    "img": "/images/communicats/skrzatka.jpeg",
+    "details": []
+  },
+  {
+    "month": "Zacy",
+    "apiLink": "Zacy",
+    "categories": "Żacy",
+    "img": "/images/communicats/zak.jpeg",
+    "details": [
+      {
+        "id": "7b66dbd5-49cf-4c59-8be9-b14633187c2j",
+        "fileName": "Komunikat I WTK Zakow.docx",
+        "link": "/downloadFiles/Sezon23-24/Komunikat I WTK Zakow.docx"
+      }
+    ]
+  },
+  {
+    "month": "Mlodzicy",
+    "apiLink": "Mlodzicy",
+    "categories": "Młodzicy",
+    "img": "/images/communicats/mlodzik.JPG",
+    "details": [
+      {
+        "id": "7b66dbd5-49cf-4c59-8be9-b14633187c2p",
+        "fileName": "Komunikat I WTK  Mlodzikow.docx",
+        "link": "/downloadFiles/Sezon23-24/Komunikat I WTK  Mlodzikow.docx"
+      }
+    ]
+  },
+  {
+    "month": "Kadeci",
+    "apiLink": "Kadeci",
+    "categories": "Kadeci",
+    "img": "/images/communicats/kadetka.jpg",
+    "details": [
+      {
+        "id": "7b66dbd5-49cf-4c59-8be9-b14633187c2v",
+        "fileName": "Komunikat I WTK Kadetow.docx",
+        "link": "/downloadFiles/Sezon23-24/Komunikat I WTK Kadetow korekta.docx"
+      }
+    ]
+  },
+  {
+    "month": "Juniorzy",
+    "apiLink": "Juniorzy",
+    "categories": "Juniorzy",
+    "img": "/images/communicats//34.jpeg",
+    "details": [
+      {
+        "id": "7b66dbd5-49cf-4c59-8be9-b14633187c2v",
+        "fileName": "Komunikat I WTK  Juniorow.docx",
+        "link": "/downloadFiles/Sezon23-24/Komunikat I WTK  Juniorow.docx"
+      }
+    ]
+  },
+  {
+    "month": "Mlodziezowcy",
+    "apiLink": "Mlodziezowcy",
+    "categories": "Młodzieżowcy",
+    "img": "/images/communicats/mlodziezowiec.jpeg",
+    "details": []
+  },
+  {
+    "month": "Seniorzy",
+    "apiLink": "Seniorzy",
+    "categories": "Seniorzy",
+    "img": "/images/communicats//senior.jpg",
+    "details": [
+      {
+        "id": "7b66dbd5-49cf-4c59-8be9-b14633187c2v",
+        "fileName": "Komunikat I WTK  seniorow.docx",
+        "link": "/downloadFiles/Sezon23-24/Komunikat I WTK  seniorow.docx"
+      }
+    ]
+  },
+  {
+    "month": "Liga",
+    "apiLink": "Liga",
+    "categories": "Liga",
+    "img": "/images/communicats/Nowokunski.jpeg",
+    "details": []
+  },
+  {
+    "apiLink": "inneImprezy",
+    "categories": "Inne imprezy",
+    "img": "/images/communicats//STATUT.JPG",
+    "details": [
+      {
+        "id": "7b66dbd5-49cf-4c59-8be9-b14633187c2v",
+        "fileName": "Komunikat  DUMW - 2023.doc",
+        "link": "/downloadFiles/Sezon23-24/Komunikat  DUMW - 2023.doc"
+      }
+    ]
+  }
+]

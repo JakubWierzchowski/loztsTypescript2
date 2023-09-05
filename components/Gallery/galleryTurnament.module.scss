@@ -1,0 +1,179 @@
+@import "../../app//variable.scss";
+.turnamentTitle {
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  font-size: $size-tableTitleMobile;
+}
+
+// @keyframes showAnimation {
+//   from {
+//     opacity: 0;
+//   }
+//   to {
+//     opacity: 1;
+//   }
+// }
+
+@keyframes imgScale {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+.wrapper {
+  padding: 15px;
+  columns: 1;
+  width: 100%;
+  padding: 10px;
+  column-gap: 10px;
+}
+
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    // transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    // transform: scale(1);
+  }
+}
+
+.galleryItem {
+  opacity: 0;
+  animation: FadeIn 0.3s ease-in forwards;
+  object-fit: cover;
+  margin-bottom: 10px;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  margin-bottom: 10px;
+  cursor: pointer;
+  overflow: hidden;
+  > div {
+    position: relative !important;
+  }
+}
+.image {
+  position: relative;
+  margin: 0 auto;
+  // animation: showAnimation 0.2s linear forwards;
+  &:hover {
+    //   animation: 0.2s ease-out forwards ${showBox};
+    overflow: hidden;
+  }
+}
+
+.images {
+  margin: 0 auto;
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+  overflow: hidden;
+  &:hover {
+    animation: imgScale 0.1s ease-in forwards;
+  }
+}
+
+.imageSection {
+  display: flex;
+  justify-content: center;
+  // position: relative !important;
+  .imageBox {
+    max-width: 90%;
+    height: 90%;
+    position: relative !important;
+
+    .galleryImgModal {
+      padding: 20px;
+      position: fixed !important;
+      margin: 0 auto;
+      object-fit: contain;
+      width: 100% !important;
+    }
+  }
+}
+
+.next {
+  position: absolute;
+  margin-right: 40px;
+  top: 50%;
+  right: 0;
+  width: 3rem;
+  height: 3rem;
+  z-index: 20;
+}
+
+.prev {
+  position: absolute;
+  top: 50%;
+  margin-left: 40px;
+  left: 0px;
+  width: 3rem;
+  height: 3rem;
+  z-index: 20;
+}
+
+@media #{$tablet} {
+  .turnamentTitle {
+    font-size: $size-tableTitleTablet;
+  }
+  .wrapper {
+    padding: 15px;
+    columns: 2;
+  }
+  .wrapperModal {
+    width: 90%;
+  }
+  .galleryImg {
+    object-fit: cover;
+    max-width: 100%;
+    max-height: 100%;
+  }
+  .next {
+    width: 4rem;
+    height: 4rem;
+  }
+  .prev {
+    width: 4rem;
+    height: 4rem;
+  }
+}
+
+@media #{$desktop} {
+  .turnamentTitle {
+    font-size: $size-tableTitleDesktop;
+  }
+  .wrapper {
+    columns: 3;
+  }
+  .next {
+    width: 6rem;
+    height: 6rem;
+  }
+  .prev {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+@media #{$bigDesktop} {
+  .turnamentTitle {
+    font-size: $size-tableTitleBigDesktop;
+  }
+  .wrapper {
+    padding: 15px;
+    columns: 3;
+  }
+  .next {
+    width: 7rem;
+    height: 7rem;
+  }
+  .prev {
+    width: 7rem;
+    height: 7rem;
+  }
+}

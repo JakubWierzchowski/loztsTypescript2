@@ -1,0 +1,26 @@
+[
+  {
+    "ID": "liga",
+    "link": "/liga",
+    "text": "II Liga Kobiet",
+    "background": "/images/navBarLeague/debelDziewczyny.jpeg"
+  },
+  {
+    "ID": "liga2M",
+    "link": "/liga2M",
+    "text": "II Liga Mężczyzn",
+    "background": "/images/navBarLeague/radekChrzescian.jpeg"
+  },
+  {
+    "ID": "liga3M",
+    "link": "/liga3M",
+    "text": "III Liga Mężczyzn",
+    "background": "/images/navBarLeague/IIILM.jpeg"
+  },
+  {
+    "ID": "liga4M",
+    "link": "/liga4M",
+    "text": "IV Liga Mężczyzn",
+    "background": "/images/navBarLeague/IVLM.jpeg"
+  }
+]

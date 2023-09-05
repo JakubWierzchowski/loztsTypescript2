@@ -1,0 +1,82 @@
+@import "../variable.scss";
+
+.associationsLink {
+  text-decoration: none;
+  color: $light;
+}
+.sectionWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  padding: 10px;
+  text-align: center;
+}
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.associationName {
+  opacity: 0;
+  animation: FadeIn 0.5s linear forwards;
+  font-size: $size-TextMobile;
+  display: flex;
+  justify-content: center;
+  margin: 20px;
+  padding: 8px 12px;
+
+  &:hover {
+    scale: 1.1;
+    color: $primary;
+  }
+}
+
+.title {
+  text-align: center;
+  margin: 0 auto;
+  padding: 44px 0 20px 0;
+  font-weight: 500;
+  color: $primary;
+  font-size: $size-TitleMobile;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: $size-TitleTablet;
+  }
+  .sectionWrapper {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .associationName {
+    font-size: $size-TextTablet;
+  }
+}
+
+@media (min-width: 1024px) {
+  .title {
+    font-size: $size-TitleDesktop;
+  }
+
+  .associationName {
+    font-size: $size-TextDesktop;
+  }
+}
+
+@media (min-width: 1280px) {
+  .title {
+    font-size: $size-TitleBigDesktop;
+  }
+
+  .associationName {
+    font-size: $size-TextBigDesktop;
+  }
+}

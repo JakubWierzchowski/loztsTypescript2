@@ -1,0 +1,94 @@
+@import "../../app//variable.scss";
+
+// @keyframes FadeIn {
+//   0% {
+//     opacity: 0;
+//   }
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  margin: 20px;
+  grid-gap: 1rem;
+  font-size: $size-tableHeadMobile;
+}
+
+.articleLink {
+  // opacity: 0;
+  text-decoration: none;
+  color: $light;
+  // animation: FadeIn 0.3s ease-in-out forwards;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  > div {
+    position: relative !important;
+  }
+  .imageContainer {
+    max-width: 400px;
+    max-height: 400px;
+    position: relative;
+  }
+  .image {
+    margin: 0 auto;
+    object-fit: contain;
+    width: 100% !important;
+    position: relative !important;
+    height: unset !important;
+    &:hover {
+      overflow: hidden;
+    }
+  }
+  .underPhoto {
+    text-align: center;
+  }
+}
+
+.span {
+  display: block;
+  cursor: pointer !important;
+  position: relative;
+  padding: 0.2em 0;
+  color: $light;
+  text-decoration: none;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    background-color: $light;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s linear;
+  }
+  &:hover:after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+}
+
+@media #{$tablet} {
+  .wrapper {
+    font-size: $size-tableHeadTablet;
+  }
+}
+@media #{$desktop} {
+  .wrapper {
+    font-size: $size-tableHeadDesktop;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  }
+}
+@media #{$bigDesktop} {
+  .wrapper {
+    font-size: $size-tableHeadBigDesktop;
+  }
+}

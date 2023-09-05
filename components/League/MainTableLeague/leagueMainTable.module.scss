@@ -1,0 +1,134 @@
+@import "../../../app/variable.scss";
+.wrapper {
+  margin: 20px;
+}
+.title {
+  color: $light;
+  text-align: center;
+  margin: 40px 0 0 0;
+  transform: translateY(40%);
+  font-size: 2.4rem;
+}
+
+.wrapper2 {
+  margin: 5px;
+  opacity: 0;
+}
+
+$colorsCategoryCalendar: (
+  "GrupaAwansowa": $primary,
+  "GrupaSpadkowa": $secondary,
+  "GrupaPółnocna": $primary,
+  "GrupaPołudniowa": $primary,
+  "IILigaKobiet": $primary,
+  "IILigaMężczyzn": $primary,
+  "IIILigaMężczyzn": $primary,
+  "IVLigaMężczyzn": $primary,
+);
+
+.tableTitle {
+  text-align: center;
+  margin: 30px;
+  @each $category, $color in $colorsCategoryCalendar {
+    &.#{$category} {
+      color: $color;
+    }
+  }
+  &.default {
+    color: $primary;
+  }
+  &:first-child:first-child {
+    padding: 20px 0px 1px 0px;
+  }
+}
+
+.table {
+  margin: 0 auto;
+  width: 95%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  text-align: center;
+  line-height: 12px;
+}
+.thead {
+  color: $white;
+  @each $category, $color in $colorsCategoryCalendar {
+    &.#{$category} {
+      background-color: $color;
+    }
+  }
+  font-size: $size-tableHeadMobile;
+  padding: 20px 0px;
+  .th {
+    padding: 10px 0px;
+    &:first-child {
+      width: 20%;
+    }
+  }
+}
+.tbody {
+  .tr {
+    &:hover {
+      background-color: $primaryHover;
+    }
+  }
+}
+.td {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.16);
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px;
+  color: $light;
+  font-size: $size-tableItemsMobile;
+  &:last-child {
+    border-right: none;
+  }
+}
+
+@media #{$tablet} {
+  .title {
+    font-size: 3rem;
+  }
+  .tableTitle {
+    font-size: $size-tableTitleTablet;
+  }
+  .table {
+    line-height: 20px;
+  }
+
+  .thead {
+    font-size: $size-tableHeadTablet;
+  }
+  .td {
+    font-size: $size-tableItemsTablet;
+  }
+}
+@media #{desktop} {
+  .title {
+    font-size: 3.4rem;
+  }
+  .tableTitle {
+    font-size: $size-tableTitleDesktop;
+  }
+  .thead {
+    font-size: $size-tableHeadDesktop;
+  }
+  .td {
+    font-size: $size-tableItemsDesktop;
+  }
+}
+@media #{$bigDesktop} {
+  .title {
+    font-size: 4rem;
+  }
+  .tableTitle {
+    font-size: $size-tableTitleBigDesktop;
+  }
+  .thead {
+    font-size: $size-tableHeadBigDesktop;
+  }
+  .td {
+    font-size: $size-tableItemsBigDesktop;
+  }
+}

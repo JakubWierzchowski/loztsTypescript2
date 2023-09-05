@@ -1,0 +1,118 @@
+@import "../../../app//variable.scss";
+
+.calendarSection {
+  display: grid;
+  grid-template-columns: 100px 200px;
+  gap: 20px;
+  grid-auto-flow: row dense;
+  margin: 12px 5px;
+  opacity: 0;
+}
+.eventsPartDate {
+  background-color: $secondary;
+  border-radius: 6px;
+  min-width: 110px;
+  color: $light;
+  padding: 8px;
+}
+.eventsPartDateDay {
+  font-size: 1.8rem;
+  text-align: center;
+}
+
+.eventsPartContent {
+  margin: 0;
+}
+.eventsPartTitle {
+  display: flex;
+  justify-content: baseline;
+  align-items: center;
+  font-size: 1.4rem;
+  color: $light;
+  font-weight: 400;
+  margin: 0;
+}
+
+.link {
+  cursor: pointer;
+  font-size: $size-tableItemsMobile;
+  text-transform: none;
+  margin: 0;
+  letter-spacing: 0;
+  text-decoration: none;
+}
+
+.spanTournament {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding: 0.2em 0;
+  color: $light;
+  font-weight: 700;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    background-color: $light;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s linear;
+  }
+  &:hover:after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+}
+
+@media #{$tablet} {
+  .eventsPartDate {
+    color: $light;
+  }
+  .eventsPartDateDay {
+    font-size: 2rem;
+  }
+
+  .eventsPartTitle {
+    font-size: 1.6rem;
+  }
+  .link {
+    font-size: $size-tableItemsTablet;
+  }
+}
+
+@media #{$desktop} {
+  .calendarSection {
+    grid-template-columns: 100px 300px;
+  }
+  .eventsPartDate {
+    color: $light;
+  }
+  .eventsPartDateDay {
+    font-size: 2.2rem;
+  }
+
+  .eventsPartTitle {
+    font-size: 1.8rem;
+  }
+  .link {
+    font-size: $size-tableItemsDesktop;
+  }
+}
+@media #{$bigDesktop} {
+  .eventsPartDate {
+    color: $light;
+  }
+  .eventsPartDateDay {
+    font-size: 2.6rem;
+  }
+
+  .eventsPartTitle {
+    font-size: 2.2rem;
+  }
+  .link {
+    font-size: $size-tableItemsBigDesktop;
+  }
+}

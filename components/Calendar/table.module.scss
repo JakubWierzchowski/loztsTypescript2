@@ -1,0 +1,217 @@
+@import "../../app//variable.scss";
+
+.wrapper {
+  opacity: 0;
+}
+.titleClockAnimation {
+  opacity: 0;
+}
+.wrapperSection {
+  opacity: 0;
+}
+
+.tableTitle {
+  color: $light;
+  text-align: center;
+  font-size: $size-tableTitleMobile;
+  &:first-child {
+    padding: 20px 0px 1px 0px;
+  }
+  @media #{$tablet} {
+    font-size: $size-tableTitleTablet;
+  }
+  @media #{$desktop} {
+    font-size: $size-tableTitleDesktop;
+  }
+  @media #{$bigDesktop} {
+    font-size: $size-tableTitleBigDesktop;
+  }
+}
+
+.table {
+  margin: 0 auto;
+  width: 95%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  table-layout: fixed;
+  text-align: center;
+  line-height: 12px;
+}
+
+.thead {
+  background-color: $primary;
+  color: $white;
+  font-size: $size-tableHeadMobile;
+  padding: 20px 0px;
+}
+.th {
+  padding: 10px 0px;
+  &:first-child {
+    width: 10%;
+  }
+}
+
+.tr {
+  &:hover {
+    background-color: $primaryHover;
+  }
+}
+
+.td {
+  border-bottom: 2px solid rgba(255, 255, 255, 0.16);
+  text-align: center;
+  margin: 0 auto;
+  padding: 15px;
+  color: $light;
+  font-size: $size-tableItemsMobile;
+  &:last-child {
+    border-right: none;
+  }
+}
+.links {
+  cursor: pointer;
+  font-size: $size-tableItemsMobile;
+  font-weight: 500;
+  padding: 0;
+  text-transform: none;
+  margin: 0;
+  letter-spacing: 0;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.deleteButton {
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  padding: 4px 8px;
+  background-color: #e42727;
+  cursor: pointer;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  font-size: $size-tableItemsMobile;
+  font-family: "Montserrat", sans-serif;
+}
+
+@media #{$tablet} {
+  .table {
+    line-height: 20px;
+  }
+  .thead {
+    font-size: $size-tableHeadTablet;
+  }
+  .td {
+    font-size: $size-tableItemsTablet;
+  }
+  .links {
+    font-size: $size-tableItemsTablet;
+  }
+  .deleteButton {
+    padding: 8px 12px;
+    font-size: $size-tableItemsMobile;
+  }
+}
+@media #{$desktop} {
+  .thead {
+    font-size: $size-tableHeadDesktop;
+  }
+  .td {
+    font-size: $size-tableItemsDesktop;
+    .links {
+      font-size: $size-tableItemsDesktop;
+    }
+  }
+  .deleteButton {
+    font-size: $size-tableItemsDesktop;
+  }
+}
+@media #{bigDesktop} {
+  .thead {
+    font-size: $size-tableHeadBigDesktop;
+  }
+  .td {
+    font-size: $size-tableItemsBigDesktop;
+    .links {
+      font-size: $size-tableItemsBigDesktop;
+    }
+  }
+  .deleteButton {
+    font-size: $size-tableItemsBigDesktop;
+  }
+}
+
+.categories {
+  width: 50%;
+  margin: 0 auto;
+}
+
+.spanCategories {
+  display: inline-block;
+  cursor: pointer;
+  position: relative;
+  padding: 0.2em 0;
+  color: $light;
+  font-size: $size-tableItemsMobile;
+  font-weight: 700;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 1.5px;
+    background-color: $light;
+    bottom: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: bottom right;
+    transition: transform 0.25s linear;
+  }
+  &:hover:after {
+    transform-origin: bottom left;
+    transform: scaleX(1);
+  }
+  @media #{$tablet} {
+    font-size: $size-tableItemsTablet;
+  }
+  @media #{$desktop} {
+    font-size: $size-tableItemsDesktop;
+  }
+  @media #{$bigDesktop} {
+    font-size: $size-tableItemsBigDesktop;
+  }
+}
+
+$colorsCategoryCalendar: (
+  Żacy: rgb(84, 169, 87),
+  skrzaci: rgb(106, 72, 186),
+  Młodzicy_Młodsi: rgb(97, 191, 210),
+  Młodzicy: rgb(81, 158, 174),
+  Kadeci: rgb(62, 106, 168),
+  Juniorzy: rgb(208, 87, 26),
+  Młodzieżowcy: rgb(190, 190, 90),
+  Seniorzy: rgb(193, 174, 72),
+  Liga: rgb(201, 174, 117),
+);
+
+.categoryList {
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: $size-tableItemsMobile;
+  position: relative;
+
+  @each $category, $color in $colorsCategoryCalendar {
+    &.#{$category} {
+      color: $color;
+    }
+  }
+
+  @media #{$tablet} {
+    font-size: $size-tableItemsTablet;
+  }
+  @media #{$desktop} {
+    font-size: $size-tableItemsDesktop;
+  }
+  @media #{$bigDesktop} {
+    font-size: $size-tableItemsBigDesktop;
+  }
+}

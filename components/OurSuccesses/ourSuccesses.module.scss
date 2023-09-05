@@ -1,0 +1,74 @@
+@import "../../app//variable.scss";
+
+.title {
+  color: $light;
+  margin: 0 auto !important;
+  font-weight: 500;
+  padding-top: 44px;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-bottom: 20px !important;
+  font-size: $size-TitleMobile;
+}
+
+.detailsSection {
+  padding: 20px;
+  margin-top: 0;
+  text-align: center;
+  color: $light;
+}
+
+.list {
+  opacity: 0;
+  padding: 0;
+  margin-top: 0;
+  list-style: none;
+}
+.succcessDate {
+  font-size: $size-smallTitleMobile;
+  color: $primary;
+  padding-top: 0;
+  padding: 20px;
+}
+
+.wrapperDetails {
+  color: $light;
+  text-align: center;
+  line-height: 20px;
+  list-style: none;
+  padding: 10px;
+  font-size: $size-tableItemsTablet;
+  &:before {
+    content: "🏓";
+    padding: 8px;
+    padding-right: 12px;
+  }
+}
+@media #{$tablet} {
+  .title {
+    font-size: $size-TitleTablet;
+  }
+  .succcessDate {
+    font-size: $size-smallTitle;
+  }
+  .wrapperDetails {
+    font-size: $size-tableItemsDesktop;
+  }
+}
+@media #{Desktop} {
+  .title {
+    font-size: $size-TitleDesktop;
+  }
+}
+@media #{$bigDesktop} {
+  .title {
+    font-size: $size-TitleBigDesktop;
+  }
+  .succcessDate {
+    font-size: $size-subHeadingDesktop;
+  }
+  .wrapperDetails {
+    font-size: $size-tableItemsBigDesktop;
+    line-height: 25px;
+  }
+}

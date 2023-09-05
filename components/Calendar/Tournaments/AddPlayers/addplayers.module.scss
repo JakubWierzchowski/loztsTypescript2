@@ -1,0 +1,204 @@
+@import "../../../../app//variable.scss";
+
+.modalWrapper {
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95vw;
+  background-color: $white;
+  border-radius: 15px;
+  box-shadow: 0px -5px 25px -10px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  padding: 10px;
+}
+
+.modalButton {
+  color: $white;
+  background-color: $dark;
+  display: flex;
+  border: 0;
+  margin: 10px auto;
+  text-align: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  font-size: $size-modalButtonMobile;
+  border: 3px solid $primary;
+}
+
+.modalCloseButton {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  transform: translate(-10%, 10%);
+  color: $white;
+  border: 0;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: $secondary;
+  margin: 5px;
+  font-size: $size-ButtonMobile;
+}
+
+.wrapperForm {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  //   animation: 0.5s ease-in-out 1 forwards ${scaleBox};
+}
+.form {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.label {
+  margin: 10px 0;
+  font-family: Montserrat, sans-serif;
+  font-size: $size-formFieldItemsMobile;
+  color: $dark;
+}
+
+.inputForm {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  box-shadow: -2px 4px 10px rgba(115, 124, 142, 0.09);
+  border-radius: 10px;
+  font-size: 15px;
+  resize: none;
+  &:focus {
+    outline: none;
+    box-shadow: -2px 4px 10px rgba(115, 124, 142, 0.3);
+  }
+}
+.selectCategory {
+  display: block;
+  border: 1px solid;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  padding: 10px 12px;
+  font-size: 12px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: -2px 4px 10px rgba(115, 124, 142, 0.09);
+  font-size: 15px;
+  resize: none;
+  &:focus {
+    outline: none;
+    box-shadow: -2px 4px 10px rgba(115, 124, 142, 0.3);
+  }
+}
+
+.sendButton {
+  color: white;
+  border: 0;
+  border-radius: 8px;
+  //   cursor: ${({ disabled }) => (disabled ? "" : "pointer")};
+  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
+  padding: 8px 12px;
+  background-color: #059316;
+  font-size: $size-modalButtonMobile;
+  margin-top: 10px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  text-align: left;
+}
+
+@media #{$tablet} {
+  .modalWrapper {
+    width: 80vw;
+    padding: 20px;
+  }
+  .modalButton {
+    font-size: $size-modalButtonMobileTablet;
+  }
+  .modalCloseButton {
+    font-size: $size-ButtonMobileTablet;
+    transform: translate(-30%, 30%);
+  }
+  .wrapperForm {
+    width: 60%;
+  }
+  .formSection {
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: $size-formFieldItemsTablet;
+  }
+  .label {
+    font-size: $size-formFieldItemsTablet;
+  }
+  .inputForm {
+    font-size: $size-formFieldItemsTablet;
+  }
+  .sendButton {
+    margin-top: 15px;
+    padding: 8px 12px;
+    font-size: $size-modalButtonMobileTablet;
+  }
+  .selectCategory {
+    font-size: 20px;
+  }
+}
+@media #{$desktop} {
+  .modalWrapper {
+    width: 70vw;
+  }
+  .modalButton {
+    font-size: $size-modalButtonMobileDesktop;
+  }
+  .modalCloseButton {
+    font-size: $size-ButtonMobileDesktop;
+  }
+  .wrapperForm {
+    width: 80%;
+  }
+  .formSection {
+    font-size: $size-formFieldItemsDesktop;
+  }
+  .label {
+    font-size: $size-formFieldItemsDesktop;
+  }
+  .inputForm {
+    font-size: $size-formFieldItemsDesktop;
+  }
+  .sendButton {
+    font-size: $size-modalButtonMobileDesktop;
+  }
+}
+@media #{$bigDesktop} {
+  .modalButton {
+    font-size: $size-modalButtonMobileBigDesktop;
+  }
+  .modalCloseButton {
+    font-size: $size-ButtonMobileBigDesktop;
+  }
+  .formSection {
+    font-size: $size-formFieldItemsBigDesktop;
+  }
+  .label {
+    font-size: $size-formFieldItemsBigDesktop;
+  }
+  .inputForm {
+    font-size: $size-formFieldItemsBigDesktop;
+  }
+  .sendButton {
+    font-size: $size-modalButtonMobileBigDesktop;
+  }
+}

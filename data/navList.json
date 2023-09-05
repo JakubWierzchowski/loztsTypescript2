@@ -1,0 +1,75 @@
+{
+  "navBar": [
+    {
+      "left": [
+        {
+          "li": "Komunikaty",
+          "link": "/komunikaty"
+        },
+        {
+          "li": "Informacje",
+          "link": "#",
+          "dropDown": [
+            {
+              "liLi": "Kontakt",
+              "link": "/kontakt"
+            },
+            {
+              "liLi": "Nasze sukcesy",
+              "link": "/naszeSukcesy"
+            },
+            {
+              "liLi": "Wojewódzkie związki",
+              "link": "/zwiazki"
+            }
+          ]
+        },
+        {
+          "li": "Kalendarz",
+          "link": "/kalendarz"
+        }
+      ]
+    },
+
+    {
+      "right": [
+        {
+          "li": "Liga",
+          "link": "#",
+          "dropDown": [
+            {
+              "liLi": "2 liga Kobiet",
+              "link": "/liga"
+            },
+            {
+              "liLi": "2 Liga Mężczyzn",
+              "link": "/liga2M"
+            },
+            {
+              "liLi": "3 Liga Mężczyzn",
+              "link": "/liga3M"
+            },
+            {
+              "liLi": "4 Liga Mężczyzn",
+              "link": "/liga4M"
+            }
+          ]
+        },
+        {
+          "li": "Galeria",
+          "link": "/galeria"
+        },
+        {
+          "li": "Archiwum",
+          "link": "/archiwum",
+          "dropDown": [
+            {
+              "liLi": "Strona archiwalna",
+              "link": "#"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,60 @@
+{
+  "associations": [
+    {
+      "title": "Dolnośląski OZTS",
+      "link": "https://kozts.pl/"
+    },
+    {
+      "title": "Krakowski OZTS",
+      "link": "https://kozts.pl/"
+    },
+    {
+      "title": "Kujawsko-Pomorski ZTS",
+      "link": "http://kpozts.bydgoszcz.pl/"
+    },
+    {
+      "title": "Łódzki OZTS",
+      "link": "http://lozts.lodz.pl/"
+    },
+    {
+      "title": "Mazowiecki OZTS",
+      "link": "http://mzts.pl/"
+    },
+    {
+      "title": "Opolski ZTS",
+      "link": "http://ozts.pl/"
+    },
+    {
+      "title": "Podkarpacki OZTS",
+      "link": "http://pozts.pl/"
+    },
+    {
+      "title": "Podlaski OZTS",
+      "link": "http://pozts.org/"
+    },
+    {
+      "title": "Pomorski ZTS",
+      "link": "http://www.pwzts.pl/"
+    },
+    {
+      "title": "Śląski OZTS",
+      "link": "http://www.slzts.pl/"
+    },
+    {
+      "title": "Świętokrzyski OZTS",
+      "link": "https://www.sozts.pl/"
+    },
+    {
+      "title": "Warmińsko-Mazurski ZTS",
+      "link": "http://wmzts.pl/"
+    },
+    {
+      "title": "Wielkopolski ZTS",
+      "link": "https://www.wzts.pl/asp/pl_start.asp?typ=14&menu=1&strona=1"
+    },
+    {
+      "title": "Zachodniopomorski ZTS",
+      "link": "http://www.atsstargard.hekko.pl/zpzts_internet/index.html"
+    }
+  ]
+}
