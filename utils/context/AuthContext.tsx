@@ -1,11 +1,5 @@
 "use client";
-import React, {
-  FC,
-  createContext,
-  useContext,
-  useState,
-  useEffect,
-} from "react";
+import React, { createContext, useContext, useState, useEffect } from "react";
 import { toast } from "react-toastify";
 import useModal from "@/utils/hooks/useModal/useModal";
 
@@ -36,13 +30,12 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({
   children,
 }) => {
   const [user, setUser] = useState<any | null>(null);
-  const [loading, setLoading] = useState(false);
+
   const [error, setError] = useState("");
 
   const { handleCloseModal } = useModal();
 
   useEffect(() => {
-    setLoading(true);
     const unsubscribe = onAuthStateChanged(auth, (res) => {
       if (res) {
         setUser(res);
@@ -50,13 +43,11 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({
         setUser(null);
       }
       setError("");
-      setLoading(false);
     });
     return unsubscribe;
   }, []);
 
   const registerUser = (email: string, password: string) => {
-    setLoading(true);
     createUserWithEmailAndPassword(auth, email, password)
       .then(() => {
         const currentUser = auth.currentUser;
@@ -66,13 +57,11 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({
         return null;
       })
       .then((res) => console.log(res))
-      .catch((err) => setError(err.message))
-      .finally(() => setLoading(false));
+      .catch((err) => setError(err.message));
+    // .finally(() => setLoading(false));
   };
 
   const signInUser = async (email: string, password: string) => {
-    setLoading(true);
-
     try {
       const signInMethods = await fetchSignInMethodsForEmail(auth, email);
 
@@ -88,7 +77,7 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({
           progress: undefined,
           theme: "light",
         });
-        setLoading(false);
+
         return;
       }
       await signInWithEmailAndPassword(auth, email, password);
@@ -128,7 +117,6 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({
         });
       }
     } finally {
-      setLoading(false);
     }
   };
 
@@ -175,7 +163,7 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({
           progress: undefined,
           theme: "light",
         });
-        setLoading(false);
+
         return;
       }
 
@@ -200,7 +188,6 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({
 
   const contextValue: UserContextType = {
     user,
-    loading,
     error,
     signInUser,
     registerUser,

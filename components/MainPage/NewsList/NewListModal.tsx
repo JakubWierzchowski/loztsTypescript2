@@ -1,10 +1,12 @@
-"use client";
+// "use client";
 import React, { FC, useEffect } from "react";
 import { toast } from "react-toastify";
 import ReactModal from "react-modal";
 import styles from "./newListModal.module.scss";
-import { FieldError, useForm, FieldErrors } from "react-hook-form";
-import { Article } from "@/types/article.type";
+import { useForm, FieldErrors } from "react-hook-form";
+import useDeleteArtykul from "@/utils/hooks/mainPage/deleteArticle";
+import useModal from "@/utils/hooks/useModal/useModal";
+import { useFetch } from "@/utils/hooks/mainPage/fetchDataHook";
 
 interface ClockProps {
   isOpen: boolean;
@@ -17,6 +19,7 @@ type FormValues = {
   signature: string;
 };
 const Modal: FC<ClockProps> = ({ handleClose, isOpen, fetchData }) => {
+  const { onSubmit } = useDeleteArtykul();
   const form = useForm<FormValues>({
     defaultValues: {
       title: "",
@@ -25,62 +28,19 @@ const Modal: FC<ClockProps> = ({ handleClose, isOpen, fetchData }) => {
     },
   });
 
-  const onSubmit = async (data: FormValues) => {
-    try {
-      const reqBody = {
-        title: data.title,
-        text: data.text,
-        signature: data.signature,
-      };
-      const response = await fetch(`/api/newList`, {
-        method: "POST",
-        body: JSON.stringify(reqBody),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      if (!response.ok) throw new Error(`Error: ${response.status}`);
-      const Apidata = await response.json();
-      fetchData();
-      handleClose();
-
-      toast.success(`${Apidata.message} - ${Apidata.article.title}`, {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    } catch (e: any) {
-      if (e.message === "Error: 409") {
-        toast.error(`Taki artykuł już istnieje`, {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      }
-    }
-  };
-
   const { register, handleSubmit, formState, reset } = form;
-  const { errors, isDirty, isValid, isSubmitSuccessful, isSubmitted } =
-    formState;
+  const { errors, isSubmitSuccessful } = formState;
 
-  useEffect(() => {
+  // const onError = (errors: FieldErrors<FormValues>) => {
+  //   console.log("Form errors", errors);
+  // };
+  const handleUploadArticle = (data: FormValues) => {
+    onSubmit(data);
+    fetchData();
+    handleClose();
     if (isSubmitSuccessful) {
       reset();
     }
-  }, [isSubmitSuccessful, reset]);
-  const onError = (errors: FieldErrors<FormValues>) => {
-    console.log("Form errors", errors);
   };
   return (
     <>
@@ -96,7 +56,10 @@ const Modal: FC<ClockProps> = ({ handleClose, isOpen, fetchData }) => {
         <section className={styles.wrapperForm}>
           <form
             className={styles.form}
-            onSubmit={handleSubmit(onSubmit, onError)}
+            onSubmit={handleSubmit(
+              handleUploadArticle
+              // onError
+            )}
             noValidate
           >
             <div className={styles.formSection}>

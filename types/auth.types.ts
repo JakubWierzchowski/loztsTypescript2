@@ -14,7 +14,6 @@ export type FormDataSingIn = {
 
 export interface UserContextType {
   user: any; // Tutaj możesz dostosować typ na podstawie danych użytkownika z Firebase
-  loading: boolean;
   error: string;
   signInUser: (email: string, password: string) => void;
   registerUser: (email: string, password: string) => void;

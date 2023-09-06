@@ -1,76 +1,23 @@
 "use client";
-import { useState, useEffect } from "react";
 import useModal from "@/utils/hooks/useModal/useModal";
 import Image from "next/image";
-import { toast } from "react-toastify";
-import newArticleData from "@/data/article.json";
-import { Article } from "@/types/article.type";
 import styles from "./newsList.module.scss";
 import Modal from "./NewListModal";
 import { useUserContext } from "@/utils/context/AuthContext";
 import Logo from "../../../public/images/header/logo.png";
+import { useFetch } from "@/utils/hooks/mainPage/fetchDataHook";
+import useDeleteArtykul from "@/utils/hooks/mainPage/deleteArticle";
 
 function NewsList() {
-  const data: Article[] = newArticleData;
   const { user } = useUserContext();
-  const [newArticle, setNewArticle] = useState<Article[]>(data);
-  const [currentInfo, setCurrentInfo] = useState<Article>({} as Article);
-
+  const { deleteArtykul } = useDeleteArtykul();
+  const { newArticle, currentInfo, fetchData, handleOpenInfo } = useFetch();
   const { isOpen, handleOpenModal, handleCloseModal } = useModal();
 
-  const handleOpenInfo = (item: Article) => {
-    setCurrentInfo(item);
-  };
-
-  async function fetchData() {
-    try {
-      const response = await fetch(`/api/newList`);
-      const data = await response.json();
-
-      const sortedData = [...data].sort((a, b) =>
-        a.sortDate > b.sortDate ? -1 : 0
-      );
-
-      setNewArticle(sortedData);
-      setCurrentInfo(sortedData[0]);
-    } catch (error) {
-      console.error("Wystąpił błąd z pobieraniem danych", error);
-    }
-  }
-
-  useEffect(() => {
+  const handleDeleteArtykul = (id: string) => {
+    deleteArtykul(id);
     fetchData();
-  }, []);
-
-  async function deleteArtykul(id: string) {
-    try {
-      await fetch(`/api/newList/${id}`, {
-        method: "DELETE",
-      });
-      fetchData();
-      toast.success(`Usunięto artykuł - ${currentInfo.title}`, {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    } catch (error) {
-      toast.error(`Wystąpił błąd podczas usuwania artykułu: - ${error}`, {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    }
-  }
+  };
 
   return (
     <>
@@ -134,7 +81,7 @@ function NewsList() {
                   <button
                     className={styles.deleteButton}
                     type="button"
-                    onClick={() => deleteArtykul(currentInfo.id)}
+                    onClick={() => handleDeleteArtykul(currentInfo.id)}
                   >
                     Usuń informację
                   </button>

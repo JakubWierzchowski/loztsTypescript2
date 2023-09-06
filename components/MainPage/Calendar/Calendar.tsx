@@ -8,7 +8,6 @@ import { CalendarTypeMonth } from "@/types/calendar.type";
 export default async function CalendarMainPage() {
   const data: CalendarTypeMonth[] = CalendarDate;
 
-  console.log(data.slice(0, 2).map((item) => item));
   return (
     <section className={styles.calendarSection}>
       <div className={styles.calendarTitle}>

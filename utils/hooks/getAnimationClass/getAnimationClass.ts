@@ -1,7 +1,10 @@
 "use client";
 import { useInView } from "react-intersection-observer";
 import styles from "./getAnimationStyles.module.scss";
-const AnimationClassHook = (slideInFirst: string, slideInSecond: string) => {
+export const AnimationClassHook = (
+  slideInFirst: string,
+  slideInSecond: string
+) => {
   const { ref, inView } = useInView({
     triggerOnce: true,
     threshold: 0.2,

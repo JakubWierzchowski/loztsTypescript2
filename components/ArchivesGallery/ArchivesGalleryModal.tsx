@@ -2,7 +2,7 @@ import Image from "next/image";
 import ReactModal from "react-modal";
 // import styles from "@/utils/hooks/useModal/galleryModal.module.scss";
 import styles from "@/components/ArchivesGallery/archivesGalleryTurnament.module.scss";
-import GalleryTest from "@/components/GalleryTest/GalleryTest";
+import GalleryTest from "@/components/newGallery/GalleryTest";
 import { GalleryDetails } from "@/types/gallery.type";
 interface GalleryModalProps {
   isOpen: boolean;
