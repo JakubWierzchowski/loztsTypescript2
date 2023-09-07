@@ -3,7 +3,7 @@ import { CalendarTypeMonth, PlayersType } from "@/types/calendar.type";
 import moment from "moment";
 import { v4 as uuidv4 } from "uuid";
 import { buildPath, extractPath } from "@/utils/api/buildExtractPath";
-import { Article } from "@/types/article.type";
+import { Article } from "@/types/newList.type";
 
 export async function GET(req: Request, res: Response) {
   const filePath = buildPath("article.json");

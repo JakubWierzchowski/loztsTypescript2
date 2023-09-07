@@ -2,7 +2,7 @@ import { buildPath, extractPath } from "@/utils/api/buildExtractPath";
 import { LeagueDataItem } from "@/types/league.types";
 import moment from "moment";
 import { v4 as uuidv4 } from "uuid";
-import { NextResponse, NextRequest } from "next/server";
+import { NextResponse } from "next/server";
 import fs from "fs";
 
 export async function GET(req: Request, res: Response) {

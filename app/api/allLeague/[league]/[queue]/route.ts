@@ -1,4 +1,3 @@
-import path from "path";
 import fs from "fs";
 import { LeagueDataItem } from "@/types/league.types";
 import { buildPath, extractPath } from "@/utils/api/buildExtractPath";
