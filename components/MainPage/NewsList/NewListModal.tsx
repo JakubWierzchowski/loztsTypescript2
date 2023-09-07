@@ -1,25 +1,13 @@
 // "use client";
-import React, { FC, useEffect } from "react";
-import { toast } from "react-toastify";
+import React, { FC } from "react";
 import ReactModal from "react-modal";
 import styles from "./newListModal.module.scss";
-import { useForm, FieldErrors } from "react-hook-form";
-import useDeleteArtykul from "@/utils/hooks/mainPage/deleteArticle";
-import useModal from "@/utils/hooks/useModal/useModal";
-import { useFetch } from "@/utils/hooks/mainPage/fetchDataHook";
+import { useForm } from "react-hook-form";
+import useHTTPrequest from "@/utils/hooks/mainPage/HTTPrequestNewList";
+import { NewListModalProps, FormValues } from "@/types/newList.type";
 
-interface ClockProps {
-  isOpen: boolean;
-  handleClose: () => void;
-  fetchData: () => void;
-}
-type FormValues = {
-  title: string;
-  text: string;
-  signature: string;
-};
-const Modal: FC<ClockProps> = ({ handleClose, isOpen, fetchData }) => {
-  const { onSubmit } = useDeleteArtykul();
+const Modal: FC<NewListModalProps> = ({ handleClose, isOpen, fetchData }) => {
+  const { onSubmit } = useHTTPrequest();
   const form = useForm<FormValues>({
     defaultValues: {
       title: "",
@@ -31,9 +19,6 @@ const Modal: FC<ClockProps> = ({ handleClose, isOpen, fetchData }) => {
   const { register, handleSubmit, formState, reset } = form;
   const { errors, isSubmitSuccessful } = formState;
 
-  // const onError = (errors: FieldErrors<FormValues>) => {
-  //   console.log("Form errors", errors);
-  // };
   const handleUploadArticle = (data: FormValues) => {
     onSubmit(data);
     fetchData();

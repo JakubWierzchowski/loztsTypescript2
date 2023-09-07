@@ -14,7 +14,7 @@ export async function GET(req: Request, res: Response) {
 export async function POST(req: Request, res: Response) {
   const filePath = buildPath("calendarDate.json");
   const calendar = extractPath<CalendarTypeMonth[]>(filePath);
-  const myDate = moment().format("YYYY-DD-MM HH:mm:ss");
+  const myDate = moment().format("YYYY-MM-DD HH:mm:ss");
   const { player, club, turnament, gender, users } = await req.json();
   const detailsBoolien = calendar.map((item) => item.details);
   const newPlayer = {

@@ -1,6 +1,5 @@
-// "use client";
-import React, { useState, useEffect } from "react";
-import { Article } from "@/types/article.type";
+import { useState, useEffect } from "react";
+import { Article } from "@/types/newList.type";
 
 export const useFetch = () => {
   const [newArticle, setNewArticle] = useState<Article[]>([]);

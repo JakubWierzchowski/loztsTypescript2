@@ -1,45 +1,33 @@
 {
   "pages": {
-    "/loading": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/loading.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/archiwum/galeria/[galeria]/[turniej]/page": [
+    "/loading": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/archiwum/galeria/[galeria]/[turniej]/page.css",
-      "static/chunks/app/archiwum/galeria/[galeria]/[turniej]/page.js"
+      "static/chunks/app/loading.js"
     ],
-    "/galeria/page": [
+    "/kalendarz/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/galeria/page.css",
-      "static/chunks/app/galeria/page.js"
+      "static/css/app/kalendarz/page.css",
+      "static/chunks/app/kalendarz/page.js"
     ],
-    "/archiwum/page": [
+    "/[liga]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/archiwum/page.css",
-      "static/chunks/app/archiwum/page.js"
+      "static/css/app/[liga]/page.css",
+      "static/chunks/app/[liga]/page.js"
     ],
-    "/archiwum/galeria/[galeria]/page": [
+    "/(mainPage)/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/archiwum/galeria/[galeria]/page.css",
-      "static/chunks/app/archiwum/galeria/[galeria]/page.js"
-    ],
-    "/galeria/[gallery]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/galeria/[gallery]/page.css",
-      "static/chunks/app/galeria/[gallery]/page.js"
+      "static/css/app/(mainPage)/page.css",
+      "static/chunks/app/(mainPage)/page.js"
     ]
   }
 }

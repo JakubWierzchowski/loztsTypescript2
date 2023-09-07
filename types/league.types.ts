@@ -42,3 +42,56 @@ export interface LeagueDataItem {
   leagueDetails: LeagueDetails[];
   queueDetails: QueueDetails[];
 }
+
+export type FormValuesFirebase = {
+  host: string;
+  guest: string;
+  hostScore: string;
+  guestScore: string;
+  queueNumber: string;
+  img?: FileList;
+};
+export interface AddQueueProps {
+  handleClose: () => void;
+  leaguePath: string;
+  queueDetails: QueueDetails[] | undefined;
+  leagueDetails: LeagueDetail[] | undefined;
+}
+
+export interface AddQueueModalProps {
+  isOpen: boolean;
+  handleClose: () => void;
+  leaguePath: string;
+  queueDetails: QueueDetails[] | undefined;
+  leagueDetails: LeagueDetail[] | undefined;
+  fetchData: () => void;
+}
+
+export interface AddQueueProps {
+  handleClose: () => void;
+  leaguePath: string;
+  queueDetails: QueueDetails[] | undefined;
+  leagueDetails: LeagueDetail[] | undefined;
+}
+
+export interface AddLeagueMatchdayProps {
+  leaguePath: string;
+  fetchData: () => void;
+}
+
+export interface AddQueueSchudleProps {
+  leaguePath: string;
+  findLeague: LeagueDataItem | undefined;
+  fetchData: () => void;
+}
+
+export type FormValuesDataMatch = {
+  addLeagueMatchday: string;
+};
+
+export interface QueueResultProps {
+  leaguePath: string;
+  findLeague: LeagueDataItem | undefined;
+  firebaseLeague: any;
+  fetchData: () => void;
+}

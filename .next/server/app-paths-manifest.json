@@ -1,6 +1,5 @@
 {
-  "/archiwum/page": "app/archiwum/page.js",
-  "/galeria/[gallery]/page": "app/galeria/[gallery]/page.js",
-  "/archiwum/galeria/[galeria]/page": "app/archiwum/galeria/[galeria]/page.js",
-  "/archiwum/galeria/[galeria]/[turniej]/page": "app/archiwum/galeria/[galeria]/[turniej]/page.js"
+  "/(mainPage)/page": "app/(mainPage)/page.js",
+  "/kalendarz/page": "app/kalendarz/page.js",
+  "/[liga]/page": "app/[liga]/page.js"
 }

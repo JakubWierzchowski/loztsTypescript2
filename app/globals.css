@@ -360,6 +360,11 @@ body {
     font-size: 2rem;
     color: #000000;
   }
+
+  .menu > li > div > div > div {
+    font-size: 2rem;
+    color: #000000;
+  }
   .submenu > li > a {
     font-size: 1.5rem;
   }

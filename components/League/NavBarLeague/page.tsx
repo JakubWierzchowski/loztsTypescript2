@@ -4,11 +4,9 @@ import navBarData from "@/data/League/navBarLeague.json";
 import Link from "next/link";
 import styles from "./navBarLeague.module.scss";
 import AnimationClassHook from "@/utils/hooks/getAnimationClass/getAnimationClass";
-interface PropsDetails {
-  leaguePath: string;
-}
 
-const NavBarLeague: React.FC<PropsDetails> = ({ leaguePath }) => {
+const NavBarLeague = ({ leaguePath }: { leaguePath: string }) => {
+  // const NavBarLeague = ({ leaguePath }):string => {
   const slideInFirst = "slideIn";
   const slideInSecond = "slideOut";
 

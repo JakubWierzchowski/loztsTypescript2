@@ -3,19 +3,19 @@ import { toast } from "react-toastify";
 import styles from "../addQueueModal.module.scss";
 import styled from "@/utils/hooks/getAnimationClass/getAnimationStyles.module.scss";
 import { useForm, FieldErrors } from "react-hook-form";
-// import useFetchHook from "@/utils/hooks/league/fetchHook";
+import useHTTPrequests from "@/utils/hooks/league/HTTPrequest";
+import {
+  AddLeagueMatchdayProps,
+  FormValuesDataMatch,
+} from "@/types/league.types";
 
-interface ClockProps {
-  leaguePath: string;
-  fetchData: () => void;
-}
+const AddLeagueMatchday: FC<AddLeagueMatchdayProps> = ({
+  leaguePath,
+  fetchData,
+}) => {
+  const { onSubmit } = useHTTPrequests();
 
-type FormValues = {
-  addLeagueMatchday: string;
-};
-
-const AddLeagueMatchday: FC<ClockProps> = ({ leaguePath, fetchData }) => {
-  const form = useForm<FormValues>({
+  const form = useForm<FormValuesDataMatch>({
     defaultValues: {
       addLeagueMatchday: "",
     },
@@ -24,62 +24,22 @@ const AddLeagueMatchday: FC<ClockProps> = ({ leaguePath, fetchData }) => {
   const { register, handleSubmit, formState, reset } = form;
   const { errors, isSubmitSuccessful } = formState;
 
-  const onSubmit = async (data: FormValues) => {
-    try {
-      const reqBody = {
-        matchDay: data.addLeagueMatchday,
-        path: leaguePath,
-      };
-      const response = await fetch(`/api/allLeague`, {
-        method: "POST",
-        body: JSON.stringify(reqBody),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      if (!response.ok) throw new Error(`Error: ${response.status}`);
-      const Apidata = await response.json();
-      fetchData();
-
-      toast.success(`${Apidata.message} - ${Apidata.newMatchDate.matchDay}`, {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    } catch (e: any) {
-      if (e.message === "Error: 409") {
-        toast.error(`Taka kolejka już istnieje`, {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      }
-    }
-  };
-
-  const onError = (errors: FieldErrors<FormValues>) => {
+  const onError = (errors: FieldErrors<FormValuesDataMatch>) => {
     console.log("Form errors", errors);
   };
-  useEffect(() => {
+
+  const handleSubmitMatchDay = (data: FormValuesDataMatch) => {
+    onSubmit(data, leaguePath);
+    fetchData();
     if (isSubmitSuccessful) {
       reset();
     }
-  }, [isSubmitSuccessful, reset]);
+  };
 
   return (
     <form
       className={`${styles.form}  ${styled.slideIn}`}
-      onSubmit={handleSubmit(onSubmit, onError)}
+      onSubmit={handleSubmit(handleSubmitMatchDay, onError)}
       noValidate
     >
       <div className={styles.formSection}>

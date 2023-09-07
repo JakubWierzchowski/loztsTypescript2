@@ -9,7 +9,7 @@
         "data": "09.09",
         "place": "Dzierzkowice",
         "categories": "Młodzicy",
-        "datamomentInvite": "2023-09-07",
+        "datamomentInvite": "2023-09-08",
         "datamoment": "2023-09-10",
         "typeofTournaments": [
           {
@@ -17,7 +17,431 @@
             "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
           }
         ],
-        "players": []
+        "players": [
+          {
+            "id": "01c96005-83cc-4d8d-9f54-b08c5d07beba",
+            "player": "Czajka Angelika",
+            "club": "LUKS \"Kłos Wola Skromowska\"",
+            "timeadd": "2023-04-09 11:07:07",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "leon.filipek@wp.pl"
+          },
+          {
+            "id": "da78955b-1055-4242-8d11-1faa6be38b8a",
+            "player": "Jakub Jędruchniewicz",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-05-09 08:55:40",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "65870c0f-062c-4864-b03d-01dd60795fea",
+            "player": "Adrian Drobik",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-05-09 09:00:00",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "256bd565-6a0c-4907-b4f0-39abd8048890",
+            "player": "Goral Emilia",
+            "club": "LUKS \"Kłos Wola Skromowska\"",
+            "timeadd": "2023-05-09 20:40:29",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "leon.filipek@wp.pl"
+          },
+          {
+            "id": "43cc506c-d3a2-4c53-9e41-270a3567a622",
+            "player": "Piotr Białach",
+            "club": "LUKS ,,Hutnik'' Huta Dąbrowa",
+            "timeadd": "2023-05-09 21:59:23",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "grzesiekczerniec@interia.pl"
+          },
+          {
+            "id": "43dcec5c-9c42-4576-beac-13aace368ffc",
+            "player": "Jakub Nowosad",
+            "club": "LUKS ,,Hutnik'' Huta Dąbrowa",
+            "timeadd": "2023-05-09 22:00:15",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "grzesiekczerniec@interia.pl"
+          },
+          {
+            "id": "4e275fb6-9838-4e61-9227-44867c1abf0f",
+            "player": "Barbara Cieślak",
+            "club": "LUKS ,,Hutnik'' Huta Dąbrowa",
+            "timeadd": "2023-05-09 22:00:57",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "grzesiekczerniec@interia.pl"
+          },
+          {
+            "id": "65e426a7-abca-4797-a3a0-96ef1cec99a0",
+            "player": "Agata Kulczyniec",
+            "club": "LUKS ,,Hutnik'' Huta Dąbrowa",
+            "timeadd": "2023-05-09 22:01:32",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "grzesiekczerniec@interia.pl"
+          },
+          {
+            "id": "178d515c-cfcc-4c3f-a025-9fad8264b2b8",
+            "player": "Mróz Szymon",
+            "club": "KS Ogniwo Chełm",
+            "timeadd": "2023-06-09 00:50:52",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "waldemar1900@o2.pl"
+          },
+          {
+            "id": "9ae859ef-9cea-4dd9-88d7-c714d2f6a69f",
+            "player": "Piasecki Jonatan",
+            "club": "KS Ogniwo Chełm",
+            "timeadd": "2023-06-09 00:51:08",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "waldemar1900@o2.pl"
+          },
+          {
+            "id": "9f9a746e-913f-42a2-839f-cee6aee46603",
+            "player": "Piasecka Wiktoria",
+            "club": "KS Ogniwo Chełm",
+            "timeadd": "2023-06-09 00:51:26",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "waldemar1900@o2.pl"
+          },
+          {
+            "id": "3cce0395-e20f-4f9f-924b-7ac465568f94",
+            "player": "Filip Stępnicki",
+            "club": "UKS Dynamo Gózd",
+            "timeadd": "2023-06-09 10:08:41",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "w.lukasiak@onet.eu"
+          },
+          {
+            "id": "7b5eebd5-1c6c-4042-b32d-55ad84fe4134",
+            "player": "Adrian Filipek",
+            "club": "UKS Dynamo Gózd",
+            "timeadd": "2023-06-09 10:09:18",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "w.lukasiak@onet.eu"
+          },
+          {
+            "id": "49fe483b-898a-4014-91e6-8ffcd4e21b53",
+            "player": "Kacper Beczek",
+            "club": "UKS Dynamo Gózd",
+            "timeadd": "2023-06-09 10:10:00",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "w.lukasiak@onet.eu"
+          },
+          {
+            "id": "b069c846-d553-487c-a2b5-a6aa023efcd3",
+            "player": "Michał Boczek",
+            "club": "ULKS Dzierzkowice",
+            "timeadd": "2023-06-09 12:36:43",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "stiga2233@onet.pl"
+          },
+          {
+            "id": "63157ff9-7109-426f-9187-133b45b73d8e",
+            "player": "Jakub Piekarz",
+            "club": "ULKS Dzierzkowice",
+            "timeadd": "2023-06-09 12:37:12",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "stiga2233@onet.pl"
+          },
+          {
+            "id": "c029b340-c952-4e9b-b5db-72703d337435",
+            "player": "Jakub Karbowniczek",
+            "club": "ULKS Dzierzkowice",
+            "timeadd": "2023-06-09 12:37:43",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "stiga2233@onet.pl"
+          },
+          {
+            "id": "32c1d950-9ce6-43f8-9f9f-a06443a77b5d",
+            "player": "Hubert Szczepanik",
+            "club": "ULKS Dzierzkowice",
+            "timeadd": "2023-06-09 12:38:17",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "stiga2233@onet.pl"
+          },
+          {
+            "id": "675b18f6-3a47-4c92-836a-d9ef5bf9d6d1",
+            "player": "Julia Zawadzka",
+            "club": "ULKS Dzierzkowice",
+            "timeadd": "2023-06-09 12:38:52",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "stiga2233@onet.pl"
+          },
+          {
+            "id": "a3e79f00-b534-4b6e-a3d4-c66a30cf3653",
+            "player": "Małgorzata Firlej",
+            "club": "ULKS Dzierzkowice",
+            "timeadd": "2023-06-09 12:39:24",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "stiga2233@onet.pl"
+          },
+          {
+            "id": "efaa670b-61c3-4df7-953c-12285ba4222c",
+            "player": "Malwina Michalec",
+            "club": "ULKS Dzierzkowice",
+            "timeadd": "2023-06-09 12:40:19",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "stiga2233@onet.pl"
+          },
+          {
+            "id": "6d7c8de3-8ac4-4c2b-9e91-77315fb1b3f6",
+            "player": "Daria Celińska",
+            "club": "ULKS Dzierzkowice",
+            "timeadd": "2023-06-09 12:41:40",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "stiga2233@onet.pl"
+          },
+          {
+            "id": "d739ea55-b19f-437c-8afb-f5b3d88a0969",
+            "player": "Katarzyna Michota",
+            "club": "ULKS Dzierzkowice",
+            "timeadd": "2023-06-09 12:42:24",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "stiga2233@onet.pl"
+          },
+          {
+            "id": "05715fee-4aa1-4550-90a9-ffcd3ccafe2d",
+            "player": "Polak Mieszko",
+            "club": "MKS Lewart AGS Lubartów ",
+            "timeadd": "2023-06-09 18:09:20",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "saganek82@vp.pl"
+          },
+          {
+            "id": "f94a7fbe-869b-47ff-b460-84a885dc8d5a",
+            "player": "Polak Filip",
+            "club": "MKS Lewart AGS Lubartów ",
+            "timeadd": "2023-06-09 18:09:41",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "saganek82@vp.pl"
+          },
+          {
+            "id": "f710f6f6-ac32-4959-afa2-c479dd94a2ad",
+            "player": "Siwek Oliwier",
+            "club": "MKS Lewart AGS Lubartów ",
+            "timeadd": "2023-06-09 18:10:08",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "saganek82@vp.pl"
+          },
+          {
+            "id": "42943488-35a9-4087-99ec-a2120f87d38f",
+            "player": "Norbert Poprawski",
+            "club": "SMS Włodawa",
+            "timeadd": "2023-06-09 19:26:41",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "artzgu@o2.pl"
+          },
+          {
+            "id": "db22c84b-9908-4e83-9d5f-8b96594f8a45",
+            "player": "Rułka Filip",
+            "club": "GLUKS Bobry Bobrowniki",
+            "timeadd": "2023-06-09 20:18:18",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "kolodziejandrzej@interia.eu"
+          },
+          {
+            "id": "1483cd74-e745-45c5-87be-759101c588c2",
+            "player": "Sochal Sebastian",
+            "club": "GLUKS Bobry Bobrowniki",
+            "timeadd": "2023-06-09 20:20:40",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "kolodziejandrzej@interia.eu"
+          },
+          {
+            "id": "e24fa617-95be-4fd9-bd6f-de5e220899b4",
+            "player": "Skibiński Kamil",
+            "club": "Szkolny Klub Tenisa Stołowego \"Dwójka\" Kraśnik",
+            "timeadd": "2023-06-09 20:33:29",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "edytadom@op.pl"
+          },
+          {
+            "id": "fd7c8eb0-819a-4d33-94ee-c390229ace16",
+            "player": "Jocek Wiktor",
+            "club": "Szkolny Klub Tenisa Stołowego \"Dwójka\" Kraśnik",
+            "timeadd": "2023-06-09 20:34:00",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "edytadom@op.pl"
+          },
+          {
+            "id": "081791d3-e933-4478-a9b9-d5744d64d542",
+            "player": "Nikola Król",
+            "club": "UKS Dynamo Gózd",
+            "timeadd": "2023-06-09 20:35:04",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "w.lukasiak@onet.eu"
+          },
+          {
+            "id": "304b2f1a-363c-482f-98b9-9698ac211ef6",
+            "player": "Szabała Damian",
+            "club": "Szkolny Klub Tenisa Stołowego \"Dwójka\" Kraśnik",
+            "timeadd": "2023-06-09 20:35:42",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "edytadom@op.pl"
+          },
+          {
+            "id": "6485fd8c-84e4-413c-b626-d5fccbae743b",
+            "player": "Giełbuda Magdalena",
+            "club": "Szkolny Klub Tenisa Stołowego \"Dwójka\" Kraśnik",
+            "timeadd": "2023-06-09 20:37:12",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "edytadom@op.pl"
+          },
+          {
+            "id": "9fada21b-06f7-4c22-9e0c-41738a50ce1c",
+            "player": "Piekarz Maja",
+            "club": "Szkolny Klub Tenisa Stołowego \"Dwójka\" Kraśnik",
+            "timeadd": "2023-06-09 20:38:10",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "edytadom@op.pl"
+          },
+          {
+            "id": "789e2e10-1fbd-4f82-b602-b777473c94d8",
+            "player": "Klara Madeja",
+            "club": "UKS Żaczek Fajsławice",
+            "timeadd": "2023-06-09 20:38:54",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "lozts1937@gmail.com"
+          },
+          {
+            "id": "8772dd02-19e3-45ac-9b6b-41d23baaf65c",
+            "player": "Janiec Marlena",
+            "club": "Szkolny Klub Tenisa Stołowego \"Dwójka\" Kraśnik",
+            "timeadd": "2023-06-09 20:38:58",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "edytadom@op.pl"
+          },
+          {
+            "id": "5d88495d-6c1d-4531-97bf-6358450a2b5c",
+            "player": "Katarzyna Wasil",
+            "club": "UKS Żaczek Fajsławice",
+            "timeadd": "2023-06-09 20:39:23",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "lozts1937@gmail.com"
+          },
+          {
+            "id": "e941d83a-c58e-4b28-b898-548746ad56e5",
+            "player": "Klaudia Zając",
+            "club": "UKS Żaczek Fajsławice",
+            "timeadd": "2023-06-09 20:39:47",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "lozts1937@gmail.com"
+          },
+          {
+            "id": "d5b90243-535a-4715-85ee-44c2e82f8301",
+            "player": "Nikola Urbańczyk",
+            "club": "UKS Żaczek Fajsławice",
+            "timeadd": "2023-06-09 20:40:21",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "lozts1937@gmail.com"
+          },
+          {
+            "id": "5032d972-c5e9-427e-af34-d7ae10378068",
+            "player": "Sagan Hanna",
+            "club": "MKS Lewart AGS Lubartów ",
+            "timeadd": "2023-06-09 21:33:41",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "saganek82@vp.pl"
+          },
+          {
+            "id": "dda55b37-e9a8-4fa9-b7ad-6bf1afcbf67d",
+            "player": "Momot Fabian",
+            "club": "MUKS Roztocze Szczebrzeszyn",
+            "timeadd": "2023-06-09 23:19:15",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "muks@poczta.onet.pl"
+          },
+          {
+            "id": "64ec0ca9-6990-42dc-9b9c-4208b1ba3077",
+            "player": "Domienik Mateusz",
+            "club": "MUKS Roztocze Szczebrzeszyn",
+            "timeadd": "2023-06-09 23:20:01",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "muks@poczta.onet.pl"
+          },
+          {
+            "id": "1d74af93-58a4-4b53-9539-c322621de8c8",
+            "player": "Laskowska Katarzyna",
+            "club": "MUKS Roztocze Szczebrzeszyn",
+            "timeadd": "2023-06-09 23:21:04",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "muks@poczta.onet.pl"
+          },
+          {
+            "id": "e0b0025d-5fca-42e0-aca3-025f1ba1ea8f",
+            "player": "Gomuła Wiktoria",
+            "club": "MUKS Roztocze Szczebrzeszyn",
+            "timeadd": "2023-06-09 23:21:40",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "muks@poczta.onet.pl"
+          },
+          {
+            "id": "85750f57-1e70-4625-b64e-20ae4328a73e",
+            "player": "Wojciechowska Weronika",
+            "club": "MUKS Roztocze Szczebrzeszyn",
+            "timeadd": "2023-06-09 23:27:07",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Kobiety",
+            "users": "muks@poczta.onet.pl"
+          },
+          {
+            "id": "1551aedd-81fb-481b-a7cc-4667ccad59f2",
+            "player": "Wasak Jan",
+            "club": "MKS Lewart AGS Lubartów ",
+            "timeadd": "2023-06-09 23:57:54",
+            "tournament": "IWTKmlodzikow",
+            "gender": "Mężczyźni",
+            "users": "saganek82@vp.pl"
+          }
+        ]
       },
       {
         "title": "I WTK Juniorów",
@@ -25,7 +449,7 @@
         "data": "09.09",
         "place": "Dzierzkowice",
         "categories": "Juniorzy",
-        "datamomentInvite": "2023-09-07",
+        "datamomentInvite": "2023-09-08",
         "datamoment": "2023-09-10",
         "typeofTournaments": [
           {
@@ -33,7 +457,251 @@
             "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
           }
         ],
-        "players": []
+        "players": [
+          {
+            "id": "26649060-7219-46cc-a796-8c9c0914c2c8",
+            "player": "Angelika Czajka",
+            "club": "LUKS \"Kłos Wola Skromowska\"",
+            "timeadd": "2023-04-09 11:09:04",
+            "tournament": "IWTKjuniorow",
+            "gender": "Kobiety",
+            "users": "leon.filipek@wp.pl"
+          },
+          {
+            "id": "1d86e3fe-caff-4ca3-b223-1eb74e9fa926",
+            "player": "Czajka Dawid",
+            "club": "LUKS \"Kłos Wola Skromowska\"",
+            "timeadd": "2023-04-09 11:09:56",
+            "tournament": "IWTKjuniorow",
+            "gender": "Mężczyźni",
+            "users": "leon.filipek@wp.pl"
+          },
+          {
+            "id": "9df2a66e-05c0-4b64-8e05-a6e41498ff78",
+            "player": "Wiktoria Salecka",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-05-09 08:38:27",
+            "tournament": "IWTKjuniorow",
+            "gender": "Kobiety",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "ec27c32d-525b-4980-aa31-47314604c345",
+            "player": "Jan Plis",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-05-09 08:48:33",
+            "tournament": "IWTKjuniorow",
+            "gender": "Mężczyźni",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "54415dfd-1cde-4172-9546-0c3a53f6f912",
+            "player": "Kowalczyk Antoni",
+            "club": "KS Heksa Niedrzwica Duża",
+            "timeadd": "2023-05-09 09:21:53",
+            "tournament": "IWTKjuniorow",
+            "gender": "Mężczyźni",
+            "users": "rbielecki3@interia.pl"
+          },
+          {
+            "id": "fb6296f6-dfe1-445f-89b9-290fe8c7d77d",
+            "player": "Bielecki Maciej",
+            "club": "KS Heksa Niedrzwica Duża",
+            "timeadd": "2023-05-09 09:22:21",
+            "tournament": "IWTKjuniorow",
+            "gender": "Mężczyźni",
+            "users": "rbielecki3@interia.pl"
+          },
+          {
+            "id": "3c946790-cadc-4c3c-a037-945a566e0f01",
+            "player": "Szymon Zguczyński",
+            "club": "SMS Włodawa",
+            "timeadd": "2023-05-09 21:17:31",
+            "tournament": "IWTKjuniorow",
+            "gender": "Mężczyźni",
+            "users": "artzgu@o2.pl"
+          },
+          {
+            "id": "3b1f232a-a388-4076-98bf-2078e93fe4b4",
+            "player": "Kalinowski Przemysław",
+            "club": "KS Ogniwo Chełm",
+            "timeadd": "2023-06-09 00:51:59",
+            "tournament": "IWTKjuniorow",
+            "gender": "Mężczyźni",
+            "users": "waldemar1900@o2.pl"
+          },
+          {
+            "id": "f1f2ecf5-9166-4afd-8e35-fd4ed2e31287",
+            "player": "Tatysiak Julia",
+            "club": "KS Ogniwo Chełm",
+            "timeadd": "2023-06-09 00:54:01",
+            "tournament": "IWTKjuniorow",
+            "gender": "Kobiety",
+            "users": "waldemar1900@o2.pl"
+          },
+          {
+            "id": "7f399e5c-7b0c-4b3e-ba4e-0e3d9bd069dd",
+            "player": "Maja Warowna",
+            "club": "UKS Dynamo Gózd",
+            "timeadd": "2023-06-09 10:10:55",
+            "tournament": "IWTKjuniorow",
+            "gender": "Kobiety",
+            "users": "w.lukasiak@onet.eu"
+          },
+          {
+            "id": "8a35c13a-1aa4-402f-90f8-6a883e4307e9",
+            "player": "Wiktoria Osial",
+            "club": "UKS Dynamo Gózd",
+            "timeadd": "2023-06-09 10:11:35",
+            "tournament": "IWTKjuniorow",
+            "gender": "Kobiety",
+            "users": "w.lukasiak@onet.eu"
+          },
+          {
+            "id": "e71f85b6-3b09-47c1-a6e7-2b0df25e48fd",
+            "player": "Kornelia Łukasiak",
+            "club": "UKS Dynamo Gózd",
+            "timeadd": "2023-06-09 10:12:26",
+            "tournament": "IWTKjuniorow",
+            "gender": "Kobiety",
+            "users": "w.lukasiak@onet.eu"
+          },
+          {
+            "id": "4d411cc8-6f38-4500-a7e4-8e120ac9a20a",
+            "player": "Olaf Cyrankiewicz",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-06-09 13:44:25",
+            "tournament": "IWTKjuniorow",
+            "gender": "Mężczyźni",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "c4834b00-62f1-4d08-a4d4-e3f3160a90bc",
+            "player": "Tkaczyk Natalia ",
+            "club": "Klub Sportowy Sygnał ",
+            "timeadd": "2023-06-09 14:41:39",
+            "tournament": "IWTKjuniorow",
+            "gender": "Kobiety",
+            "users": "4maruszki@gmail.com"
+          },
+          {
+            "id": "95310ef5-2e5b-42f7-9d3d-fd6adf613803",
+            "player": "Romanowska Lena",
+            "club": "Klub Sportowy Sygnał ",
+            "timeadd": "2023-06-09 14:42:05",
+            "tournament": "IWTKjuniorow",
+            "gender": "Kobiety",
+            "users": "4maruszki@gmail.com"
+          },
+          {
+            "id": "79187fb8-8b9e-493f-a2d2-792cdcdfe4f0",
+            "player": "Piasecki Jonatan ",
+            "club": "KS Ogniwo Chełm",
+            "timeadd": "2023-06-09 17:53:30",
+            "tournament": "IWTKjuniorow",
+            "gender": "Mężczyźni",
+            "users": "waldemar1900@o2.pl"
+          },
+          {
+            "id": "04e6490f-ccfa-42ee-b859-152c4622f972",
+            "player": "Piasecka Wiktoria ",
+            "club": "KS Ogniwo Chełm",
+            "timeadd": "2023-06-09 17:53:47",
+            "tournament": "IWTKjuniorow",
+            "gender": "Kobiety",
+            "users": "waldemar1900@o2.pl"
+          },
+          {
+            "id": "82c49689-4bb8-40df-b41a-fe31d5f1d8ef",
+            "player": "Wojtowicz Bartosz",
+            "club": "MKS Lewart AGS Lubartów ",
+            "timeadd": "2023-06-09 18:07:02",
+            "tournament": "IWTKjuniorow",
+            "gender": "Mężczyźni",
+            "users": "saganek82@vp.pl"
+          },
+          {
+            "id": "b5d789e3-e57c-4f2b-8002-0eaa8175d09e",
+            "player": "Karczmarz Maksymilian",
+            "club": "MKS Lewart AGS Lubartów ",
+            "timeadd": "2023-06-09 18:07:31",
+            "tournament": "IWTKjuniorow",
+            "gender": "Mężczyźni",
+            "users": "saganek82@vp.pl"
+          },
+          {
+            "id": "d68d1e22-f970-4372-a1ad-6e971e277c26",
+            "player": "Lipska Agata",
+            "club": "MKS Lewart AGS Lubartów ",
+            "timeadd": "2023-06-09 18:07:55",
+            "tournament": "IWTKjuniorow",
+            "gender": "Kobiety",
+            "users": "saganek82@vp.pl"
+          },
+          {
+            "id": "beb756b6-f92f-4975-a135-0b3ce8c4ed60",
+            "player": "Zgierska Aleksandra",
+            "club": "MKS Lewart AGS Lubartów ",
+            "timeadd": "2023-06-09 18:08:17",
+            "tournament": "IWTKjuniorow",
+            "gender": "Kobiety",
+            "users": "saganek82@vp.pl"
+          },
+          {
+            "id": "3501e674-3bdb-4d7e-bf81-00cceaa5e758",
+            "player": "Wojtowicz Karolina",
+            "club": "MKS Lewart AGS Lubartów ",
+            "timeadd": "2023-06-09 18:08:47",
+            "tournament": "IWTKjuniorow",
+            "gender": "Kobiety",
+            "users": "saganek82@vp.pl"
+          },
+          {
+            "id": "75c64d1d-50ec-473c-a205-d64ec3bb6d18",
+            "player": "EMILIA GORAL",
+            "club": "LUKS \"KŁOS\" WOLA SKROMOWSKA",
+            "timeadd": "2023-06-09 18:27:10",
+            "tournament": "IWTKjuniorow",
+            "gender": "Kobiety",
+            "users": "leon.filipek@wp.pl"
+          },
+          {
+            "id": "ff881a87-c250-4b88-bb76-c86aaecd6f8f",
+            "player": "Antonina Serafin",
+            "club": "UKS Żaczek Fajsławice",
+            "timeadd": "2023-06-09 20:43:04",
+            "tournament": "IWTKjuniorow",
+            "gender": "Kobiety",
+            "users": "lozts1937@gmail.com"
+          },
+          {
+            "id": "cb2b82f3-aeac-436a-af77-da8c123360f1",
+            "player": "Karczewski Piotr",
+            "club": "MKS Lewart AGS Lubartów ",
+            "timeadd": "2023-06-09 21:30:21",
+            "tournament": "IWTKjuniorow",
+            "gender": "Mężczyźni",
+            "users": "saganek82@vp.pl"
+          },
+          {
+            "id": "7b6bebde-272f-4081-a141-5097633485b5",
+            "player": "Gozdal Jakub",
+            "club": "MKS Lewart AGS Lubartów ",
+            "timeadd": "2023-06-09 21:32:31",
+            "tournament": "IWTKjuniorow",
+            "gender": "Mężczyźni",
+            "users": "saganek82@vp.pl"
+          },
+          {
+            "id": "ef4e6ee8-9ef2-4522-85fa-4118af7d3634",
+            "player": "Franczak Roksana",
+            "club": "KS Heksa Niedrzwica Duża",
+            "timeadd": "2023-06-09 22:03:48",
+            "tournament": "IWTKjuniorow",
+            "gender": "Kobiety",
+            "users": "rbielecki3@interia.pl"
+          }
+        ]
       },
       {
         "title": "I WTK Seniorów",
@@ -41,7 +709,7 @@
         "data": "10.09",
         "place": "Dzierzkowice",
         "categories": "Seniorzy",
-        "datamomentInvite": "2023-09-08",
+        "datamomentInvite": "2023-09-09",
         "datamoment": "2023-09-11",
         "typeofTournaments": [
           {
@@ -49,7 +717,251 @@
             "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
           }
         ],
-        "players": []
+        "players": [
+          {
+            "id": "4adcfbcf-0c82-4a98-8878-22ec0b40267c",
+            "player": "Kamil Gołębiowski",
+            "club": "KS Cisowianka Drzewce",
+            "timeadd": "2023-04-09 15:10:58",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "golebiowski@cisowianka.pl"
+          },
+          {
+            "id": "e30d62ec-6b90-4ef6-ab99-4d5ffcb927ed",
+            "player": "Patrycja Waszczuk",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-05-09 09:01:32",
+            "tournament": "IWTKseniorow",
+            "gender": "Kobiety",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "d5ab5cd1-c2f9-4624-8346-5e0145e04f5f",
+            "player": "Dagmara Wierzbicka",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-05-09 09:01:51",
+            "tournament": "IWTKseniorow",
+            "gender": "Kobiety",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "a7818707-3642-4660-b8ab-e480a30f6930",
+            "player": "Norbert Płachta",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-05-09 09:02:31",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "030c466c-85bf-499a-8c82-a4d3830487ec",
+            "player": "Aleksandra Osuch",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-05-09 09:03:05",
+            "tournament": "IWTKseniorow",
+            "gender": "Kobiety",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "08611e45-ea5c-444a-a3bf-ab706cb04aed",
+            "player": "Plis Jan",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-05-09 09:05:42",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "cfd38182-895a-4539-9e02-da1ce22e69c6",
+            "player": "Salecka Wiktoria",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-05-09 09:06:10",
+            "tournament": "IWTKseniorow",
+            "gender": "Kobiety",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "969369f2-f641-4051-828c-adad66c80cc8",
+            "player": "Słomka Tomasz",
+            "club": "KS Heksa Niedrzwica Duża",
+            "timeadd": "2023-05-09 09:23:34",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "rbielecki3@interia.pl"
+          },
+          {
+            "id": "d7435062-8ecf-409c-a403-c8fddf225843",
+            "player": "Bielecki Robert",
+            "club": "KS Heksa Niedrzwica Duża",
+            "timeadd": "2023-05-09 09:26:22",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "rbielecki3@interia.pl"
+          },
+          {
+            "id": "973d2c56-5e6c-49c3-be05-6b09fd8c5011",
+            "player": "Słomka Artur",
+            "club": "KS Heksa Niedrzwica Duża",
+            "timeadd": "2023-05-09 09:27:18",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "rbielecki3@interia.pl"
+          },
+          {
+            "id": "2dc00782-e7e2-465b-b588-1ba4cfa00ca7",
+            "player": "Maciej Bielecki",
+            "club": "KS Heksa Niedrzwica Duża",
+            "timeadd": "2023-05-09 09:35:11",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "rbielecki3@interia.pl"
+          },
+          {
+            "id": "95881f71-216e-4a81-bca0-1871e3542c5c",
+            "player": "Antoni Kowalczyk",
+            "club": "KS Heksa Niedrzwica Duża",
+            "timeadd": "2023-05-09 09:35:47",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "rbielecki3@interia.pl"
+          },
+          {
+            "id": "e2c35106-9e34-4719-89c0-0fbe61edac9c",
+            "player": "Jakub Zguczyński",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-05-09 10:39:38",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "f7c77297-8d9b-4463-b83c-c68e68c3e076",
+            "player": "Bartosz Kowalczyk",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-05-09 11:20:04",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "023313bf-9c0f-4a8d-ad85-b6fabe1dd05e",
+            "player": "Łukasz Drzewiecki",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-05-09 11:20:17",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "95c6de49-c631-4f91-a0ae-e01baf8294e2",
+            "player": "Dominik Maciąg",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-05-09 13:17:09",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "b42246ab-5f92-42ee-8840-953510159e66",
+            "player": "Cezary Domagalski",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-05-09 19:08:14",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "0cad8a20-3def-4610-bae0-4a922a135bde",
+            "player": "Szymon Modrzejewski",
+            "club": "SMS Włodawa",
+            "timeadd": "2023-05-09 21:18:26",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "artzgu@o2.pl"
+          },
+          {
+            "id": "abb0259c-b9e4-48a4-948c-e8c90d251b3a",
+            "player": "Zguczyński Szymon",
+            "club": "SMS Włodawa",
+            "timeadd": "2023-05-09 21:51:05",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "artzgu@o2.pl"
+          },
+          {
+            "id": "656b76c7-fcd1-4c26-8cca-f80889b403c7",
+            "player": "Cyrankiewicz Olaf",
+            "club": "AZS Politechnika Lublin",
+            "timeadd": "2023-06-09 13:45:02",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "azs@pollub.edu.pl"
+          },
+          {
+            "id": "f0ca81f2-d0c3-45c5-b45d-acac388b97fe",
+            "player": "Romanowska Lena ",
+            "club": "Klub Sportowy Sygnał ",
+            "timeadd": "2023-06-09 14:44:34",
+            "tournament": "IWTKseniorow",
+            "gender": "Kobiety",
+            "users": "4maruszki@gmail.com"
+          },
+          {
+            "id": "b1ac6ec3-4607-4257-a64c-dfc21d3a599a",
+            "player": "Emilia Kołomańska",
+            "club": "UKS Dynamo Gózd",
+            "timeadd": "2023-06-09 20:19:52",
+            "tournament": "IWTKseniorow",
+            "gender": "Kobiety",
+            "users": "w.lukasiak@onet.eu"
+          },
+          {
+            "id": "fc3a47e3-89f7-4bec-baaf-0af159a05b40",
+            "player": "Warowna Maja",
+            "club": "UKS Dynamo Gózd",
+            "timeadd": "2023-06-09 20:24:49",
+            "tournament": "IWTKseniorow",
+            "gender": "Kobiety",
+            "users": "w.lukasiak@onet.eu"
+          },
+          {
+            "id": "d0373c85-d6d5-4326-9734-a41b7ce07640",
+            "player": "Grzegorz Wisiński",
+            "club": "ULKS Dzierzkowice",
+            "timeadd": "2023-06-09 20:25:49",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "stiga2233@onet.pl"
+          },
+          {
+            "id": "e64edeea-95d1-4b11-8995-c658a3ac22b1",
+            "player": "Aleksander Szczepanik",
+            "club": "ULKS Dzierzkowice",
+            "timeadd": "2023-06-09 20:26:12",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "stiga2233@onet.pl"
+          },
+          {
+            "id": "e94ddff8-dbe1-46e0-a347-ad7b0636544e",
+            "player": "Baranowski Mateusz",
+            "club": "MKS STS Lubartów",
+            "timeadd": "2023-06-09 20:33:48",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "lozts1937@gmail.com"
+          },
+          {
+            "id": "9e27d38a-f323-4b50-8c27-468e9e12e37b",
+            "player": "Barszcz Krzysztof",
+            "club": "MKS STS Lubartów",
+            "timeadd": "2023-06-09 20:34:46",
+            "tournament": "IWTKseniorow",
+            "gender": "Mężczyźni",
+            "users": "lozts1937@gmail.com"
+          }
+        ]
       },
       {
         "title": "Drużynowe Uczn. MW Żaków",
@@ -57,7 +969,7 @@
         "data": "10.09",
         "place": "Dzierzkowice",
         "categories": "Żacy",
-        "datamomentInvite": "2023-09-08",
+        "datamomentInvite": "2023-09-09",
         "datamoment": "2023-09-11",
         "typeofTournaments": [
           {
@@ -65,7 +977,62 @@
             "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
           }
         ],
-        "players": []
+        "players": [
+          {
+            "id": "d09dd44d-b03c-4dcd-81ca-031f675facfc",
+            "player": "Piekarz Jakub,Karbowniczek Jakub",
+            "club": "ULKS Dzierzkowice",
+            "timeadd": "2023-06-09 20:22:53",
+            "tournament": "druzynoweUcznMWZakow",
+            "gender": "Mężczyźni",
+            "users": "stiga2233@onet.pl"
+          },
+          {
+            "id": "d41c1a8e-da6c-4d8c-ad33-c21f801ec486",
+            "player": "Zawadzka Julia, Firlej Małgorzata",
+            "club": "ULKS Dzierzkowice",
+            "timeadd": "2023-06-09 20:23:57",
+            "tournament": "druzynoweUcznMWZakow",
+            "gender": "Kobiety",
+            "users": "stiga2233@onet.pl"
+          },
+          {
+            "id": "8fec085c-2329-486d-aa78-4414d9ef9bf7",
+            "player": "Michalec Malwina,Celińska Daria, Michota Katarzyna",
+            "club": "ULKS Dzierzkowice",
+            "timeadd": "2023-06-09 20:24:59",
+            "tournament": "druzynoweUcznMWZakow",
+            "gender": "Kobiety",
+            "users": "stiga2233@onet.pl"
+          },
+          {
+            "id": "c851357f-7063-4f1d-bc09-007dae8ed308",
+            "player": "Wojciech Pieńkosz, Szymon Beczek",
+            "club": "UKS Dynamo Gózd",
+            "timeadd": "2023-06-09 20:38:29",
+            "tournament": "druzynoweUcznMWZakow",
+            "gender": "Mężczyźni",
+            "users": "w.lukasiak@onet.eu"
+          },
+          {
+            "id": "63969224-b33e-468f-b273-6af8130a35fd",
+            "player": "Nikola Król, Kiersnowska Malwina",
+            "club": "UKS Dynamo Gózd",
+            "timeadd": "2023-06-09 20:39:53",
+            "tournament": "druzynoweUcznMWZakow",
+            "gender": "Kobiety",
+            "users": "w.lukasiak@onet.eu"
+          },
+          {
+            "id": "6f34072b-7ae2-4bd3-a2b9-36363aab6c9e",
+            "player": "Kiersnowska Marcelina, Ciołek Zuzanna, Szajkowska Aleksandra",
+            "club": "UKS Dynamo Gózd",
+            "timeadd": "2023-06-09 20:43:30",
+            "tournament": "druzynoweUcznMWZakow",
+            "gender": "Kobiety",
+            "users": "w.lukasiak@onet.eu"
+          }
+        ]
       },
       {
         "title": "Drużynowe Uczn. MW Młodzików",
@@ -73,7 +1040,7 @@
         "data": "10.09",
         "place": "Dzierzkowice",
         "categories": "Młodzicy",
-        "datamomentInvite": "2023-09-08",
+        "datamomentInvite": "2023-09-09",
         "datamoment": "2023-09-11",
         "typeofTournaments": [
           {
@@ -81,7 +1048,53 @@
             "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
           }
         ],
-        "players": []
+        "players": [
+          {
+            "id": "0c0e53cf-d6b5-4fd7-8377-138bd009c84e",
+            "player": "Piotr Białach, Jakub Nowosad",
+            "club": "LUKS ,,Hutnik'' Huta Dąbrowa",
+            "timeadd": "2023-05-09 22:03:18",
+            "tournament": "druzynoweUcznMWMlodzikow",
+            "gender": "Mężczyźni",
+            "users": "grzesiekczerniec@interia.pl"
+          },
+          {
+            "id": "37ce1a28-e194-4441-9e69-993545b04072",
+            "player": "Barbara Cieślak, Agata Kulczyniec, Hanna Kulczyniec",
+            "club": "LUKS ,,Hutnik'' Huta Dąbrowa",
+            "timeadd": "2023-05-09 22:04:23",
+            "tournament": "druzynoweUcznMWMlodzikow",
+            "gender": "Kobiety",
+            "users": "grzesiekczerniec@interia.pl"
+          },
+          {
+            "id": "766b01ec-158f-4155-a72f-1420639b5fa0",
+            "player": "Angelika Czajka, Emilia Goral",
+            "club": "LUKS \"KŁOS\" WOLA SKROMOWSKA",
+            "timeadd": "2023-06-09 18:28:50",
+            "tournament": "druzynoweUcznMWMlodzikow",
+            "gender": "Kobiety",
+            "users": "leon.filipek@wp.pl"
+          },
+          {
+            "id": "fd0e3734-8f65-4388-a9d9-aecadedc5295",
+            "player": "Boczek Michał,Szczepanik Hubert",
+            "club": "ULKS Dzierzkowice",
+            "timeadd": "2023-06-09 20:21:43",
+            "tournament": "druzynoweUcznMWMlodzikow",
+            "gender": "Mężczyźni",
+            "users": "stiga2233@onet.pl"
+          },
+          {
+            "id": "49dc282b-48b6-47c6-8300-67ee0fb14746",
+            "player": "Filip Stępnicki, Adrian Filipek",
+            "club": "UKS Dynamo Gózd",
+            "timeadd": "2023-06-09 20:29:42",
+            "tournament": "druzynoweUcznMWMlodzikow",
+            "gender": "Mężczyźni",
+            "users": "w.lukasiak@onet.eu"
+          }
+        ]
       },
       {
         "title": "I WTK Żaków",

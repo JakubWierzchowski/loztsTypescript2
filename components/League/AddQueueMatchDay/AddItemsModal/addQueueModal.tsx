@@ -1,19 +1,11 @@
 import React, { FC } from "react";
 import styles from "./addQueueModal.module.scss";
 import ReactModal from "react-modal";
-import { QueueDetails, LeagueDetail } from "@/types/league.types";
+import { AddQueueModalProps } from "@/types/league.types";
 import AddLeagueMatchday from "./AddMatchDay/page";
 import AddQueue from "./AddQueue/addQueue";
-interface ClockProps {
-  isOpen: boolean;
-  handleClose: () => void;
-  leaguePath: string;
-  queueDetails: QueueDetails[] | undefined;
-  leagueDetails: LeagueDetail[] | undefined;
-  fetchData: () => void;
-}
 
-const Modal: FC<ClockProps> = ({
+const Modal: FC<AddQueueModalProps> = ({
   handleClose,
   isOpen,
   queueDetails,

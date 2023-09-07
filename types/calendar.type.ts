@@ -51,10 +51,10 @@ export interface ClockDetailsProps {
 }
 
 export interface CountdownProps {
-  days: string | number;
-  hours: string | number;
-  mins: string | number;
-  seconds: string | number;
+  days: number | string;
+  hours: number | string;
+  mins: number | string;
+  seconds: number | string;
 }
 
 export interface ListProps {

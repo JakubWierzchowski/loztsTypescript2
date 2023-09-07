@@ -1,40 +1,22 @@
-import React, { FC, useEffect } from "react";
-import { collection, addDoc, serverTimestamp } from "firebase/firestore";
-import db, { storage } from "@/utils/firebase/firebase-config";
-import moment from "moment";
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import React, { FC } from "react";
 import { useUserContext } from "@/utils/context/AuthContext";
 import Image from "next/image";
 import styles from "../addQueueModal.module.scss";
 import { useForm, FieldErrors } from "react-hook-form";
-import { toast } from "react-toastify";
 import { QueueDetails, LeagueDetail } from "@/types/league.types";
 import UploadIcon from "@/public/upload.png";
 import styled from "@/utils/hooks/getAnimationClass/getAnimationStyles.module.scss";
+import useHTTPrequests from "@/utils/hooks/league/HTTPrequest";
+import { AddQueueProps, FormValuesFirebase } from "@/types/league.types";
 
-type FormValues = {
-  host: string;
-  guest: string;
-  hostScore: string;
-  guestScore: string;
-  queueNumber: string;
-  img?: FileList;
-};
-interface ClockProps {
-  handleClose: () => void;
-  leaguePath: string;
-  queueDetails: QueueDetails[] | undefined;
-  leagueDetails: LeagueDetail[] | undefined;
-}
-
-const AddQueue: FC<ClockProps> = ({
+const AddQueue: FC<AddQueueProps> = ({
   leaguePath,
   handleClose,
   queueDetails,
   leagueDetails,
 }) => {
-  const { user } = useUserContext();
-  const form = useForm<FormValues>({
+  const { onSubmitFirebase } = useHTTPrequests();
+  const form = useForm<FormValuesFirebase>({
     defaultValues: {
       host: "Wybierz Gospodarza",
       guest: "Wybierz Gościa",
@@ -46,74 +28,23 @@ const AddQueue: FC<ClockProps> = ({
   });
   const { register, handleSubmit, formState, reset, watch } = form;
   const { errors, isSubmitSuccessful } = formState;
-  //   const [articles, setArticles] = useState<ArticleItem[]>([]);
   const imgValue = watch("img");
-  const onSubmit = async (data: FormValues) => {
-    if (data.img && data.img[0]) {
-      const imageFile = data.img[0];
-      const storageRef = ref(storage, `${imageFile.name}`);
-      const uploadTask = uploadBytesResumable(storageRef, imageFile);
-      uploadTask.on(
-        "state_changed",
-        () => {},
-        (error) => {
-          console.error("Błąd podczas przesyłania pliku:", error);
-        },
-        async () => {
-          const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
-          try {
-            await addDoc(collection(db, `${leaguePath}`), {
-              host: data.host,
-              guest: data.guest,
-              hostScore: data.hostScore,
-              guestScore: data.guestScore,
-              queueNumber: data.queueNumber,
-              img: downloadURL,
-              timestamp: serverTimestamp(),
-              time: moment().format("YYYY-DD-MM HH:mm:ss"),
-              user: user?.email,
-            });
-            handleClose();
-            toast.success(`Dodano nową pozycję do ${data.queueNumber}`, {
-              position: "top-right",
-              autoClose: 2000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: true,
-              draggable: true,
-              progress: undefined,
-              theme: "light",
-            });
-          } catch (e: any) {
-            if (e.message === "Error: 409") {
-              console.log("blad");
-              toast.error(`ups coś poszło nie tak`, {
-                position: "top-right",
-                autoClose: 2000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-                progress: undefined,
-                theme: "light",
-              });
-            }
-          }
-        }
-      );
-    }
-  };
-  const onError = (errors: FieldErrors<FormValues>) => {
+
+  const onError = (errors: FieldErrors<FormValuesFirebase>) => {
     console.log("Form errors", errors);
   };
-  useEffect(() => {
+
+  const handleSumbitFirebase = (data: FormValuesFirebase) => {
+    onSubmitFirebase(data, leaguePath);
     if (isSubmitSuccessful) {
       reset();
     }
-  }, [isSubmitSuccessful, reset]);
+    handleClose();
+  };
+
   return (
     <form
-      onSubmit={handleSubmit(onSubmit, onError)}
+      onSubmit={handleSubmit(handleSumbitFirebase, onError)}
       noValidate
       className={styles.form}
     >
@@ -285,8 +216,12 @@ const AddQueue: FC<ClockProps> = ({
                 required: "Zdjęcie jest wymagane",
                 validate: {
                   size: (value) => {
-                    if (value && value[0] && value[0].size > 1 * 1024 * 1024) {
-                      return "Zdjęcie nie może przekraczać 1MB";
+                    if (
+                      value &&
+                      value[0] &&
+                      value[0].size > 0.25 * 1024 * 1024
+                    ) {
+                      return "Zdjęcie nie może przekraczać 250kb";
                     }
                     return true;
                   },
