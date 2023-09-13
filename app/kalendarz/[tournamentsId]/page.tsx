@@ -48,7 +48,7 @@ export default function Tournaments({ params }: CalendarTournamentPageProps) {
     slideInSecond
   );
 
-  const title = actualData.map((item) => item?.title);
+  const title = actualData.find((item) => item?.title);
 
   return (
     <>
@@ -56,7 +56,7 @@ export default function Tournaments({ params }: CalendarTournamentPageProps) {
         className={`${styles.titleClockAnimation} ${getShowAnimationClass()}`}
         ref={ref}
       >
-        <h1 className={styles.tableTitle}>{title}</h1>
+        <h1 className={styles.tableTitle}>{title?.title}</h1>
         <Clock
           findTournaments={filteredTournaments}
           tournaments={pathTournament}

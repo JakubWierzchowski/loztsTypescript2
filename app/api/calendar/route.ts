@@ -27,9 +27,10 @@ export async function POST(req: Request, res: Response) {
     users: users,
   };
 
-  const playerExists = calendar.some((item) =>
+  const playerExistsInTournament = calendar.some((item) =>
     item.details.some(
       (item2) =>
+        item2.link === newPlayer.tournament &&
         item2.players &&
         item2.players.find(
           (existingPlayer) => existingPlayer.player === newPlayer.player
@@ -37,9 +38,13 @@ export async function POST(req: Request, res: Response) {
     )
   );
 
-  if (playerExists) {
+  if (playerExistsInTournament) {
     return NextResponse.json(
-      { message: "Taki zawodnik juz istnieje", newPlayer, status: 409 },
+      {
+        message: "Taki zawodnik już istnieje w tym turnieju",
+        newPlayer,
+        status: 409,
+      },
       { status: 409 }
     );
   }

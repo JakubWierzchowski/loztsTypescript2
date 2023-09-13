@@ -6,15 +6,6 @@
   font-size: $size-tableTitleMobile;
 }
 
-// @keyframes showAnimation {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
-
 @keyframes imgScale {
   0% {
     transform: scale(1);
@@ -34,11 +25,9 @@
 @keyframes FadeIn {
   0% {
     opacity: 0;
-    // transform: scale(0.9);
   }
   100% {
     opacity: 1;
-    // transform: scale(1);
   }
 }
 

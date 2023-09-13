@@ -3,7 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import DataGallery from "@/data/gallery.json";
 import { GallerySeason } from "@/types/gallery.type";
-import styles from "@/components/Gallery/gallery.module.scss";
+import styles from "@/components/newGallery/gallery.module.scss";
 import { staticBlurDataUrl } from "@/utils/staticBlurDataURL";
 
 export default async function GaleriaArchiwum() {

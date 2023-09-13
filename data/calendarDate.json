@@ -14,7 +14,11 @@
         "typeofTournaments": [
           {
             "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
+            "table": [
+              "Wybierz kategorię",
+              "Mężczyźni",
+              "Kobiety"
+            ]
           }
         ],
         "players": [
@@ -454,7 +458,11 @@
         "typeofTournaments": [
           {
             "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
+            "table": [
+              "Wybierz kategorię",
+              "Mężczyźni",
+              "Kobiety"
+            ]
           }
         ],
         "players": [
@@ -714,7 +722,11 @@
         "typeofTournaments": [
           {
             "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
+            "table": [
+              "Wybierz kategorię",
+              "Mężczyźni",
+              "Kobiety"
+            ]
           }
         ],
         "players": [
@@ -974,7 +986,11 @@
         "typeofTournaments": [
           {
             "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
+            "table": [
+              "Wybierz kategorię",
+              "Mężczyźni",
+              "Kobiety"
+            ]
           }
         ],
         "players": [
@@ -1045,7 +1061,11 @@
         "typeofTournaments": [
           {
             "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
+            "table": [
+              "Wybierz kategorię",
+              "Mężczyźni",
+              "Kobiety"
+            ]
           }
         ],
         "players": [
@@ -1107,10 +1127,51 @@
         "typeofTournaments": [
           {
             "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
+            "table": [
+              "Wybierz kategorię",
+              "Mężczyźni",
+              "Kobiety"
+            ]
           }
         ],
-        "players": []
+        "players": [
+          {
+            "id": "d20f6086-cfa5-497f-a360-6ccc90ea31ad",
+            "player": "c",
+            "club": "c",
+            "timeadd": "2023-09-13 18:17:13",
+            "tournament": "IWTKzakow",
+            "gender": "Mężczyźni",
+            "users": "lozts1937@gmail.com"
+          },
+          {
+            "id": "7acd43d0-6906-400b-b78c-a21b55e6bb65",
+            "player": "c",
+            "club": "c",
+            "timeadd": "2023-09-13 18:17:19",
+            "tournament": "IWTKzakow",
+            "gender": "Mężczyźni",
+            "users": "lozts1937@gmail.com"
+          },
+          {
+            "id": "6681b979-fa0d-4328-81ac-89bd2b615355",
+            "player": "d",
+            "club": "d",
+            "timeadd": "2023-09-13 18:22:34",
+            "tournament": "IWTKzakow",
+            "gender": "Mężczyźni",
+            "users": "lozts1937@gmail.com"
+          },
+          {
+            "id": "296e764d-263d-4096-9c01-5aca075a1ddf",
+            "player": "x",
+            "club": "x",
+            "timeadd": "2023-09-13 18:23:33",
+            "tournament": "IWTKzakow",
+            "gender": "Mężczyźni",
+            "users": "lozts1937@gmail.com"
+          }
+        ]
       },
       {
         "title": "I WTK Kadetów",
@@ -1123,10 +1184,33 @@
         "typeofTournaments": [
           {
             "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
+            "table": [
+              "Wybierz kategorię",
+              "Mężczyźni",
+              "Kobiety"
+            ]
           }
         ],
-        "players": []
+        "players": [
+          {
+            "id": "03443c4b-ee02-4b83-966e-46a6215558b1",
+            "player": "d",
+            "club": "d",
+            "timeadd": "2023-09-13 18:22:52",
+            "tournament": "IWTKKadetow",
+            "gender": "Mężczyźni",
+            "users": "lozts1937@gmail.com"
+          },
+          {
+            "id": "875d8663-ed18-430f-b924-33fe7e66a775",
+            "player": "x",
+            "club": "x",
+            "timeadd": "2023-09-13 18:23:15",
+            "tournament": "IWTKKadetow",
+            "gender": "Mężczyźni",
+            "users": "lozts1937@gmail.com"
+          }
+        ]
       },
       {
         "title": "1. Grand Prix Polski Seniorów",
@@ -1270,7 +1354,11 @@
         "typeofTournaments": [
           {
             "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
+            "table": [
+              "Wybierz kategorię",
+              "Mężczyźni",
+              "Kobiety"
+            ]
           }
         ],
         "players": []
@@ -1297,7 +1385,11 @@
         "typeofTournaments": [
           {
             "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
+            "table": [
+              "Wybierz kategorię",
+              "Mężczyźni",
+              "Kobiety"
+            ]
           }
         ],
         "players": []
@@ -1313,7 +1405,11 @@
         "typeofTournaments": [
           {
             "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
+            "table": [
+              "Wybierz kategorię",
+              "Mężczyźni",
+              "Kobiety"
+            ]
           }
         ],
         "players": []
@@ -1329,7 +1425,11 @@
         "typeofTournaments": [
           {
             "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
+            "table": [
+              "Wybierz kategorię",
+              "Mężczyźni",
+              "Kobiety"
+            ]
           }
         ],
         "players": []
@@ -1345,7 +1445,11 @@
         "typeofTournaments": [
           {
             "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
+            "table": [
+              "Wybierz kategorię",
+              "Mężczyźni",
+              "Kobiety"
+            ]
           }
         ],
         "players": []
@@ -1422,7 +1526,11 @@
         "typeofTournaments": [
           {
             "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
+            "table": [
+              "Wybierz kategorię",
+              "Mężczyźni",
+              "Kobiety"
+            ]
           }
         ],
         "players": []
@@ -1438,7 +1546,11 @@
         "typeofTournaments": [
           {
             "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
+            "table": [
+              "Wybierz kategorię",
+              "Mężczyźni",
+              "Kobiety"
+            ]
           }
         ],
         "players": []

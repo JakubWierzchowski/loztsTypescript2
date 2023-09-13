@@ -4,7 +4,7 @@ import DataGallery from "@/data/gallery.json";
 import useModal from "@/utils/hooks/useModal/useModal";
 import { GallerySeason } from "@/types/gallery.type";
 import Image from "next/image";
-import styles from "@/components/Gallery/galleryTurnament.module.scss";
+import styles from "@/components/newGallery/galleryTurnament.module.scss";
 import GalleryModal from "@/components/ArchivesGallery/ArchivesGalleryModal";
 import { staticBlurDataUrl } from "@/utils/staticBlurDataURL";
 interface pageProps {

@@ -15,7 +15,6 @@ export async function POST(req: Request, res: Response) {
   const filePath = buildPath("league.json");
   const leagueData = extractPath<LeagueDataItem[]>(filePath);
 
-  const myDate = moment().format("YYYY-DD-MM HH:mm:ss");
   const { matchDay, path } = await req.json();
   const leagueDataFilter = leagueData.filter(
     (item: { league: string }) => item.league === path
