@@ -1,6 +1,6 @@
 This is a refreshed version of the previous website (currently www.lozts.pl), which has been developed using Next.js and TypeScript. The project is hosted on a private VPS server with a custom Nginx configuration. In addition to the updated graphics, when logged in as an administrator, you can find features such as:
 <ol>
-  <li>Adding files and saving them as JSON with placement in a local folder.</li>
+  <li>Adding files and saving them as JSON with placement in a local folder.</li></br>
     <li>CRUD operations for posts using JSON.</li>
     <li>CRUD operations for posts (including images) using Firebase.</li>
     <li>A timer that determines the time frame for adding/removing players in a specific tournament.</li>
@@ -16,4 +16,4 @@ These features are accessible only from the administrator's account. Below are s
 <img width="1460" alt="Zrzut ekranu 2023-05-27 o 13 24 15" src="https://github.com/JakubWierzchowski/loztsNextJs/assets/72977410/9924dc89-b227-4ffd-bc03-c9408d8e33ab">
 <img width="1508" alt="Zrzut ekranu 2023-05-27 o 13 24 23" src="https://github.com/JakubWierzchowski/loztsNextJs/assets/72977410/9f8fbbb0-361f-496c-b29a-d5776fb98b25">
 
-Aby projekt działał poprawnie należy dodać konto Fireabse oraz uruchomić komendę npm install.
+To make the project work correctly, you need to create a Firebase account and run the command npm install.
