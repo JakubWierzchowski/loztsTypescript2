@@ -1,6 +1,6 @@
 This is a refreshed version of the previous website (currently www.lozts.pl), which has been developed using Next.js and TypeScript. The project is hosted on a private VPS server with a custom Nginx configuration. In addition to the updated graphics, when logged in as an administrator, you can find features such as:
 <ol>
-  <li>Adding files and saving them as JSON with placement in a local folder.</li></br>
+  <li>Adding files and saving them as JSON with placement in a local folder.</li>
     <li>CRUD operations for posts using JSON.</li>
     <li>CRUD operations for posts (including images) using Firebase.</li>
     <li>A timer that determines the time frame for adding/removing players in a specific tournament.</li>
