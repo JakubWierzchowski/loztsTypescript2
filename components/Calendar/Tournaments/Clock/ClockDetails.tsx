@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import moment from "moment";
 import styles from "../tournamentsTable.module.scss";
-import { CalendarTypeDetails } from "@/types/calendar.type";
 import Countdown from "./Cutdown";
 import { ClockDetailsProps } from "@/types/calendar.type";
 

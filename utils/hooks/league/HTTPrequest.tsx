@@ -1,5 +1,3 @@
-// "use client";
-
 import { toast } from "react-toastify";
 import { collection, addDoc, serverTimestamp } from "firebase/firestore";
 import db, { storage } from "@/utils/firebase/firebase-config";
@@ -7,18 +5,8 @@ import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import moment from "moment";
 import { useUserContext } from "@/utils/context/AuthContext";
 import { QueueDetails } from "@/types/league.types";
-type FormValues = {
-  addLeagueMatchday: string;
-};
-
-type FormValuesFirebase = {
-  host: string;
-  guest: string;
-  hostScore: string;
-  guestScore: string;
-  queueNumber: string;
-  img?: FileList;
-};
+import { FormValuesSubmit, FormValuesFirebase } from "@/types/calendar.type";
+import { deleteDoc, doc } from "firebase/firestore";
 
 const useHTTPrequests = () => {
   const { user } = useUserContext();
@@ -61,7 +49,7 @@ const useHTTPrequests = () => {
     }
   };
 
-  const onSubmit = async (data: FormValues, leaguePath: string) => {
+  const onSubmit = async (data: FormValuesSubmit, leaguePath: string) => {
     try {
       const reqBody = {
         matchDay: data.addLeagueMatchday,
@@ -160,11 +148,49 @@ const useHTTPrequests = () => {
       );
     }
   };
+  const deleteQueueFirebase = async (
+    id: string,
+    host: string,
+    guest: string,
+    guestScore: number,
+    hostScore: number,
+    leaguePath: string
+  ) => {
+    const docRef = doc(db, `${leaguePath}`, id);
+    try {
+      await deleteDoc(docRef);
+      toast.success(
+        `Usunieto spotkanie \n ${host}:${hostScore} vs ${guest}:${guestScore}`,
+        {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        }
+      );
+    } catch (error) {
+      toast.error(`Błąd przy usuwaniu dokumentu: ${error}`, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+      });
+    }
+  };
 
   return {
     deleteQueue,
     onSubmit,
     onSubmitFirebase,
+    deleteQueueFirebase,
   };
 };
 

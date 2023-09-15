@@ -3,7 +3,7 @@ import React, { FC } from "react";
 import ReactModal from "react-modal";
 import styles from "./newListModal.module.scss";
 import { useForm } from "react-hook-form";
-import useHTTPrequest from "@/utils/hooks/mainPage/HTTPrequestNewList";
+import useHTTPrequest from "@/utils/hooks/mainPage/httpRequestNewList";
 import { NewListModalProps, FormValues } from "@/types/newList.type";
 
 const Modal: FC<NewListModalProps> = ({ handleClose, isOpen, fetchData }) => {

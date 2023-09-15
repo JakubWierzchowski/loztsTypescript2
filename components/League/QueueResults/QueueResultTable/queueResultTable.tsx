@@ -2,61 +2,30 @@ import React, { FC } from "react";
 import { useUserContext } from "@/utils/context/AuthContext";
 import Link from "next/link";
 import styles from "./queueResultTable.module.scss";
-import { db } from "@/utils/firebase/firebase-config";
-import { deleteDoc, doc } from "firebase/firestore";
-import { toast } from "react-toastify";
-import { QueueDetailsFirebase } from "@/types/league.types";
 import AnimationClassHook from "@/utils/hooks/getAnimationClass/getAnimationClass";
-interface DataPropsQueueDetails {
-  data: QueueDetailsFirebase[];
-  leaguePath: string;
-}
+import useHTTPrequests from "@/utils/hooks/league/httpRequest";
+import { DataPropsQueueDetails } from "@/types/league.types";
 
 const LeagueSchedules: FC<DataPropsQueueDetails> = ({ data, leaguePath }) => {
   const { user } = useUserContext();
+  const { deleteQueueFirebase } = useHTTPrequests();
 
-  const handleDelete = async (
-    id: string,
-    host: string,
-    guest: string,
-    guestScore: number,
-    hostScore: number
-  ) => {
-    const docRef = doc(db, `${leaguePath}`, id);
-    try {
-      await deleteDoc(docRef);
-      toast.success(
-        `Usunieto spotkanie \n ${host}:${hostScore} vs ${guest}:${guestScore}`,
-        {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        }
-      );
-    } catch (error) {
-      toast.error(`Błąd przy usuwaniu dokumentu: ${error}`, {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    }
-  };
   const slideInFirst = "showAnimationDelay";
   const slideInSecond = "slideOut";
   const { ref, getShowAnimationClass } = AnimationClassHook(
     slideInFirst,
     slideInSecond
   );
+
+  const handleDeleteQueueFirebase = (
+    id: string,
+    host: string,
+    guest: string,
+    guestScore: number,
+    hostScore: number
+  ) => {
+    deleteQueueFirebase(id, host, guest, guestScore, hostScore, leaguePath);
+  };
 
   return (
     <section
@@ -118,7 +87,7 @@ const LeagueSchedules: FC<DataPropsQueueDetails> = ({ data, leaguePath }) => {
                         className={styles.deleteButton}
                         key={item.id}
                         onClick={() =>
-                          handleDelete(
+                          handleDeleteQueueFirebase(
                             item.id,
                             item.host,
                             item.guest,

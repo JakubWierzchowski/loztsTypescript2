@@ -3,7 +3,6 @@ import TournamentsTable from "@/components/Calendar/Tournaments/TournamentsTable
 import React, { FC, useState, useEffect } from "react";
 import CalendarDate from "@/data/calendarDate.json";
 import {
-  CalendarTypeMonth,
   CalendarTypeTournaments,
   CalendarTypeDetails,
   CalendarTournamentPageProps,
@@ -11,35 +10,14 @@ import {
 import styles from "@/components/Calendar/table.module.scss";
 import Clock from "@/components/Calendar/Tournaments/Clock/Clock";
 import AnimationClassHook from "@/utils/hooks/getAnimationClass/getAnimationClass";
+import { useFetchCalendar } from "@/utils/hooks/calendar/calendarFetchHook";
 
 export default function Tournaments({ params }: CalendarTournamentPageProps) {
   const pathTournament = params.tournamentsId;
   const [timeDone, setTimeDone] = useState<boolean>(false);
-  const data: CalendarTypeMonth[] | CalendarTypeMonth = CalendarDate;
 
-  const findTournaments: (CalendarTypeDetails | undefined)[] = data.map(
-    (item) =>
-      item.details.find((tournament) => tournament.link === pathTournament)
-  );
-
-  const [actualData, setActualData] = useState(findTournaments);
-
-  async function fetchData() {
-    try {
-      const response = await fetch(`/api/calendar/${pathTournament}`);
-      const data = await response.json();
-      setActualData(data);
-    } catch (error) {
-      console.error("Wystąpił błąd podczas pobierania danych:", error);
-    }
-  }
-  useEffect(() => {
-    fetchData();
-  }, []);
-
-  const filteredTournaments: CalendarTypeDetails[] = actualData.filter(
-    (item): item is CalendarTypeDetails => item !== undefined
-  );
+  const { title, fetchData, filteredTournaments, actualData } =
+    useFetchCalendar(pathTournament);
 
   const slideInFirst = "showAnimationDelay";
   const slideInSecond = "";
@@ -47,8 +25,6 @@ export default function Tournaments({ params }: CalendarTournamentPageProps) {
     slideInFirst,
     slideInSecond
   );
-
-  const title = actualData.find((item) => item?.title);
 
   return (
     <>

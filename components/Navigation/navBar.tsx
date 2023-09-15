@@ -42,8 +42,8 @@ const Navbar: React.FC<NavbarProps> = ({ pathname }) => {
   return (
     <section className="header">
       <Wrapper
-        background={scrollValue < scrollPath}
-        paddingTop={scrollValue < scrollPath}
+      // background={scrollValue < scrollPath}
+      // paddingTop={scrollValue < scrollPath}
       >
         <motion.nav
           style={{

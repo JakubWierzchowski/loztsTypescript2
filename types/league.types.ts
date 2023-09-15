@@ -95,3 +95,8 @@ export interface QueueResultProps {
   firebaseLeague: any;
   fetchData: () => void;
 }
+
+export interface DataPropsQueueDetails {
+  data: QueueDetailsFirebase[];
+  leaguePath: string;
+}

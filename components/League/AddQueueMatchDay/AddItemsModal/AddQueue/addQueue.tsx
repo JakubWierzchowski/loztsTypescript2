@@ -6,7 +6,7 @@ import { useForm, FieldErrors } from "react-hook-form";
 import { QueueDetails, LeagueDetail } from "@/types/league.types";
 import UploadIcon from "@/public/upload.png";
 import styled from "@/utils/hooks/getAnimationClass/getAnimationStyles.module.scss";
-import useHTTPrequests from "@/utils/hooks/league/HTTPrequest";
+import useHTTPrequests from "@/utils/hooks/league/httpRequest";
 import { AddQueueProps, FormValuesFirebase } from "@/types/league.types";
 
 const AddQueue: FC<AddQueueProps> = ({

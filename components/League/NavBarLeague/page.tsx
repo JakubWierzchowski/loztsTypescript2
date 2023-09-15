@@ -6,7 +6,6 @@ import styles from "./navBarLeague.module.scss";
 import AnimationClassHook from "@/utils/hooks/getAnimationClass/getAnimationClass";
 
 const NavBarLeague = ({ leaguePath }: { leaguePath: string }) => {
-  // const NavBarLeague = ({ leaguePath }):string => {
   const slideInFirst = "slideIn";
   const slideInSecond = "slideOut";
 

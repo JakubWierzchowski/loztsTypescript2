@@ -87,3 +87,30 @@ export interface CalendarItemPropsMainPage {
 export interface CalendarTournamentPageProps {
   params: { tournamentsId: string };
 }
+
+export interface ModalAddPlayerProps {
+  isOpen: boolean;
+  handleClose: () => void;
+  findTournaments: (CalendarTypeDetails | undefined)[];
+  tournaments: string;
+  fetchData: () => void;
+}
+
+export type FormValuesAddPlayer = {
+  zawodnicy: string;
+  klub: string;
+  kategoria: string;
+};
+
+export type FormValuesSubmit = {
+  addLeagueMatchday: string;
+};
+
+export type FormValuesFirebase = {
+  host: string;
+  guest: string;
+  hostScore: string;
+  guestScore: string;
+  queueNumber: string;
+  img?: FileList;
+};

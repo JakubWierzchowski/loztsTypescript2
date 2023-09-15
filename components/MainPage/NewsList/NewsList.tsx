@@ -6,7 +6,7 @@ import Modal from "./NewListModal";
 import { useUserContext } from "@/utils/context/AuthContext";
 import Logo from "../../../public/images/header/logo.png";
 import { useFetch } from "@/utils/hooks/mainPage/fetchDataHook";
-import useDeleteArtykul from "@/utils/hooks/mainPage/HTTPrequestNewList";
+import useDeleteArtykul from "@/utils/hooks/mainPage/httpRequestNewList";
 
 function NewsList() {
   const { user } = useUserContext();

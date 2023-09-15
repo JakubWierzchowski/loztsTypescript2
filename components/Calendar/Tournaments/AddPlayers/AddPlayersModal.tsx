@@ -1,28 +1,17 @@
 "use client";
-import React, { FC, useEffect } from "react";
-import { CalendarTypeDetails } from "@/types/calendar.type";
+import React, { FC } from "react";
 import ReactModal from "react-modal";
 import styles from "./addplayers.module.scss";
-import { FieldError, useForm, FieldErrors } from "react-hook-form";
-import { toast } from "react-toastify";
+import { useForm, FieldErrors } from "react-hook-form";
 import { useUserContext } from "@/utils/context/AuthContext";
 import styled from "@/utils/hooks/getAnimationClass/getAnimationStyles.module.scss";
+import {
+  ModalAddPlayerProps,
+  FormValuesAddPlayer,
+} from "@/types/calendar.type";
+import useHTTPrequests from "@/utils/hooks/calendar/httpRequestCalendar";
 
-interface ClockProps {
-  isOpen: boolean;
-  handleClose: () => void;
-  findTournaments: (CalendarTypeDetails | undefined)[];
-  tournaments: string;
-  fetchData: () => void;
-}
-
-type FormValues = {
-  zawodnicy: string;
-  klub: string;
-  kategoria: string;
-};
-
-const Modal: FC<ClockProps> = ({
+const Modal: FC<ModalAddPlayerProps> = ({
   findTournaments,
   handleClose,
   isOpen,
@@ -30,9 +19,10 @@ const Modal: FC<ClockProps> = ({
   fetchData,
 }) => {
   const { user } = useUserContext();
+  const { onSubmit } = useHTTPrequests();
   const initialMail = user?.email;
 
-  const form = useForm<FormValues>({
+  const form = useForm<FormValuesAddPlayer>({
     defaultValues: {
       zawodnicy: "",
       klub: "",
@@ -40,78 +30,20 @@ const Modal: FC<ClockProps> = ({
     },
   });
   const { register, handleSubmit, formState, reset } = form;
-  const { errors, isSubmitSuccessful } = formState;
+  const { errors, isSubmitSuccessful, isSubmitted } = formState;
 
-  const onSubmit = async (data: FormValues) => {
-    try {
-      const reqBody = {
-        club: data.klub,
-        player: data.zawodnicy,
-        turnament: tournaments,
-        gender: data.kategoria,
-        users: user?.email,
-      };
-      const response = await fetch(`/api/calendar`, {
-        method: "POST",
-        body: JSON.stringify(reqBody),
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
-      // if (!response.ok) throw new Error(`Error: ${response.status}`);
-      const Apidata = await response.json();
-      fetchData();
-      handleClose();
-      if (Apidata.status === 409) {
-        toast.error(`${Apidata.message} - ${Apidata.newPlayer.player}`, {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      }
-      toast.success(`${Apidata.message} - ${Apidata.player.player}`, {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    } catch (e: any) {
-      if (e.message === "Error: 500") {
-        console.log("bład");
-        toast.error(`Ups.. Coś poszło nie tak`, {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      }
+  const handleAddPlayer = (data: FormValuesAddPlayer) => {
+    onSubmit(data, tournaments);
+    fetchData();
+    handleClose();
+    if (isSubmitted) {
+      reset();
     }
   };
-  const onError = (errors: FieldErrors<FormValues>) => {
+
+  const onError = (errors: FieldErrors<FormValuesAddPlayer>) => {
     console.log("Form errors", errors);
   };
-  useEffect(() => {
-    if (isSubmitSuccessful) {
-      reset({
-        zawodnicy: "",
-        klub: "",
-        kategoria: "Wybierz kategorię",
-      });
-    }
-  }, [isSubmitSuccessful, reset]);
 
   return (
     <>
@@ -127,7 +59,7 @@ const Modal: FC<ClockProps> = ({
         <section className={styles.wrapperForm}>
           <form
             className={styles.form}
-            onSubmit={handleSubmit(onSubmit, onError)}
+            onSubmit={handleSubmit(handleAddPlayer, onError)}
             noValidate
           >
             <div className={`${styles.formSection}  ${styled.slideIn}`}>

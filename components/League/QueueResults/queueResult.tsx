@@ -3,7 +3,7 @@ import styles from "./queueResult.module.scss";
 import { useUserContext } from "@/utils/context/AuthContext";
 import QueueResultTable from "./QueueResultTable/queueResultTable";
 import AnimationClassHook from "@/utils/hooks/getAnimationClass/getAnimationClass";
-import useHTTPrequests from "@/utils/hooks/league/HTTPrequest";
+import useHTTPrequests from "@/utils/hooks/league/httpRequest";
 import { QueueResultProps } from "@/types/league.types";
 
 const QueueSchudle: FC<QueueResultProps> = ({
@@ -17,7 +17,7 @@ const QueueSchudle: FC<QueueResultProps> = ({
   const sortDate = findLeague?.queueDetails.sort((a, b) =>
     a.day > b.day ? -1 : 0
   );
-  const firstSortDateItem = sortDate ? sortDate[0]?.matchDay : "";
+  const firstSortDateItem = sortDate ? sortDate[1]?.matchDay : "";
   const [details, setDetails] = useState(firstSortDateItem);
   const [activeDay, setActiveDay] = useState(firstSortDateItem);
   if (!findLeague) {

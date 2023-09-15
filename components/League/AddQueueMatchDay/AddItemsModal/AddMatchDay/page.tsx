@@ -1,9 +1,8 @@
-import React, { FC, useEffect } from "react";
-import { toast } from "react-toastify";
+import React, { FC } from "react";
 import styles from "../addQueueModal.module.scss";
 import styled from "@/utils/hooks/getAnimationClass/getAnimationStyles.module.scss";
 import { useForm, FieldErrors } from "react-hook-form";
-import useHTTPrequests from "@/utils/hooks/league/HTTPrequest";
+import useHTTPrequests from "@/utils/hooks/league/httpRequest";
 import {
   AddLeagueMatchdayProps,
   FormValuesDataMatch,

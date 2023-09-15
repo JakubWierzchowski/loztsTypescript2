@@ -1,9 +1,9 @@
 import React from "react";
 import styles from "../table.module.scss";
 import { CalendarTournamentProps } from "@/types/calendar.type";
-import { toast } from "react-toastify";
 import { useUserContext } from "@/utils/context/AuthContext";
 import AnimationClassHook from "@/utils/hooks/getAnimationClass/getAnimationClass";
+import useHTTPrequests from "@/utils/hooks/calendar/httpRequestCalendar";
 const TournamentsTable: React.FC<CalendarTournamentProps> = ({
   details,
   title,
@@ -13,30 +13,7 @@ const TournamentsTable: React.FC<CalendarTournamentProps> = ({
   fetchData,
 }) => {
   const { user } = useUserContext();
-  async function deletePlayer(id: string) {
-    try {
-      const response = await fetch(`/api/calendar/${pathTournament}/${id}`, {
-        method: "DELETE",
-      });
-      const data = await response.json();
-      {
-        fetchData && fetchData();
-      }
-      const Player = data.filterPlayer?.find((item: string) => item);
-      toast.success(`${data.message} ${Player.player}`, {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
-    } catch (error) {
-      console.error("Wystąpił błąd podczas usuwania artykułu:", error);
-    }
-  }
+  const { deletePlayer } = useHTTPrequests();
 
   const slideInFirst = "slideIn";
   const slideInSecond = "slideOut";
@@ -44,6 +21,11 @@ const TournamentsTable: React.FC<CalendarTournamentProps> = ({
     slideInFirst,
     slideInSecond
   );
+
+  const handleDeletePlayer = (id: string) => {
+    deletePlayer(id, pathTournament);
+    fetchData();
+  };
 
   return (
     <section
@@ -86,7 +68,7 @@ const TournamentsTable: React.FC<CalendarTournamentProps> = ({
                 ) : user?.email === item.users ? (
                   <button
                     className={styles.deleteButton}
-                    onClick={() => item.id && deletePlayer(item.id)}
+                    onClick={() => item.id && handleDeletePlayer(item.id)}
                   >
                     Usuń
                   </button>
