@@ -1,6 +1,7 @@
 export interface DownloadData {
   month?: string;
   download?: DownloadItem[];
+  apiLink?: string;
 }
 
 export interface DownloadItem {

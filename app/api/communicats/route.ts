@@ -70,7 +70,6 @@ export async function POST(request: NextRequest, res: any) {
     const existingCategory = komunikatyData.find(
       (item: any) => item.month === month
     );
-    const MAX_FILE_SIZE = 2 * 1024 * 1024;
 
     if (
       existingCategory &&

@@ -11,7 +11,6 @@ interface ModalProps {
 
 const Additems: FC<ModalProps> = ({ data }) => {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
-  // const [uploading, setUploading] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
   const [month, setMonth] = useState("Wybierz kategorię");
 
@@ -82,6 +81,7 @@ const Additems: FC<ModalProps> = ({ data }) => {
   const handleInputChange = (event: ChangeEvent<HTMLSelectElement>) => {
     setMonth(event.target.value);
   };
+
   return (
     <section className={styles.wrapper}>
       <form onSubmit={handleUpload} className="form">
