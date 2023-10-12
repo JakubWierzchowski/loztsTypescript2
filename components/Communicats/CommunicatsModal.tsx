@@ -2,25 +2,24 @@
 import { FC } from "react";
 import Link from "next/link";
 import styles from "@/components/Communicats/communicatsModal.module.scss";
-import { DownloadDetails } from "@/types/communicats.type";
 import ReactModal from "react-modal";
-import { toast } from "react-toastify";
-
-interface ModalProps {
-  isOpen: boolean;
-  handleClose: () => void;
-  data: DownloadDetails[] | undefined;
-  user?: { email: string } | undefined;
-  deletePlayer: (id: string) => void;
-}
-
-const CommunicatsModal: FC<ModalProps> = ({
+import { CommunicatsModalProps } from "@/types/communicats.type";
+import useHttpRequest from "@/utils/hooks/communicats/httpRequest";
+import { useFetchCommunicats } from "@/utils/hooks/communicats/fetchData";
+const CommunicatsModal: FC<CommunicatsModalProps> = ({
   data,
   handleClose,
   isOpen,
   user,
-  deletePlayer,
+  category,
 }) => {
+  const { deleteCommunicat } = useHttpRequest(category);
+  const { fetchData } = useFetchCommunicats();
+  const handleDeleteCommunicat = (id: string) => {
+    deleteCommunicat(id);
+    fetchData(category);
+  };
+
   return (
     <>
       <ReactModal
@@ -55,7 +54,7 @@ const CommunicatsModal: FC<ModalProps> = ({
                 {user?.email === "lozts1937@gmail.com" ? (
                   <button
                     className={styles.deleteButton}
-                    onClick={() => deletePlayer(item.id)}
+                    onClick={() => handleDeleteCommunicat(item.id)}
                   >
                     Usuń
                   </button>

@@ -4,11 +4,9 @@ import LeagueMainTableComponent from "@/components/League/MainTableLeague/League
 import ArchivesDataLeague from "@/data/archivesLeague.json";
 import { LeagueSeason } from "@/types/archivesLeague";
 import styles from "@/components/League/MainTableLeague/leagueMainTable.module.scss";
-interface pageProps {
-  params: { liga: string };
-}
+import { archivesPropsLeague } from "@/types/league.types";
 
-export default function ArchiwumLiga({ params }: pageProps) {
+export default function ArchiwumLiga({ params }: archivesPropsLeague) {
   const data: LeagueSeason[] = ArchivesDataLeague.ligaArchiwum;
 
   const findArchives = data.find((sezon) => sezon.sezon === params.liga);

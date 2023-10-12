@@ -17,3 +17,17 @@ export interface DownloadDetails {
   fileName: string;
   link: string;
 }
+
+export interface CommunicatsModalProps {
+  isOpen: boolean;
+  handleClose: () => void;
+  data: DownloadDetails[] | undefined;
+  user?: { email: string } | undefined;
+  category: string;
+  deleteCommunicat?: (id: string) => void;
+}
+
+export interface HandleUpdateProps {
+  data: DownloadData[];
+  category: string;
+}

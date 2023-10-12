@@ -6,11 +6,9 @@ import NavBarLeague from "@/components/League/NavBarLeague/page";
 import AddMatchDayQueue from "@/components/League/AddQueueMatchDay/page";
 import QueueResult from "@/components/League/QueueResults/queueResult";
 import useFetchHook from "@/utils/hooks/league/fetchHook";
-interface pageProps {
-  params: { liga: string };
-}
+import { ligaPageDetails } from "@/types/league.types";
 
-export default function Liga({ params }: pageProps) {
+export default function Liga({ params }: ligaPageDetails) {
   const pathName = params.liga;
   const { fetchData, actualData, Liga } = useFetchHook(pathName);
 

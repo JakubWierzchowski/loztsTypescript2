@@ -1,9 +1,5 @@
 @import "../../app//variable.scss";
 
-// imageSection
-// imageBox
-// galleryImgModal
-
 .modalWrapper {
   position: absolute;
   margin: auto;
@@ -47,15 +43,6 @@
   margin-top: 50px;
   font-size: $size-tableTitleMobile;
 }
-
-// @keyframes showAnimation {
-//   from {
-//     opacity: 0;
-//   }
-//   to {
-//     opacity: 1;
-//   }
-// }
 
 @keyframes imgScale {
   0% {
@@ -104,12 +91,8 @@
 
 .image {
   margin: 0 auto;
-  // object-fit: contain;
-  // width: 100% !important;
-  // position: relative !important;
-  // height: unset !important;
+
   &:hover {
-    //   animation: 0.2s ease-out forwards ${showBox};
     overflow: hidden;
   }
 }
@@ -131,53 +114,6 @@
       width: 100% !important;
     }
   }
-}
-
-// .imageSection {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   margin: 0 auto;
-//   width: 90%;
-//   height: 90%;
-
-//   // animation: 0.2s ease-in 1 forwards ${showBox};
-//   > div {
-//     // position: relative !important;
-//   }
-// }
-// .imageBox {
-//   width: 10% !important;
-// }
-// .galleryImgModal {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   object-fit: cover !important;
-//   margin: 0 auto;
-//   width: 100% !important;
-//   // position: relative;
-//   height: unset !important;
-// }
-
-.next {
-  position: absolute;
-  margin-right: 40px;
-  top: 50%;
-  right: 0;
-  width: 3rem;
-  height: 3rem;
-  z-index: 20;
-}
-
-.prev {
-  position: absolute;
-  top: 50%;
-  margin-left: 40px;
-  left: 0px;
-  width: 3rem;
-  height: 3rem;
-  z-index: 20;
 }
 
 @media #{$tablet} {
@@ -203,14 +139,6 @@
     max-width: 100%;
     max-height: 100%;
   }
-  .next {
-    width: 4rem;
-    height: 4rem;
-  }
-  .prev {
-    width: 4rem;
-    height: 4rem;
-  }
 }
 
 @media #{$desktop} {
@@ -223,14 +151,6 @@
   .wrapper {
     columns: 3;
   }
-  .next {
-    width: 6rem;
-    height: 6rem;
-  }
-  .prev {
-    width: 6rem;
-    height: 6rem;
-  }
 }
 @media #{$bigDesktop} {
   .modalCloseButton {
@@ -242,13 +162,5 @@
   .wrapper {
     padding: 15px;
     columns: 3;
-  }
-  .next {
-    width: 7rem;
-    height: 7rem;
-  }
-  .prev {
-    width: 7rem;
-    height: 7rem;
   }
 }

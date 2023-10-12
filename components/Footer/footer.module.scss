@@ -1,0 +1,24 @@
+@import "../../app/variable.scss";
+.footerWrapper {
+  border-top: 0.4px solid #d1cdce49;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 10px 0;
+}
+
+.footerDetails {
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  text-align: center;
+  margin: 0 auto;
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}

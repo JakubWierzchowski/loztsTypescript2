@@ -100,3 +100,10 @@ export interface DataPropsQueueDetails {
   data: QueueDetailsFirebase[];
   leaguePath: string;
 }
+
+export interface ligaPageDetails {
+  params: { liga: string };
+}
+export interface archivesPropsLeague {
+  params: { liga: string };
+}

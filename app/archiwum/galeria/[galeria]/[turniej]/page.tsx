@@ -5,12 +5,10 @@ import useModal from "@/utils/hooks/useModal/useModal";
 import { GallerySeason } from "@/types/archivesGallery.type";
 import Image from "next/image";
 import styles from "@/components/ArchivesGallery/archivesGalleryTurnament.module.scss";
-import GalleryModal from "../../../../../components/ArchivesGallery/ArchivesGalleryModal";
-interface pageProps {
-  params: { turniej: string };
-}
+import GalleryModal from "@/components/newGallery/galleryModal";
+import { GalleryTournamentsProps } from "@/types/gallery.type";
 
-export default function GaleriaArchiwum({ params }: pageProps) {
+export default function GaleriaArchiwum({ params }: GalleryTournamentsProps) {
   const data: GallerySeason[] = ArchivesDataGallery.archiveGallery;
 
   const [findArchivesGallery] = data
@@ -23,8 +21,6 @@ export default function GaleriaArchiwum({ params }: pageProps) {
     setSlideNumber(index);
     handleOpenModal();
   };
-  // const imgMapping = findArchivesGallery?.link[slideNumber]?.img || "";
-
   const slider: number = findArchivesGallery?.link.length || 0;
   const prevSlide = () => {
     slideNumber === 0
@@ -36,10 +32,7 @@ export default function GaleriaArchiwum({ params }: pageProps) {
       ? setSlideNumber(slider)
       : setSlideNumber(slideNumber + 1);
   };
-
   const lastSlide = findArchivesGallery?.link.length || 0;
-
-  console.log(findArchivesGallery);
 
   return (
     <>
@@ -66,9 +59,6 @@ export default function GaleriaArchiwum({ params }: pageProps) {
           images={findArchivesGallery}
           isOpen={isOpen}
           handleCloseModal={handleCloseModal}
-          prevSlide={prevSlide}
-          nextSlide={nextSlide}
-          lastSlide={lastSlide}
           slideNumber={slideNumber}
         />
       </section>

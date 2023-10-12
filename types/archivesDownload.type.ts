@@ -19,3 +19,7 @@ export interface DownloadDetailsProps {
   index?: number;
   details: DownloadDetails[];
 }
+
+export interface archivesPropsCommunicats {
+  params: { komunikaty: string };
+}

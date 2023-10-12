@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 import { UserContextProvider } from "@/utils/context/AuthContext";
 import { Suspense } from "react";
 import Loading from "./loading";
+import Footer from "@/components/Footer/footer";
 const montserrat = Montserrat({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
@@ -29,6 +30,7 @@ export default function RootLayout({
             <Suspense fallback={<Loading />}>
               <Navi />
               {children}
+              <Footer />
             </Suspense>
           </UserContextProvider>
           <ToastContainer />

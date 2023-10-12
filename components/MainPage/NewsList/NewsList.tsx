@@ -14,7 +14,7 @@ function NewsList() {
   const { newArticle, currentInfo, fetchData, handleOpenInfo } = useFetch();
   const { isOpen, handleOpenModal, handleCloseModal } = useModal();
 
-  const handleDeleteArtykul = (id: string) => {
+  const handleDeleteArticle = (id: string) => {
     deleteArtykul(id);
     fetchData();
   };
@@ -81,7 +81,7 @@ function NewsList() {
                   <button
                     className={styles.deleteButton}
                     type="button"
-                    onClick={() => handleDeleteArtykul(currentInfo.id)}
+                    onClick={() => handleDeleteArticle(currentInfo.id)}
                   >
                     Usuń informację
                   </button>

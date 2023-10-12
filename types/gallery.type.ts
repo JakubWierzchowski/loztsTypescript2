@@ -14,3 +14,11 @@ export interface GalleryDetails {
 export interface GalleryDetailsPhotos {
   src: string;
 }
+
+export interface galleryProps {
+  params: { gallery: string };
+}
+
+export interface GalleryTournamentsProps {
+  params: { turniej: string };
+}

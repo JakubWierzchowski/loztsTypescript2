@@ -5,7 +5,7 @@ import useModal from "@/utils/hooks/useModal/useModal";
 import { GallerySeason } from "@/types/gallery.type";
 import Image from "next/image";
 import styles from "@/components/newGallery/galleryTurnament.module.scss";
-import GalleryModal from "@/components/ArchivesGallery/ArchivesGalleryModal";
+import GalleryModal from "@/components/newGallery/galleryModal";
 import { staticBlurDataUrl } from "@/utils/staticBlurDataURL";
 interface pageProps {
   params: { gallery: string };
@@ -24,22 +24,6 @@ export default function Gallery({ params }: pageProps) {
     setSlideNumber(index);
     handleOpenModal();
   };
-
-  // const imgMapping = findTurnament?.link[slideNumber]?.img || "";
-
-  const slider: number = findTurnament?.link.length || 0;
-  const prevSlide = () => {
-    slideNumber === 0
-      ? setSlideNumber(slider)
-      : setSlideNumber(slideNumber - 1);
-  };
-  const nextSlide = () => {
-    slideNumber === slider
-      ? setSlideNumber(slider)
-      : setSlideNumber(slideNumber + 1);
-  };
-
-  const lastSlide = findTurnament?.link.length || 0;
 
   return (
     <>
@@ -67,14 +51,10 @@ export default function Gallery({ params }: pageProps) {
             </div>
           </div>
         ))}
-
         <GalleryModal
           isOpen={isOpen}
           handleCloseModal={handleCloseModal}
           images={findTurnament}
-          prevSlide={prevSlide}
-          nextSlide={nextSlide}
-          lastSlide={lastSlide}
           slideNumber={slideNumber}
         />
       </section>

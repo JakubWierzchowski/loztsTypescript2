@@ -1,4 +1,4 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 import styles from "./queueResult.module.scss";
 import { useUserContext } from "@/utils/context/AuthContext";
 import QueueResultTable from "./QueueResultTable/queueResultTable";
@@ -19,6 +19,7 @@ const QueueSchudle: FC<QueueResultProps> = ({
   );
   const firstSortDateItem = sortDate ? sortDate[1]?.matchDay : "";
   const [details, setDetails] = useState(firstSortDateItem);
+
   const [activeDay, setActiveDay] = useState(firstSortDateItem);
   if (!findLeague) {
     return <div>Loading...</div>;

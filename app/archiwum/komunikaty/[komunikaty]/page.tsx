@@ -2,11 +2,11 @@ import React from "react";
 import ArchivesDataDownload from "@/data/archivesDownload.json";
 import { DownloadSeason } from "@/types/archivesDownload.type";
 import Komunikaty from "@/components/ArchivesDownload/page";
+import { archivesPropsCommunicats } from "@/types/archivesDownload.type";
 
-interface pageProps {
-  params: { komunikaty: string };
-}
-export default function ArchiwumKomunikaty({ params }: pageProps) {
+export default function ArchiwumKomunikaty({
+  params,
+}: archivesPropsCommunicats) {
   const data: DownloadSeason[] = ArchivesDataDownload.komunikatyArchiwum;
 
   const findArchivesDownload = data.find(
