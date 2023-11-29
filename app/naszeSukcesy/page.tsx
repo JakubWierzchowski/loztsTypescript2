@@ -1,8 +1,8 @@
-import React from "react";
-import Successes from "../../data/ourSuccesses.json";
-import OurSuccess from "@/components/OurSuccesses/ourSuccesses";
-import { SuccessDetails } from "@/types/ourSuccesses.type";
-import styles from "../../components/OurSuccesses/ourSuccesses.module.scss";
+import React from 'react';
+import Successes from '../../data/ourSuccesses.json';
+import OurSuccess from '@/components/OurSuccesses/ourSuccesses';
+import { SuccessDetails } from '@/types/ourSuccesses.type';
+import styles from '../../components/OurSuccesses/ourSuccesses.module.scss';
 
 export default async function OurSuccesses() {
   const data: SuccessDetails[] = Successes.successes;

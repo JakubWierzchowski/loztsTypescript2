@@ -11,7 +11,7 @@
   table-layout: fixed;
   text-align: center;
   line-height: 12px;
-  margin-bottom: 300px;
+  margin-bottom: 10px;
 }
 .thead {
   color: $white;
@@ -97,9 +97,11 @@
   .title {
     font-size: 3.4rem;
   }
+
   .tableTitle {
     font-size: $size-tableTitleDesktop;
   }
+
   .thead {
     font-size: $size-tableHeadDesktop;
   }

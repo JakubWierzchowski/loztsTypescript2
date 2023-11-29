@@ -5,330 +5,118 @@
       "sezon": "Sezon 2022/2023 r.",
       "data": [
         {
-          "ID": "Podium2023r.",
-          "text": "Podium 2023r.",
-          "firstPhoto": "images/turnaments/Podium2023/20.jpeg",
-          "link": [
-            { "id": 1, "src": "/images/turnaments/Podium2023/1.jpeg" },
-            { "id": 2, "src": "/images/turnaments/Podium2023/2.jpeg" },
-            { "id": 3, "src": "/images/turnaments/Podium2023/3.jpeg" },
-            { "id": 4, "src": "/images/turnaments/Podium2023/4.jpeg" },
-            { "id": 5, "src": "/images/turnaments/Podium2023/5.jpeg" },
-            { "id": 6, "src": "/images/turnaments/Podium2023/6.jpeg" },
-            { "id": 7, "src": "/images/turnaments/Podium2023/7.jpeg" },
-            { "id": 8, "src": "/images/turnaments/Podium2023/8.jpeg" },
-            { "id": 9, "src": "/images/turnaments/Podium2023/9.jpeg" },
-            { "id": 10, "src": "/images/turnaments/Podium2023/10.jpeg" },
-            { "id": 11, "src": "/images/turnaments/Podium2023/11.jpeg" },
-            { "id": 12, "src": "/images/turnaments/Podium2023/12.jpeg" },
-            { "id": 13, "src": "/images/turnaments/Podium2023/13.jpeg" },
-            { "id": 14, "src": "/images/turnaments/Podium2023/14.jpeg" },
-            { "id": 15, "src": "/images/turnaments/Podium2023/15.jpeg" },
-            { "id": 16, "src": "/images/turnaments/Podium2023/16.jpeg" },
-            { "id": 17, "src": "/images/turnaments/Podium2023/17.jpeg" },
-            { "id": 18, "src": "/images/turnaments/Podium2023/18.jpeg" },
-            { "id": 19, "src": "/images/turnaments/Podium2023/19.jpeg" },
-            { "id": 20, "src": "/images/turnaments/Podium2023/20.jpeg" },
-            { "id": 21, "src": "/images/turnaments/Podium2023/21.jpeg" },
-
-            { "id": 22, "src": "/images/turnaments/Podium2023/22.jpeg" },
-            { "id": 23, "src": "/images/turnaments/Podium2023/23.jpeg" },
-            { "id": 24, "src": "/images/turnaments/Podium2023/24.jpeg" },
-            { "id": 25, "src": "/images/turnaments/Podium2023/25.jpeg" },
-            { "id": 26, "src": "/images/turnaments/Podium2023/26.jpeg" },
-            { "id": 27, "src": "/images/turnaments/Podium2023/27.jpeg" },
-            { "id": 28, "src": "/images/turnaments/Podium2023/28.jpeg" },
-            { "id": 29, "src": "/images/turnaments/Podium2023/29.jpeg" },
-            { "id": 30, "src": "/images/turnaments/Podium2023/30.jpeg" },
-            { "id": 31, "src": "/images/turnaments/Podium2023/31.jpeg" },
-            { "id": 32, "src": "/images/turnaments/Podium2023/32.jpeg" },
-            { "id": 33, "src": "/images/turnaments/Podium2023/33.jpeg" },
-            { "id": 34, "src": "/images/turnaments/Podium2023/34.jpeg" },
-            { "id": 35, "src": "/images/turnaments/Podium2023/35.jpeg" },
-            { "id": 36, "src": "/images/turnaments/Podium2023/36.jpeg" },
-            { "id": 37, "src": "/images/turnaments/Podium2023/37.jpeg" },
-            { "id": 38, "src": "/images/turnaments/Podium2023/38.jpeg" },
-            { "id": 39, "src": "/images/turnaments/Podium2023/39.jpeg" },
-            { "id": 40, "src": "/images/turnaments/Podium2023/40.jpeg" },
-            { "id": 41, "src": "/images/turnaments/Podium2023/41.jpeg" },
-            { "id": 42, "src": "/images/turnaments/Podium2023/42.jpeg" },
-            { "id": 43, "src": "/images/turnaments/Podium2023/43.jpeg" },
-            { "id": 44, "src": "/images/turnaments/Podium2023/44.jpeg" },
-            { "id": 45, "src": "/images/turnaments/Podium2023/45.jpeg" },
-            { "id": 46, "src": "/images/turnaments/Podium2023/46.jpeg" },
-            { "id": 47, "src": "/images/turnaments/Podium2023/47.jpeg" },
-            { "id": 48, "src": "/images/turnaments/Podium2023/48.jpeg" },
-            { "id": 49, "src": "/images/turnaments/Podium2023/49.jpeg" },
-            { "id": 50, "src": "/images/turnaments/Podium2023/50.jpeg" }
-          ]
-        },
-        {
-          "ID": "IIIWTKSeniorow7.01.2023r",
-          "text": "III WTK seniorow 7.01.2023 r",
-          "firstPhoto": "images/turnaments/IIIWTKSeniorow7.01.2023//15.jpeg",
+          "ID": "IWTKDzierzkowice9Pazdziernik2023",
+          "text": "I WTK młodzików, juniorów, seniorów i DUMW 2023 - Dzierzkowice 9-10.09.2023 r.",
+          "firstPhoto": "images/turnaments/IWTKdzierzkowice9pazdziernik2023/21.jpeg",
           "link": [
             {
               "id": 1,
-              "src": "/images/turnaments/IIIWTKSeniorow7.01.2023/1.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/1.jpeg"
             },
             {
               "id": 2,
-              "src": "/images/turnaments/IIIWTKSeniorow7.01.2023/2.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/2.jpeg"
             },
             {
               "id": 3,
-              "src": "/images/turnaments/IIIWTKSeniorow7.01.2023/3.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/3.jpeg"
             },
             {
               "id": 4,
-              "src": "/images/turnaments/IIIWTKSeniorow7.01.2023/4.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/4.jpeg"
             },
             {
               "id": 5,
-              "src": "/images/turnaments/IIIWTKSeniorow7.01.2023/5.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/5.jpeg"
             },
             {
               "id": 6,
-              "src": "/images/turnaments/IIIWTKSeniorow7.01.2023/6.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/6.jpeg"
             },
             {
               "id": 7,
-              "src": "/images/turnaments/IIIWTKSeniorow7.01.2023/7.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/7.jpeg"
             },
             {
               "id": 8,
-              "src": "/images/turnaments/IIIWTKSeniorow7.01.2023/8.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/8.jpeg"
             },
             {
               "id": 9,
-              "src": "/images/turnaments/IIIWTKSeniorow7.01.2023/9.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/9.jpeg"
             },
             {
               "id": 10,
-              "src": "/images/turnaments/IIIWTKSeniorow7.01.2023/10.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/10.jpeg"
             },
             {
               "id": 11,
-              "src": "/images/turnaments/IIIWTKSeniorow7.01.2023/11.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/11.jpeg"
             },
             {
               "id": 12,
-              "src": "/images/turnaments/IIIWTKSeniorow7.01.2023/12.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/12.jpeg"
             },
             {
               "id": 13,
-              "src": "/images/turnaments/IIIWTKSeniorow7.01.2023/13.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/13.jpeg"
             },
             {
               "id": 14,
-              "src": "/images/turnaments/IIIWTKSeniorow7.01.2023/14.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/14.jpeg"
             },
             {
               "id": 15,
-              "src": "/images/turnaments/IIIWTKSeniorow7.01.2023/15.jpeg"
-            }
-          ]
-        },
-        {
-          "ID": "SzkolnyMikolajkowyTurniej",
-          "text": "Szkolny mikołajkowy turniej",
-          "firstPhoto": "images/turnaments/SzkolnyMikolajkowy/2.jpeg",
-          "link": [
-            { "id": 1, "src": "/images/turnaments/SzkolnyMikolajkowy/1.jpeg" },
-            { "id": 2, "src": "/images/turnaments/SzkolnyMikolajkowy/2.jpeg" },
-            { "id": 3, "src": "/images/turnaments/SzkolnyMikolajkowy/3.jpeg" },
-            { "id": 4, "src": "/images/turnaments/SzkolnyMikolajkowy/4.jpeg" },
-            { "id": 5, "src": "/images/turnaments/SzkolnyMikolajkowy/5.jpeg" },
-            { "id": 6, "src": "/images/turnaments/SzkolnyMikolajkowy/6.jpeg" },
-            { "id": 7, "src": "/images/turnaments/SzkolnyMikolajkowy/7.jpeg" },
-            { "id": 8, "src": "/images/turnaments/SzkolnyMikolajkowy/8.jpeg" },
-            { "id": 9, "src": "/images/turnaments/SzkolnyMikolajkowy/10.jpeg" },
-            {
-              "id": 10,
-              "src": "/images/turnaments/SzkolnyMikolajkowy/11.jpeg"
-            },
-            {
-              "id": 11,
-              "src": "/images/turnaments/SzkolnyMikolajkowy/12.jpeg"
-            },
-            {
-              "id": 12,
-              "src": "/images/turnaments/SzkolnyMikolajkowy/13.jpeg"
-            },
-            {
-              "id": 13,
-              "src": "/images/turnaments/SzkolnyMikolajkowy/14.jpeg"
-            },
-            {
-              "id": 14,
-              "src": "/images/turnaments/SzkolnyMikolajkowy/15.jpeg"
-            },
-            {
-              "id": 15,
-              "src": "/images/turnaments/SzkolnyMikolajkowy/16.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/15.jpeg"
             },
             {
               "id": 16,
-              "src": "/images/turnaments/SzkolnyMikolajkowy/17.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/16.jpeg"
             },
             {
               "id": 17,
-              "src": "/images/turnaments/SzkolnyMikolajkowy/18.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/17.jpeg"
             },
             {
               "id": 18,
-              "src": "/images/turnaments/SzkolnyMikolajkowy/19.jpeg"
-            },
-            { "id": 19, "src": "/images/turnaments/SzkolnyMikolajkowy/20.jpeg" }
-          ]
-        },
-        {
-          "ID": "IIWTKmlodzikowJuniorowSeniorow5.6.12.2022",
-          "text": "II WTK Młodzików, Juniorów, Seniorów 5-6.12.2022 r.",
-          "firstPhoto": "images/turnaments/IIWTKMJS/1.jpeg",
-          "link": [
-            { "id": 1, "src": "/images/turnaments/IIWTKMJS/1.jpeg" },
-            { "id": 2, "src": "/images/turnaments/IIWTKMJS/2.jpeg" },
-            { "id": 3, "src": "/images/turnaments/IIWTKMJS/3.jpeg" },
-            { "id": 4, "src": "/images/turnaments/IIWTKMJS/4.jpeg" },
-            { "id": 5, "src": "/images/turnaments/IIWTKMJS/5.jpeg" },
-            { "id": 6, "src": "/images/turnaments/IIWTKMJS/6.jpeg" },
-            { "id": 7, "src": "/images/turnaments/IIWTKMJS/7.jpeg" },
-            { "id": 8, "src": "/images/turnaments/IIWTKMJS/8.jpeg" },
-            { "id": 9, "src": "/images/turnaments/IIWTKMJS/9.jpeg" },
-            { "id": 10, "src": "/images/turnaments/IIWTKMJS/10.jpeg" },
-            { "id": 11, "src": "/images/turnaments/IIWTKMJS/11.jpeg" },
-            { "id": 12, "src": "/images/turnaments/IIWTKMJS/12.jpeg" },
-            { "id": 13, "src": "/images/turnaments/IIWTKMJS/13.jpeg" },
-            { "id": 14, "src": "/images/turnaments/IIWTKMJS/14.jpeg" },
-            { "id": 15, "src": "/images/turnaments/IIWTKMJS/15.jpeg" },
-            { "id": 16, "src": "/images/turnaments/IIWTKMJS/16.jpeg" },
-            { "id": 17, "src": "/images/turnaments/IIWTKMJS/17.jpeg" },
-            { "id": 18, "src": "/images/turnaments/IIWTKMJS/18.jpeg" },
-            { "id": 19, "src": "/images/turnaments/IIWTKMJS/19.jpeg" },
-            { "id": 20, "src": "/images/turnaments/IIWTKMJS/20.jpeg" },
-            { "id": 21, "src": "/images/turnaments/IIWTKMJS/21.jpeg" }
-          ]
-        },
-        {
-          "ID": "IWTKSeniorow18.09.2022",
-          "text": "IWTK Seniorów 18.09.2022 r.",
-          "firstPhoto": "images/turnaments/WTKSeniorowI18IX2022/1.jpeg",
-          "link": [
-            {
-              "id": 1,
-              "src": "/images/turnaments/WTKSeniorowI18IX2022/1.jpeg"
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/18.jpeg"
             },
             {
-              "id": 2,
-              "src": "/images/turnaments/WTKSeniorowI18IX2022/2.jpeg"
+              "id": 19,
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/19.jpeg"
             },
             {
-              "id": 3,
-              "src": "/images/turnaments/WTKSeniorowI18IX2022/3.jpeg"
+              "id": 20,
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/20.jpeg"
             },
             {
-              "id": 4,
-              "src": "/images/turnaments/WTKSeniorowI18IX2022/4.jpeg"
+              "id": 21,
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/21.jpeg"
+            },
+
+            {
+              "id": 22,
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/22.jpeg"
             },
             {
-              "id": 5,
-              "src": "/images/turnaments/WTKSeniorowI18IX2022/5.jpeg"
+              "id": 23,
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/23.jpeg"
             },
             {
-              "id": 6,
-              "src": "/images/turnaments/WTKSeniorowI18IX2022/6.jpeg"
+              "id": 24,
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/24.jpeg"
             },
             {
-              "id": 7,
-              "src": "/images/turnaments/WTKSeniorowI18IX2022/7.jpeg"
+              "id": 25,
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/25.jpeg"
             },
             {
-              "id": 8,
-              "src": "/images/turnaments/WTKSeniorowI18IX2022/8.jpeg"
+              "id": 26,
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/26.jpeg"
             },
             {
-              "id": 9,
-              "src": "/images/turnaments/WTKSeniorowI18IX2022/9.jpeg"
-            },
-            {
-              "id": 10,
-              "src": "/images/turnaments/WTKSeniorowI18IX2022/10.jpeg"
-            },
-            {
-              "id": 11,
-              "src": "/images/turnaments/WTKSeniorowI18IX2022/11.jpeg"
-            },
-            {
-              "id": 12,
-              "src": "/images/turnaments/WTKSeniorowI18IX2022/12.jpeg"
-            },
-            {
-              "id": 13,
-              "src": "/images/turnaments/WTKSeniorowI18IX2022/13.jpeg"
-            },
-            {
-              "id": 14,
-              "src": "/images/turnaments/WTKSeniorowI18IX2022/14.jpeg"
-            },
-            {
-              "id": 15,
-              "src": "/images/turnaments/WTKSeniorowI18IX2022/15.jpeg"
-            }
-          ]
-        },
-        {
-          "ID": "IWTKZakowIkadetow-10.09.2022",
-          "text": "I WTK zakow I kadetow - 10.09.2022 r.",
-          "firstPhoto": "images/turnaments/IWTKZakowKadetow10IX2022/12.jpeg",
-          "link": [
-            {
-              "id": 1,
-              "src": "/images/turnaments/IWTKZakowKadetow10IX2022/1.avif"
-            },
-            {
-              "id": 2,
-              "src": "/images/turnaments/IWTKZakowKadetow10IX2022/2.avif"
-            },
-            {
-              "id": 3,
-              "src": "/images/turnaments/IWTKZakowKadetow10IX2022/3.avif"
-            },
-            {
-              "id": 4,
-              "src": "/images/turnaments/IWTKZakowKadetow10IX2022/4.avif"
-            },
-            {
-              "id": 5,
-              "src": "/images/turnaments/IWTKZakowKadetow10IX2022/5.avif"
-            },
-            {
-              "id": 6,
-              "src": "/images/turnaments/IWTKZakowKadetow10IX2022/6.avif"
-            },
-            {
-              "id": 7,
-              "src": "/images/turnaments/IWTKZakowKadetow10IX2022/7.avif"
-            },
-            {
-              "id": 8,
-              "src": "/images/turnaments/IWTKZakowKadetow10IX2022/8.avif"
-            },
-            {
-              "id": 9,
-              "src": "/images/turnaments/IWTKZakowKadetow10IX2022/9.avif"
-            },
-            {
-              "id": 10,
-              "src": "/images/turnaments/IWTKZakowKadetow10IX2022/10.avif"
-            },
-            {
-              "id": 11,
-              "src": "/images/turnaments/IWTKZakowKadetow10IX2022/11.avif"
-            },
-            {
-              "id": 12,
-              "src": "/images/turnaments/IWTKZakowKadetow10IX2022/12.avif"
+              "id": 27,
+              "src": "/images/turnaments/IWTKdzierzkowice9pazdziernik2023/27.jpeg"
             }
           ]
         }

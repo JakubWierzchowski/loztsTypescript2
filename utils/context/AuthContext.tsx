@@ -1,7 +1,7 @@
-"use client";
-import React, { createContext, useContext, useState, useEffect } from "react";
-import { toast } from "react-toastify";
-import useModal from "@/utils/hooks/useModal/useModal";
+'use client';
+import React, { createContext, useContext, useState, useEffect } from 'react';
+import { toast } from 'react-toastify';
+import useModal from '@/utils/hooks/useModal/useModal';
 
 import {
   signInWithEmailAndPassword,
@@ -11,29 +11,26 @@ import {
   signOut,
   updateProfile,
   sendPasswordResetEmail,
-} from "firebase/auth";
+} from 'firebase/auth';
 
-import { auth } from "@/utils/firebase/firebase-config";
-import { UserContextType } from "@/types/auth.types";
-export const UserContext = createContext<UserContextType | undefined>(
-  undefined
-);
+import { auth } from '@/utils/firebase/firebase-config';
+import { UserContextType } from '@/types/auth.types';
+export const UserContext = createContext<UserContextType | undefined>(undefined);
 
 export const useUserContext = () => {
   const context = useContext(UserContext);
   if (!context) {
-    throw new Error("useUserContext must be used within a UserContextProvider");
+    throw new Error('useUserContext must be used within a UserContextProvider');
   }
   return context;
 };
-export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({
-  children,
-}) => {
+export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [user, setUser] = useState<any | null>(null);
 
-  const [error, setError] = useState("");
+  const [error, setError] = useState('');
 
   const { handleCloseModal } = useModal();
+  const admin = user?.email === 'lozts1937@gmail.com';
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (res) => {
@@ -42,7 +39,7 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({
       } else {
         setUser(null);
       }
-      setError("");
+      setError('');
     });
     return unsubscribe;
   }, []);
@@ -67,53 +64,53 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({
 
       if (signInMethods.length === 0) {
         console.log(signInMethods);
-        toast.error("Konto z takim adresem email nie zostało zarejestrowane", {
-          position: "top-right",
+        toast.error('Konto z takim adresem email nie zostało zarejestrowane', {
+          position: 'top-right',
           autoClose: 2000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: 'light',
         });
 
         return;
       }
       await signInWithEmailAndPassword(auth, email, password);
       toast.success(`Zalogowano pomyślnie ${email}!`, {
-        position: "top-right",
+        position: 'top-right',
         autoClose: 2000,
         hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
+        theme: 'light',
       });
       console.log(email);
     } catch (error: any) {
-      if (error.code === "auth/wrong-password") {
-        toast.error("Błędne hasło!", {
-          position: "top-right",
+      if (error.code === 'auth/wrong-password') {
+        toast.error('Błędne hasło!', {
+          position: 'top-right',
           autoClose: 2000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: 'light',
         });
       } else {
         toast.error(`${error.code}`, {
-          position: "top-right",
+          position: 'top-right',
           autoClose: 2000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: 'light',
         });
       }
     } finally {
@@ -124,27 +121,27 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({
     signOut(auth)
       .then(() =>
         toast.success(`Wylogowano pomyślnie!`, {
-          position: "top-right",
+          position: 'top-right',
           autoClose: 2000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: 'light',
         })
       )
       .then(handleCloseModal)
       .catch(() =>
         toast.error(`Ups.. Coś poszło nie tak. Spróbuj jeszcze raz.`, {
-          position: "top-right",
+          position: 'top-right',
           autoClose: 2000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: 'light',
         })
       );
   };
@@ -153,40 +150,38 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({
     try {
       const signInMethods = await fetchSignInMethodsForEmail(auth, email);
       if (signInMethods.length === 0) {
-        toast.error("Konto z takim adresem email nie zostało zarejestrowane", {
-          position: "top-right",
+        toast.error('Konto z takim adresem email nie zostało zarejestrowane', {
+          position: 'top-right',
           autoClose: 2000,
           hideProgressBar: false,
           closeOnClick: true,
           pauseOnHover: true,
           draggable: true,
           progress: undefined,
-          theme: "light",
+          theme: 'light',
         });
 
         return;
       }
 
       await sendPasswordResetEmail(auth, email);
-      toast.success(
-        "Link do resetowania hasła został wysłany na Twój adres email",
-        {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        }
-      );
+      toast.success('Link do resetowania hasła został wysłany na Twój adres email', {
+        position: 'top-right',
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: 'light',
+      });
     } catch (error) {
-      console.error("Wystąpił błąd podczas resetowania hasła:", error);
+      console.error('Wystąpił błąd podczas resetowania hasła:', error);
     }
   };
 
   const contextValue: UserContextType = {
+    admin,
     user,
     error,
     signInUser,
@@ -195,7 +190,5 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({
     forgotPassword,
   };
 
-  return (
-    <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>
-  );
+  return <UserContext.Provider value={contextValue}>{children}</UserContext.Provider>;
 };

@@ -74,8 +74,9 @@
 }
 @media #{$desktop} {
   .wrapper {
+    margin-top: 50px;
     font-size: $size-tableHeadDesktop;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(400px, 600px));
   }
 }
 @media #{$bigDesktop} {

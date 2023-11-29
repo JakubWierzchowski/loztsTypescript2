@@ -1,11 +1,11 @@
 // Import the functions you need from the SDKs you need
 
-import { initializeApp } from "firebase/app";
-import { getFirestore } from "firebase/firestore";
-import { getStorage } from "firebase/storage";
-import { getAuth } from "firebase/auth";
-import { getApps, getApp } from "firebase/app";
-import firebase from "firebase/app";
+import { initializeApp } from 'firebase/app';
+import { getFirestore } from 'firebase/firestore';
+import { getStorage } from 'firebase/storage';
+import { getAuth } from 'firebase/auth';
+import { getApps, getApp } from 'firebase/app';
+import firebase from 'firebase/app';
 
 const firebaseConfig = {
   apiKey: process.env.API_KEY,

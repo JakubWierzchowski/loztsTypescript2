@@ -1,0 +1,9 @@
+/dist
+/coverage
+
+/.eslintrc.json
+/commitlint.config.js
+/package.json
+/azure-pipelines.yml
+/pipelines/azure-build.template.yml
+/pipelines/azure-deploy.template.yml

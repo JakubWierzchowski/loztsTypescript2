@@ -1,0 +1,58 @@
+@import '../../app//variable.scss';
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.label {
+  font-size: $size-formFieldItems;
+  margin: 10px 0;
+}
+
+.inputForm {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  box-shadow: -2px 4px 10px rgba(115, 124, 142, 0.09);
+  border-radius: 10px;
+  font-size: 15px;
+  resize: none;
+  &:focus {
+    outline: none;
+    box-shadow: -2px 4px 10px rgba(115, 124, 142, 0.3);
+  }
+}
+
+.textareaForm {
+  @extend .inputForm;
+  height: 200px;
+}
+.error {
+  margin: 5px;
+  color: $secondary;
+  font-size: $size-formFieldError;
+}
+
+.selectCategory {
+  width: 100%;
+  display: block;
+  border: 1px solid;
+  border-radius: 8px;
+  border: 1px solid #cccccc;
+  padding: 10px 12px;
+  font-size: 12px;
+  font-size: 1.25rem;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: #fff;
+  box-sizing: border-box;
+  box-shadow: -2px 4px 10px rgba(115, 124, 142, 0.09);
+  font-size: 15px;
+  resize: none;
+  &:focus {
+    outline: none;
+    box-shadow: -2px 4px 10px rgba(115, 124, 142, 0.3);
+  }
+}

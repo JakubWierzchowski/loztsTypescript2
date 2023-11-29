@@ -1,22 +1,15 @@
-"use client";
-import React from "react";
-import Link from "next/link";
-import moment from "moment";
-import { CalendarDetailsProps } from "@/types/calendar.type";
-import styles from "./table.module.scss";
-import AnimationClassHook from "@/utils/hooks/getAnimationClass/getAnimationClass";
-const CalendarDetails: React.FC<CalendarDetailsProps> = ({
-  details,
-  index,
-  month,
-}) => {
-  const myDate = moment().format("YYYY-MM-DD");
-  const slideInFirst = "slideIn";
-  const slideInSecond = "slideOut";
-  const { ref, getAnimationClass } = AnimationClassHook(
-    slideInFirst,
-    slideInSecond
-  );
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import moment from 'moment';
+import { CalendarDetailsProps } from '@/types/calendar.type';
+import styles from './table.module.scss';
+import AnimationClassHook from '@/utils/hooks/getAnimationClass/getAnimationClass';
+const CalendarDetails: React.FC<CalendarDetailsProps> = ({ details, index, month }) => {
+  const myDate = moment().format('YYYY-MM-DD');
+  const slideInFirst = 'slideIn';
+  const slideInSecond = 'slideOut';
+  const { ref, getAnimationClass } = AnimationClassHook(slideInFirst, slideInSecond);
 
   return (
     <>
@@ -43,23 +36,15 @@ const CalendarDetails: React.FC<CalendarDetailsProps> = ({
               </tr>
             </thead>
             <tbody className={styles.tbody}>
-              <tr className={styles.td} key={"noEvents"}>
-                <td colSpan={4}>
-                  Kalendarz zostanie uzupełniony przed rozpoczęciem nowego
-                  sezonu
-                </td>
+              <tr className={styles.td} key={'noEvents'}>
+                <td colSpan={4}>Kalendarz zostanie uzupełniony przed rozpoczęciem nowego sezonu</td>
               </tr>
             </tbody>
           </table>
         </>
       ) : (
         <>
-          <div
-            ref={ref}
-            className={`${styles.wrapperSection} ${getAnimationClass(
-              index || 0
-            )}`}
-          >
+          <div ref={ref} className={`${styles.wrapperSection} ${getAnimationClass(index || 0)}`}>
             <h2 className={styles.tableTitle}>{month}</h2>
 
             <table className={styles.table}>
@@ -81,7 +66,7 @@ const CalendarDetails: React.FC<CalendarDetailsProps> = ({
               </thead>
               <tbody className={styles.tbody}>
                 {details.map((item) => (
-                  <tr className="tr" key={item.title}>
+                  <tr className={styles.tr} key={item.title}>
                     {moment(item.datamoment).isAfter(myDate) ? (
                       <>
                         <td className={styles.td}>{item.data}</td>
@@ -89,13 +74,8 @@ const CalendarDetails: React.FC<CalendarDetailsProps> = ({
                           {!item.datamomentInvite ? (
                             <div> {item.title}</div>
                           ) : (
-                            <Link
-                              href={`/kalendarz/${item.link}`}
-                              className={styles.links}
-                            >
-                              <span className={styles.spanCategories}>
-                                {item.title}
-                              </span>
+                            <Link href={`/kalendarz/${item.link}`} className={styles.links}>
+                              <span className={styles.spanCategories}>{item.title}</span>
                             </Link>
                           )}
                         </td>
@@ -103,11 +83,7 @@ const CalendarDetails: React.FC<CalendarDetailsProps> = ({
                         <td className={styles.td}>
                           <div className={styles.categories}>
                             <div className={styles.categories}>
-                              <div
-                                className={`${styles.categoryList} ${
-                                  styles[item.categories]
-                                }`}
-                              >
+                              <div className={`${styles.categoryList} ${styles[item.categories]}`}>
                                 {item.categories}
                               </div>
                             </div>

@@ -25,6 +25,11 @@ export interface QueueDetails {
   matchDay: string;
 }
 
+export interface DataPropsQueueDetails {
+  data: QueueDetailsFirebase[];
+  leaguePath: string;
+}
+
 export interface QueueDetailsFirebase {
   id: string;
   host: string;
@@ -52,26 +57,19 @@ export type FormValuesFirebase = {
   img?: FileList;
 };
 export interface AddQueueProps {
-  handleClose: () => void;
+  handleCloseModal?: () => void;
   leaguePath: string;
-  queueDetails: QueueDetails[] | undefined;
-  leagueDetails: LeagueDetail[] | undefined;
+  queueDetails: QueueDetails[];
+  leagueDetails: LeagueDetail[];
 }
 
 export interface AddQueueModalProps {
   isOpen: boolean;
-  handleClose: () => void;
+  handleCloseModal?: () => void;
   leaguePath: string;
-  queueDetails: QueueDetails[] | undefined;
-  leagueDetails: LeagueDetail[] | undefined;
+  queueDetails: QueueDetails[];
+  leagueDetails: LeagueDetail[];
   fetchData: () => void;
-}
-
-export interface AddQueueProps {
-  handleClose: () => void;
-  leaguePath: string;
-  queueDetails: QueueDetails[] | undefined;
-  leagueDetails: LeagueDetail[] | undefined;
 }
 
 export interface AddLeagueMatchdayProps {
@@ -86,7 +84,8 @@ export interface AddQueueSchudleProps {
 }
 
 export type FormValuesDataMatch = {
-  addLeagueMatchday: string;
+  matchDay: string;
+  path?: string;
 };
 
 export interface QueueResultProps {
@@ -96,14 +95,6 @@ export interface QueueResultProps {
   fetchData: () => void;
 }
 
-export interface DataPropsQueueDetails {
-  data: QueueDetailsFirebase[];
-  leaguePath: string;
-}
-
-export interface ligaPageDetails {
-  params: { liga: string };
-}
-export interface archivesPropsLeague {
+export interface leaguePageDetails {
   params: { liga: string };
 }

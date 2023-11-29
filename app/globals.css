@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   margin: 0;
   background-color: rgb(0, 0, 0);
   font-size: 1.6rem;
@@ -351,7 +351,8 @@ body {
     opacity: 0;
     transform: scaleY(0);
     transform-origin: top center;
-    transition: 200ms transform cubic-bezier(0.36, 0.4, 0.42, 1.48) 100ms,
+    transition:
+      200ms transform cubic-bezier(0.36, 0.4, 0.42, 1.48) 100ms,
       100ms opacity ease-in-out;
 
     overflow-y: hidden;
@@ -373,7 +374,9 @@ body {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s, opacity 0.2s;
+    transition:
+      max-height 0.2s,
+      opacity 0.2s;
   }
 
   .has-dropdown.open .submenu {
@@ -392,7 +395,9 @@ body {
     opacity: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    transition:
+      max-height 0.2s ease-in-out,
+      opacity 0.2s ease-in-out;
   }
 
   .menu > li > div > div:hover > a + .submenu,
@@ -412,7 +417,7 @@ body {
   }
   .hamburger::after,
   .hamburger::before {
-    content: "";
+    content: '';
     position: absolute;
     left: 0;
     background: inherit;
@@ -444,7 +449,7 @@ body {
     transform: rotate(-90deg);
   }
 
-  input[type="checkbox"]:checked + .menu {
+  input[type='checkbox']:checked + .menu {
     position: absolute;
     opacity: 1;
     transform: scaleY(1);

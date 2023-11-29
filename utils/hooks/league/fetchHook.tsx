@@ -1,38 +1,51 @@
-"use client";
-import { useState, useEffect } from "react";
-import { TeamData, LeagueDataItem } from "@/types/league.types";
-import LeagueData from "@/data/league.json";
-import db from "@/utils/firebase/firebase-config";
-import { onSnapshot, collection } from "firebase/firestore";
+'use client';
+import { useState, useEffect } from 'react';
+import { TeamData, LeagueDataItem, QueueDetails } from '@/types/league.types';
+import LeagueData from '@/data/league.json';
+import db from '@/utils/firebase/firebase-config';
+import { onSnapshot, collection } from 'firebase/firestore';
 function useFetchHook(initialPathName: string) {
   const [pathName, setPathName] = useState(initialPathName);
   const [Liga, setLiga] = useState<TeamData[]>([]);
   const data: LeagueDataItem[] | LeagueDataItem = LeagueData;
   const findLeague = data?.find((item) => item.league === pathName);
-
   const [actualData, setActualData] = useState(findLeague);
+
+  const [currentInfo, setCurrentInfo] = useState<QueueDetails>({} as QueueDetails);
+
+  const [details, setDetails] = useState('');
+  const [activeDay, setActiveDay] = useState('');
 
   async function fetchData() {
     try {
       const response = await fetch(`/api/allLeague/${pathName}`);
       const data = await response.json();
-
+      const sortedDate = data.queueDetails.sort((a: any, b: any) => (a.day > b.day ? -1 : 0));
       setActualData(data);
+      setCurrentInfo(sortedDate[1]);
+
+      if (sortedDate && sortedDate.length > 1) {
+        const firstSortDateItem = sortedDate[1]?.matchDay || '';
+        setDetails(firstSortDateItem);
+        setActiveDay(firstSortDateItem);
+      }
     } catch (error) {
-      console.error("Wystąpił błąd podczas pobierania danych:", error);
+      console.error('Wystąpił błąd podczas pobierania danych:', error);
     }
   }
+
+  const viewDetails = (i: string) => {
+    setDetails(i);
+    setActiveDay(i);
+  };
+
   useEffect(() => {
     fetchData();
   }, []);
 
   useEffect(() => {
     const unsubscribe = onSnapshot(collection(db, `${pathName}`), (snapshot) =>
-      setLiga(
-        snapshot.docs.map(
-          (doc) => ({ ...doc.data(), id: doc.id } as unknown as TeamData)
-        )
-      )
+      setLiga(snapshot.docs.map((doc) => ({ ...doc.data(), id: doc.id }) as unknown as TeamData))
     );
     return unsubscribe;
   }, [pathName]);
@@ -59,13 +72,9 @@ function useFetchHook(initialPathName: string) {
     )
   );
 
-  const itemWyniki = actualData?.leagueDetails.map(({ details }) =>
-    details.map(({ wyniki }) => wyniki.length)
-  );
+  const itemWyniki = actualData?.leagueDetails.map(({ details }) => details.map(({ wyniki }) => wyniki.length));
 
-  const itemResult = actualData?.leagueDetails.map(({ details }) =>
-    details.map(({ result }) => result.length)
-  );
+  const itemResult = actualData?.leagueDetails.map(({ details }) => details.map(({ result }) => result.length));
 
   if (itemWyniki && itemResult && itemWyniki.length === itemResult.length) {
     itemWyniki.forEach((item, index) => {
@@ -85,8 +94,7 @@ function useFetchHook(initialPathName: string) {
     });
   }
 
-  const calculateSum = (arr: number[]): number =>
-    arr.reduce((acc, el) => acc + el, 0);
+  const calculateSum = (arr: number[]): number => arr.reduce((acc, el) => acc + el, 0);
 
   actualData?.leagueDetails.forEach(({ details }) => {
     details.forEach((item) => {
@@ -98,7 +106,7 @@ function useFetchHook(initialPathName: string) {
     details.sort((a, b) => b.wynikiSum! - a.wynikiSum!);
   });
 
-  return { fetchData, actualData, Liga };
+  return { fetchData, actualData, Liga, currentInfo, details, activeDay, viewDetails };
 }
 
 export default useFetchHook;

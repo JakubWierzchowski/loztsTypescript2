@@ -2,8 +2,9 @@
 .turnamentTitle {
   color: white;
   text-align: center;
-  margin-top: 50px;
   font-size: $size-tableTitleMobile;
+  max-width: 80vw;
+  margin: 70px auto 20px auto;
 }
 
 @keyframes imgScale {

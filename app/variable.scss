@@ -2,7 +2,8 @@ $primary: #048c34;
 $primaryHover: #048c3423;
 $secondary: #e4051d;
 $tertiary: #7bb2d9;
-$hoverColor: #d1cdce;
+$hoverColor: #f0f0f028;
+
 $dark: #100b00;
 $light: #ffffea;
 $white: #ffffff;
@@ -15,7 +16,6 @@ $size-smallTitle: 3rem;
 $size-smallTitleMobile: 2rem;
 
 $size-mobileText: 1rem;
-
 $size-TextMobile: 1.4rem;
 $size-TextTablet: 1.8rem;
 $size-TextDesktop: 2.2rem;
@@ -26,41 +26,44 @@ $size-tableTitleTablet: 2.4rem;
 $size-tableTitleDesktop: 3rem;
 $size-tableTitleBigDesktop: 3.6rem;
 
-$size-tableHeadMobile: 0.8rem;
+$size-tableHeadMobile: 1.2rem;
 $size-tableHeadTablet: 1.2rem;
 $size-tableHeadDesktop: 1.6rem;
 $size-tableHeadBigDesktop: 2rem;
 
-$size-tableItemsMobile: 0.8rem;
-$size-tableItemsTablet: 1rem;
+$size-tableItemsMobile: 1rem;
+$size-tableItemsTablet: 1.2rem;
 $size-tableItemsDesktop: 1.4rem;
 $size-tableItemsBigDesktop: 1.8rem;
 
-$size-modalButtonMobile: 1.4rem;
-$size-modalButtonMobileTablet: 1.8rem;
-$size-modalButtonMobileDesktop: 2.2rem;
-$size-modalButtonMobileBigDesktop: 2.6rem;
+$size-modalButtonMobile: 1.4rem; //do usuniecia
+$size-modalButtonMobileTablet: 1.6rem; //do usuniecia
+$size-modalButtonMobileDesktop: 1.6rem; //do usuniecia
+$size-modalButtonMobileBigDesktop: 2rem; //do usuniecia
 
-$size-formFieldItemsMobile: 1.4rem;
-$size-formFieldItemsTablet: 1.8rem;
-$size-formFieldItemsDesktop: 2rem;
-$size-formFieldItemsBigDesktop: 2.4rem;
-
-$size-ButtonMobile: 0.8rem;
-$size-ButtonMobileTablet: 1rem;
-$size-ButtonMobileDesktop: 1.4rem;
-$size-ButtonMobileBigDesktop: 1.8rem;
-
+$size-formFieldItems: 2rem;
+$size-formFieldError: 1.4rem;
 $size-TitleMobile: 2.6rem;
-$size-TitleTablet: 3.2rem;
-$size-TitleDesktop: 3.8rem;
-$size-TitleBigDesktop: 4.4rem;
+$size-TitleDesktop: 3rem;
 
-$tablet: "(min-width: 768px)";
-$desktop: "(min-width: 1024px)";
-$bigDesktop: "(min-width: 1280px)";
-$huge: "(min-width: 1440px)";
+$size-formFieldItemsMobile: 0.6rem; //do usuniecia
+$size-formFieldItemsTablet: 1.8rem; //do usuniecia
+$size-formFieldItemsDesktop: 2rem; //do usuniecia
+$size-formFieldItemsBigDesktop: 2.4rem; //do usuniecia
 
-$monserrat: "Montserrat";
+$size-ButtonMobile: 0.8rem; //do usuniecia
+$size-ButtonMobileTablet: 1rem; //do usuniecia
+$size-ButtonMobileDesktop: 1.4rem; //do usuniecia
+$size-ButtonMobileBigDesktop: 1.8rem; //do usuniecia
 
+// $size-TitleMobile: 2.6rem;
+$size-TitleTablet: 3.2rem; //do usuniecia
+$size-TitleDesktop: 3.8rem; //do usuniecia
+$size-TitleBigDesktop: 4.4rem; //do usuniecia
 
+$tablet: '(min-width: 768px)';
+$desktop: '(min-width: 1024px)';
+$bigDesktop: '(min-width: 1280px)';
+$huge: '(min-width: 1440px)';
+
+$monserrat: 'Montserrat';

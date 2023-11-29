@@ -1,4 +1,4 @@
-@import "../../../../app/variable.scss";
+@import '../../../../app/variable.scss';
 
 .wrapper {
   // animation: 0.2s ease-in 1 forwards ${scaleBox};
@@ -191,6 +191,7 @@
   .layout {
     display: grid;
     grid-template-columns: 50% 50%;
+    grid-gap: 10px;
   }
 }
 @media #{$desktop} {

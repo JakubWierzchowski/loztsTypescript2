@@ -1,20 +1,20 @@
-import fs from "fs";
-import { CalendarTypeMonth, PlayersType } from "@/types/calendar.type";
-import moment from "moment";
-import { v4 as uuidv4 } from "uuid";
-import { buildPath, extractPath } from "@/utils/api/buildExtractPath";
-import { NextResponse } from "next/server";
+import fs from 'fs';
+import { CalendarTypeMonth, PlayersType } from '@/types/calendar.type';
+import moment from 'moment';
+import { v4 as uuidv4 } from 'uuid';
+import { buildPath, extractPath } from '@/utils/api/buildExtractPath';
+import { NextResponse } from 'next/server';
 
 export async function GET(req: Request, res: Response) {
-  const filePath = buildPath("calendarDate.json");
+  const filePath = buildPath('calendarDate.json');
   const calendar = extractPath<CalendarTypeMonth[]>(filePath);
   return new Response(JSON.stringify(calendar));
 }
 
 export async function POST(req: Request, res: Response) {
-  const filePath = buildPath("calendarDate.json");
+  const filePath = buildPath('calendarDate.json');
   const calendar = extractPath<CalendarTypeMonth[]>(filePath);
-  const myDate = moment().format("YYYY-MM-DD HH:mm:ss");
+  const myDate = moment().format('YYYY-MM-DD HH:mm:ss');
   const { player, club, turnament, gender, users } = await req.json();
   const detailsBoolien = calendar.map((item) => item.details);
   const newPlayer = {
@@ -32,16 +32,14 @@ export async function POST(req: Request, res: Response) {
       (item2) =>
         item2.link === newPlayer.tournament &&
         item2.players &&
-        item2.players.find(
-          (existingPlayer) => existingPlayer.player === newPlayer.player
-        )
+        item2.players.find((existingPlayer) => existingPlayer.player === newPlayer.player)
     )
   );
 
   if (playerExistsInTournament) {
     return NextResponse.json(
       {
-        message: "Taki zawodnik już istnieje w tym turnieju",
+        message: 'Taki zawodnik już istnieje w tym turnieju',
         newPlayer,
         status: 409,
       },
@@ -67,14 +65,8 @@ export async function POST(req: Request, res: Response) {
   });
 
   if (!detailsBoolien) {
-    return NextResponse.json(
-      { message: "Nie można znaleźć takiego turnieju" },
-      { status: 404 }
-    );
+    return NextResponse.json({ message: 'Nie można znaleźć takiego turnieju' }, { status: 404 });
   }
   fs.writeFileSync(filePath, JSON.stringify(newAllDetails, null, 2));
-  return NextResponse.json(
-    { message: "Dodano zawodnika:", player: newPlayer },
-    { status: 200 }
-  );
+  return NextResponse.json({ message: 'Dodano zawodnika:', player: newPlayer }, { status: 200 });
 }

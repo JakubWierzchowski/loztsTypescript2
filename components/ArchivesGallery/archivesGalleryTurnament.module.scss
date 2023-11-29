@@ -2,6 +2,7 @@
 
 .modalWrapper {
   position: absolute;
+  z-index: 2000;
   margin: auto;
   top: 45%;
   left: 50%;
@@ -21,7 +22,7 @@
 }
 
 .modalCloseButton {
-  z-index: 2000;
+  z-index: 20;
   position: absolute;
   z-index: 2;
   top: 0;

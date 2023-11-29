@@ -102,15 +102,15 @@ export type FormValuesAddPlayer = {
   kategoria: string;
 };
 
-export type FormValuesSubmit = {
-  addLeagueMatchday: string;
-};
+// export type FormValuesSubmit = {
+//   matchDay: string;
+// };
 
-export type FormValuesFirebase = {
-  host: string;
-  guest: string;
-  hostScore: string;
-  guestScore: string;
-  queueNumber: string;
-  img?: FileList;
-};
+// export type FormValuesFirebase = {
+//   host: string;
+//   guest: string;
+//   hostScore: string;
+//   guestScore: string;
+//   queueNumber: string;
+//   img?: FileList;
+// };

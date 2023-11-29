@@ -1,27 +1,21 @@
 {
   "pages": {
-    "/(mainPage)/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/(mainPage)/page.css",
-      "static/chunks/app/(mainPage)/page.js"
-    ],
-    "/loading": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/chunks/app/loading.js"
-    ],
     "/layout": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/komunikaty/page": [
+    "/loading": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/komunikaty/page.css",
-      "static/chunks/app/komunikaty/page.js"
+      "static/chunks/app/loading.js"
+    ],
+    "/[liga]/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/[liga]/page.css",
+      "static/chunks/app/[liga]/page.js"
     ],
     "/kalendarz/page": [
       "static/chunks/webpack.js",
@@ -29,11 +23,17 @@
       "static/css/app/kalendarz/page.css",
       "static/chunks/app/kalendarz/page.js"
     ],
-    "/[liga]/page": [
+    "/kalendarz/[tournamentsId]/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/[liga]/page.css",
-      "static/chunks/app/[liga]/page.js"
+      "static/css/app/kalendarz/[tournamentsId]/page.css",
+      "static/chunks/app/kalendarz/[tournamentsId]/page.js"
+    ],
+    "/(mainPage)/page": [
+      "static/chunks/webpack.js",
+      "static/chunks/main-app.js",
+      "static/css/app/(mainPage)/page.css",
+      "static/chunks/app/(mainPage)/page.js"
     ]
   }
 }

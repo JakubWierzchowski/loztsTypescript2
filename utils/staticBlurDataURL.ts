@@ -7,9 +7,7 @@ export function staticBlurDataUrl() {
       <rect x='0' y='0' height='100%' width='100%' filter='url(#b)' fill='#426874' />
     </svg>
     `;
-  const toBase64 = (str: any) =>
-    typeof window === "undefined"
-      ? Buffer.from(str).toString("base64")
-      : window.btoa(str);
+  const toBase64 = (str: string) =>
+    typeof window === 'undefined' ? Buffer.from(str).toString('base64') : window.btoa(str);
   return `data:image/svg+xml;base64,${toBase64(blurSvg)}`;
 }

@@ -1,6 +1,6 @@
 // import { useEffect, useState } from "react";
 // import { useRouter } from "next/router";
-import styles from "./loading.module.scss";
+import styles from './loading.module.scss';
 
 // const Loading = () => {
 //   const [loading, setLoading] = useState(false);

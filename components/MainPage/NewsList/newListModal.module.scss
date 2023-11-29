@@ -1,26 +1,4 @@
-@import "../../../app/variable.scss";
-.modalWrapper {
-  position: absolute;
-  margin: auto;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 95vw;
-  background-color: $white;
-  border-radius: 15px;
-  box-shadow: 0px -5px 25px -10px rgba(0, 0, 0, 0.3);
-  align-items: center;
-  padding: 10px;
-}
-.moduleSection {
-  padding: 10px;
-  margin: 0 auto;
-  border-radius: 10px 10px 10px 10px;
-  height: fit-content;
-  width: 100%;
-  background-color: rgb(255, 255, 255);
-  //   animation: 0.5s ease-in 1 forwards ${scaleBox};
-}
+@import '../../../app/variable.scss';
 
 .wrapperForm {
   padding: 0 10px;
@@ -32,130 +10,14 @@
   // animation: 0.5s ease-in 1 forwards ${scaleBox};
 }
 
-.formSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-.label {
-  margin: 10px 0;
-}
-
-.inputForm {
-  width: 100%;
-  padding: 10px 12px;
-  border: 1px solid #cccccc;
-  box-sizing: border-box;
-  box-shadow: -2px 4px 10px rgba(115, 124, 142, 0.09);
-  border-radius: 10px;
-  font-size: 15px;
-  resize: none;
-  &:focus {
-    outline: none;
-    box-shadow: -2px 4px 10px rgba(115, 124, 142, 0.3);
-  }
-}
-.error {
-  color: $secondary;
-  font-size: $size-TextMobile;
-}
-
-.modalCloseButton {
-  position: absolute;
-  z-index: 2;
-  top: 0;
-  right: 0;
-  transform: translate(-10%, 10%);
-  color: $white;
-  border: 0;
-  padding: 8px 12px;
-  border-radius: 8px;
-  cursor: pointer;
-  background-color: $secondary;
-  margin: 5px;
-  font-size: $size-ButtonMobile;
-}
-
-.sendButton {
-  color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto;
-  border: 0;
-  border-radius: 8px;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-  background-color: $primary;
-  font-size: $size-modalButtonMobile;
-  padding: 8px 12px;
-  margin-top: 8px;
-}
-
 @media #{$tablet} {
-  .modalWrapper {
-    width: 80vw;
-    padding: 20px;
-  }
-  .modalCloseButton {
-    font-size: $size-ButtonMobileTablet;
-    transform: translate(-30%, 30%);
-  }
-  .formSection {
-    flex-direction: column;
-    align-items: flex-start;
-    font-size: $size-formFieldItemsTablet;
-  }
-  .inputForm {
-    font-size: $size-formFieldItemsTablet;
-    width: 100%;
-  }
-  .error {
-    color: $secondary;
-    font-size: $size-TextTablet;
-  }
-  .sendButton {
-    margin-top: 15px;
-    padding: 8px 12px;
-    font-size: $size-modalButtonMobileTablet;
-  }
 }
 @media #{$desktop} {
-  .modalWrapper {
-    width: 60vw;
-  }
-  .modalCloseButton {
-    font-size: $size-ButtonMobileDesktop;
-  }
-  .formSection {
-    font-size: $size-formFieldItemsDesktop;
-  }
-  .inputForm {
-    font-size: $size-formFieldItemsDesktop;
-  }
-  .sendButton {
-    font-size: $size-modalButtonMobileDesktop;
-  }
-  .error {
-    font-size: $size-TextDesktop;
+  .wrapperForm {
+    width: 80%;
+    margin: 0 auto;
+    // animation: 0.5s ease-in 1 forwards ${scaleBox};
   }
 }
 @media #{$bigDesktop} {
-  .modalButton {
-    font-size: $size-modalButtonMobileBigDesktop;
-  }
-  .modalCloseButton {
-    font-size: $size-ButtonMobileBigDesktop;
-  }
-  .formSection {
-    font-size: $size-formFieldItemsBigDesktop;
-  }
-  .inputForm {
-    font-size: $size-formFieldItemsBigDesktop;
-  }
-  .error {
-    font-size: $size-TextBigDesktop;
-  }
-  .sendButton {
-    font-size: $size-modalButtonMobileBigDesktop;
-  }
 }

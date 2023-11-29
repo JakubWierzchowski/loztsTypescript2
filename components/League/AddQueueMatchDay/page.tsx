@@ -1,39 +1,22 @@
-import React, { FC } from "react";
-import useModal from "@/utils/hooks/useModal/useModal";
-import { useUserContext } from "@/utils/context/AuthContext";
-import Modal from "./AddItemsModal/addQueueModal";
-import styles from "./page.module.scss";
-import { AddQueueSchudleProps } from "@/types/league.types";
+import React, { FC } from 'react';
+import { AddQueueSchudleProps } from '@/types/league.types';
+import { ModaWithButton } from '@/ui';
+import AddLeagueMatchday from './AddItemsModal/AddMatchDay/page';
+import AddQueue from './AddItemsModal/AddQueue/addQueue';
 
-const AddQueueSchudle: FC<AddQueueSchudleProps> = ({
-  leaguePath,
-  findLeague,
-  fetchData,
-}) => {
-  const { isOpen, handleOpenModal, handleCloseModal } = useModal();
-  const { user } = useUserContext();
-
-  const leagueDetails = findLeague?.leagueDetails
-    .map(({ details }) => details)
-    .flat();
+const AddQueueSchudle: FC<AddQueueSchudleProps> = ({ leaguePath, findLeague, fetchData }) => {
+  const leagueDetails = findLeague?.leagueDetails.map(({ details }) => details).flat() || [];
+  const queueDetails = findLeague?.queueDetails || [];
 
   return (
-    <>
-      {user?.email ? (
-        <button className={styles.modalButton} onClick={handleOpenModal}>
-          Dodaj kolejkę
-        </button>
-      ) : null}
-
-      <Modal
-        isOpen={isOpen}
-        handleClose={handleCloseModal}
-        queueDetails={findLeague?.queueDetails}
-        leagueDetails={leagueDetails}
-        leaguePath={leaguePath}
-        fetchData={fetchData}
-      />
-    </>
+    <div>
+      <ModaWithButton text={'Dodaj kolejkę'}>
+        <>
+          <AddLeagueMatchday leaguePath={leaguePath} fetchData={fetchData} />
+          <AddQueue leaguePath={leaguePath} queueDetails={queueDetails} leagueDetails={leagueDetails} />
+        </>
+      </ModaWithButton>
+    </div>
   );
 };
 

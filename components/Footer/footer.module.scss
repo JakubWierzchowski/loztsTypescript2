@@ -1,13 +1,14 @@
-@import "../../app/variable.scss";
+@import '../../app/variable.scss';
 .footerWrapper {
   border-top: 0.4px solid #d1cdce49;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 20px 0 10px 0;
+  padding: 10px 0;
 }
 
 .footerDetails {
+  position: relative;
   width: 40vw;
   display: flex;
   justify-content: center;
@@ -21,4 +22,10 @@
   width: 100% !important;
   position: relative !important;
   height: unset !important;
+}
+
+@media #{$desktop} {
+  .footerWrapper {
+    padding: 20px 0;
+  }
 }

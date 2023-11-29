@@ -1,7 +1,7 @@
-import React from "react";
-import styles from "./footer.module.scss";
-import Image from "next/image";
-import Andro from "./BanerAndro.png";
+import React from 'react';
+import styles from './footer.module.scss';
+import Image from 'next/image';
+import Andro from './BanerAndro.jpeg';
 function footer() {
   return (
     <section className={styles.footerWrapper}>

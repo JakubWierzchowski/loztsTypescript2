@@ -1,7 +1,6 @@
 export interface NewListModalProps {
-  isOpen: boolean;
-  handleClose: () => void;
   fetchData: () => void;
+  handleCloseModal?: () => void;
 }
 export type FormValues = {
   title: string;

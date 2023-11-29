@@ -1,21 +1,19 @@
-import React, { FC } from "react";
-import { useUserContext } from "@/utils/context/AuthContext";
-import Link from "next/link";
-import styles from "./queueResultTable.module.scss";
-import AnimationClassHook from "@/utils/hooks/getAnimationClass/getAnimationClass";
-import useHTTPrequests from "@/utils/hooks/league/httpRequest";
-import { DataPropsQueueDetails } from "@/types/league.types";
+import React, { FC } from 'react';
+import { useUserContext } from '@/utils/context/AuthContext';
+import Link from 'next/link';
+import styles from './queueResultTable.module.scss';
+import AnimationClassHook from '@/utils/hooks/getAnimationClass/getAnimationClass';
+import useHTTPrequests from '@/utils/hooks/league/httpRequest';
+import { DataPropsQueueDetails } from '@/types/league.types';
+import IsAdmin from '@/utils/hooks/isAdmin/isAdmin';
+import { Button } from '@/ui';
 
 const LeagueSchedules: FC<DataPropsQueueDetails> = ({ data, leaguePath }) => {
-  const { user } = useUserContext();
   const { deleteQueueFirebase } = useHTTPrequests();
 
-  const slideInFirst = "showAnimationDelay";
-  const slideInSecond = "slideOut";
-  const { ref, getShowAnimationClass } = AnimationClassHook(
-    slideInFirst,
-    slideInSecond
-  );
+  const slideInFirst = 'showAnimationDelay';
+  const slideInSecond = 'slideOut';
+  const { ref, getShowAnimationClass } = AnimationClassHook(slideInFirst, slideInSecond);
 
   const handleDeleteQueueFirebase = (
     id: string,
@@ -28,10 +26,7 @@ const LeagueSchedules: FC<DataPropsQueueDetails> = ({ data, leaguePath }) => {
   };
 
   return (
-    <section
-      ref={ref}
-      className={`${styles.resultSection} ${getShowAnimationClass()}`}
-    >
+    <section ref={ref} className={`${styles.resultSection} ${getShowAnimationClass()}`}>
       <table className={styles.table}>
         <thead className={styles.thead}>
           <tr>
@@ -50,30 +45,25 @@ const LeagueSchedules: FC<DataPropsQueueDetails> = ({ data, leaguePath }) => {
             <th className={styles.th}>
               <strong>Protokół</strong>
             </th>
-            <th className={styles.th}>
-              <strong>Usuń</strong>
-            </th>
+            <IsAdmin>
+              <th className={styles.th}>
+                <strong>Usuń</strong>
+              </th>
+            </IsAdmin>
           </tr>
         </thead>
         <tbody>
           <>
             {data?.map((item, index: number) => (
-              <tr key={index} className="tr">
-                <td key={index} className={styles.td}>
-                  {index + 1}
-                </td>
+              <tr key={index} className={styles.tr}>
+                <td className={styles.td}>{index + 1}</td>
                 <td className={styles.td}>{item.host}</td>
                 <td className={styles.td}>{item.guest}</td>
                 <td className={styles.td}>{item.hostScore}</td>
                 <td className={styles.td}>{item.guestScore}</td>
                 <td className={styles.td}>
                   {item.img ? (
-                    <Link
-                      key={item.img}
-                      href={item.img}
-                      className={styles.links}
-                      target="_blank"
-                    >
+                    <Link key={item.img} href={item.img} className={styles.links} target="_blank">
                       Protokół
                     </Link>
                   ) : (
@@ -81,27 +71,17 @@ const LeagueSchedules: FC<DataPropsQueueDetails> = ({ data, leaguePath }) => {
                   )}
                 </td>
                 <td className={styles.td}>
-                  {user?.email === item.user ? (
-                    <>
-                      <button
-                        className={styles.deleteButton}
-                        key={item.id}
-                        onClick={() =>
-                          handleDeleteQueueFirebase(
-                            item.id,
-                            item.host,
-                            item.guest,
-                            item.hostScore,
-                            item.guestScore
-                          )
-                        }
-                      >
-                        usuń
-                      </button>
-                    </>
-                  ) : (
-                    <div>Brak dostępu</div>
-                  )}
+                  <IsAdmin>
+                    <Button
+                      deleteButton
+                      onClick={() =>
+                        handleDeleteQueueFirebase(item.id, item.host, item.guest, item.hostScore, item.guestScore)
+                      }
+                      type="button"
+                    >
+                      Usuń kolejkę
+                    </Button>
+                  </IsAdmin>
                 </td>
               </tr>
             ))}

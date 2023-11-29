@@ -1,39 +1,28 @@
-"use client";
-import React, { FC } from "react";
-import UploadIcon from "@/public/uploadWhite.png";
-import Image from "next/legacy/image";
+'use client';
+import React, { FC } from 'react';
+import UploadIcon from '@/public/uploadWhite.png';
+import Image from 'next/legacy/image';
 
-import styles from "@/components/Communicats/AddCommunicats/addcommunicats.module.scss";
-import { HandleUpdateProps } from "@/types/communicats.type";
-import useHTTPrequest from "@/utils/hooks/communicats/httpRequest";
+import styles from '@/components/Communicats/AddCommunicats/addcommunicats.module.scss';
+import { HandleUpdateProps } from '@/types/communicats.type';
+import useHTTPrequest from '@/utils/hooks/communicats/httpRequest';
+import { Button } from '@/ui';
 
 const Additems: FC<HandleUpdateProps> = ({ data, category }) => {
-  const {
-    handleUpload,
-    selectedFile,
-    setSelectedImage,
-    setSelectedFile,
-    handleInputChange,
-    month,
-  } = useHTTPrequest(category);
+  const { handleUpload, selectedFile, setSelectedImage, setSelectedFile, handleInputChange, month } =
+    useHTTPrequest(category);
   return (
     <section className={styles.wrapper}>
       <form onSubmit={handleUpload} className="form">
         <div className={styles.customInputWrapper}>
           <label className={styles.formfieldFile}>
-            <Image
-              width={50}
-              height={50}
-              src={UploadIcon}
-              className="icon"
-              alt="icon"
-            />
+            <Image width={50} height={50} src={UploadIcon} className="icon" alt="icon" />
             {!selectedFile ? (
               <div className={styles.inputText}>Wybierz plik</div>
             ) : (
               <div className={styles.inputText}>{selectedFile.name}</div>
             )}
-            `{" "}
+            `{' '}
             <input
               className="displayNonInput"
               type="file"
@@ -48,6 +37,7 @@ const Additems: FC<HandleUpdateProps> = ({ data, category }) => {
             />
           </label>
         </div>
+
         <select
           onChange={handleInputChange}
           required
@@ -65,10 +55,9 @@ const Additems: FC<HandleUpdateProps> = ({ data, category }) => {
             </option>
           ))}
         </select>
-
-        <button className={styles.button} type="submit">
+        <Button sendButton type={'submit'}>
           Wyślij
-        </button>
+        </Button>
       </form>
     </section>
   );

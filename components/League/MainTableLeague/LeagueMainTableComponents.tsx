@@ -1,40 +1,18 @@
-import React from "react";
-import styles from "./leagueMainTable.module.scss";
-import AnimationClassHook from "@/utils/hooks/getAnimationClass/getAnimationClass";
-import { LeagueMainTableComponentProps } from "@/types/mainTable.type";
+import React from 'react';
+import styles from './leagueMainTable.module.scss';
+import AnimationClassHook from '@/utils/hooks/getAnimationClass/getAnimationClass';
+import { LeagueMainTableComponentProps } from '@/types/mainTable.type';
 
-export default function LeagueMainTableComponent({
-  data,
-  index,
-  title,
-}: LeagueMainTableComponentProps) {
-  const slideInFirst = "slideIn";
-  const slideInSecond = "slideOut";
-  const { ref, getAnimationClass } = AnimationClassHook(
-    slideInFirst,
-    slideInSecond
-  );
+export default function LeagueMainTableComponent({ data, index, title }: LeagueMainTableComponentProps) {
+  const { ref, getAnimationClass } = AnimationClassHook('slideIn', 'slideOut');
 
   return (
-    <section
-      ref={ref}
-      className={`${styles.wrapper2} ${getAnimationClass(index || 0)}`}
-    >
+    <section ref={ref} className={`${styles.wrapper2} ${getAnimationClass(index || 0)}`}>
       <div>
-        <h2
-          className={`${styles.tableTitle} ${
-            styles[`${title}`.split(" ").join("")]
-          }`}
-        >
-          {title}
-        </h2>
+        <h2 className={`${styles.tableTitle} ${styles[`${title}`.split(' ').join('')]}`}>{title}</h2>
 
         <table className={styles.table}>
-          <thead
-            className={`${styles.thead} ${
-              styles[`${title}`.split(" ").join("") || styles["default"]]
-            }`}
-          >
+          <thead className={`${styles.thead} ${styles[`${title}`.split(' ').join('') || styles['default']]}`}>
             <tr>
               <th className={styles.th}>
                 <strong>LP</strong>
@@ -62,15 +40,10 @@ export default function LeagueMainTableComponent({
                 <td className={styles.td}> {index + 1}</td>
                 <td className={styles.td}>{details.team}</td>
                 <td className={styles.td}>{details.result.length}</td>
+                <td className={styles.td}>{details.wyniki.reduce((acc, el) => acc + el, 0)}</td>
+                <td className={styles.td}>{details.result.map(Number).reduce((acc, el) => acc + el, 0)}</td>
                 <td className={styles.td}>
-                  {details.wyniki.reduce((acc, el) => acc + el, 0)}
-                </td>
-                <td className={styles.td}>
-                  {details.result.map(Number).reduce((acc, el) => acc + el, 0)}
-                </td>
-                <td className={styles.td}>
-                  {details.result.length * 10 -
-                    details.result.map(Number).reduce((acc, el) => acc + el, 0)}
+                  {details.result.length * 10 - details.result.map(Number).reduce((acc, el) => acc + el, 0)}
                 </td>
               </tr>
             ))}

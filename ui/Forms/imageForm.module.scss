@@ -1,0 +1,85 @@
+@import '../../app/variable.scss';
+
+.grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+}
+.previewImageContainer {
+  max-width: 200px;
+}
+.containerWrapper {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.previewImage {
+  text-align: center;
+  margin: 0 auto;
+  object-fit: contain;
+  width: 100% !important;
+  position: relative !important;
+  height: unset !important;
+}
+
+.formSection {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-top: 25px;
+}
+
+.inputForm {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cccccc;
+  box-sizing: border-box;
+  box-shadow: -2px 4px 10px rgba(115, 124, 142, 0.09);
+  border-radius: 10px;
+  font-size: 15px;
+  resize: none;
+  &:focus {
+    outline: none;
+    box-shadow: -2px 4px 10px rgba(115, 124, 142, 0.3);
+  }
+}
+
+.formfieldFile {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  padding: 6px 12px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  word-wrap: break-word;
+}
+
+.inputText {
+  font-size: $size-formFieldItems;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.uploadIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.displayNonInput {
+  display: none;
+}
+
+.error {
+  margin: 5px;
+  color: $secondary;
+  font-size: $size-formFieldError;
+}

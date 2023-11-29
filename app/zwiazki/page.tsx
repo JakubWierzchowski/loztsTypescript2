@@ -1,7 +1,7 @@
-import Link from "next/link";
-import associations from "../../data/associations.json";
-import styles from "./associations.module.scss";
-import { Association } from "@/types/association.type";
+import Link from 'next/link';
+import associations from '../../data/associations.json';
+import styles from './associations.module.scss';
+import { Association } from '@/types/association.type';
 
 export default async function Associations() {
   const data: Association[] = associations.associations;
@@ -17,10 +17,7 @@ export default async function Associations() {
             target="_blank"
             rel="noreferrer"
           >
-            <div
-              className={styles.associationName}
-              style={{ animationDelay: `${0.1 * index}s` }}
-            >
+            <div className={styles.associationName} style={{ animationDelay: `${0.1 * index}s` }}>
               {details.title}
             </div>
           </Link>

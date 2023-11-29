@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react";
-import { Article } from "@/types/newList.type";
+import { useState, useEffect } from 'react';
+import { Article } from '@/types/newList.type';
 
 export const useFetch = () => {
   const [newArticle, setNewArticle] = useState<Article[]>([]);
@@ -10,14 +10,12 @@ export const useFetch = () => {
       const response = await fetch(`/api/newList`);
       const data = await response.json();
 
-      const sortedData = [...data].sort((a, b) =>
-        a.sortDate > b.sortDate ? -1 : 0
-      );
+      const sortedData = [...data].sort((a, b) => (a.sortDate > b.sortDate ? -1 : 0));
 
       setNewArticle(sortedData);
       setCurrentInfo(sortedData[0]);
     } catch (error) {
-      console.error("Wystąpił błąd z pobieraniem danych", error);
+      console.error('Wystąpił błąd z pobieraniem danych', error);
     }
   };
 

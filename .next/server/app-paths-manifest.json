@@ -1,6 +1,5 @@
 {
   "/[liga]/page": "app/[liga]/page.js",
   "/(mainPage)/page": "app/(mainPage)/page.js",
-  "/komunikaty/page": "app/komunikaty/page.js",
-  "/kalendarz/page": "app/kalendarz/page.js"
+  "/api/newList/route": "app/api/newList/route.js"
 }

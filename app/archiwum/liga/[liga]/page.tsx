@@ -1,12 +1,12 @@
-"use client";
-import React from "react";
-import LeagueMainTableComponent from "@/components/League/MainTableLeague/LeagueMainTableComponents";
-import ArchivesDataLeague from "@/data/archivesLeague.json";
-import { LeagueSeason } from "@/types/archivesLeague";
-import styles from "@/components/League/MainTableLeague/leagueMainTable.module.scss";
-import { archivesPropsLeague } from "@/types/league.types";
+'use client';
+import React from 'react';
+import LeagueMainTableComponent from '@/components/League/MainTableLeague/LeagueMainTableComponents';
+import ArchivesDataLeague from '@/data/archivesLeague.json';
+import { LeagueSeason } from '@/types/archivesLeague';
+import styles from '@/components/League/MainTableLeague/leagueMainTable.module.scss';
+import { leaguePageDetails } from '@/types/league.types';
 
-export default function ArchiwumLiga({ params }: archivesPropsLeague) {
+export default function ArchiwumLiga({ params }: leaguePageDetails) {
   const data: LeagueSeason[] = ArchivesDataLeague.ligaArchiwum;
 
   const findArchives = data.find((sezon) => sezon.sezon === params.liga);
@@ -15,16 +15,12 @@ export default function ArchiwumLiga({ params }: archivesPropsLeague) {
 
   if (findArchives) {
     findArchives.details.forEach(({ leagueDetails }) =>
-      leagueDetails.forEach(({ details }) =>
-        details.sort((a, b) => sum(b.result) - sum(a.result))
-      )
+      leagueDetails.forEach(({ details }) => details.sort((a, b) => sum(b.result) - sum(a.result)))
     );
   }
   if (findArchives) {
     findArchives.details.forEach(({ leagueDetails }) =>
-      leagueDetails.forEach(({ details }) =>
-        details.sort((a, b) => sum(b.wyniki) - sum(a.wyniki))
-      )
+      leagueDetails.forEach(({ details }) => details.sort((a, b) => sum(b.wyniki) - sum(a.wyniki)))
     );
   }
 
@@ -35,9 +31,7 @@ export default function ArchiwumLiga({ params }: archivesPropsLeague) {
           <h1 className={styles.title}>{item.title}</h1>
           {item.leagueDetails.map((item, index) => (
             <LeagueMainTableComponent
-              data={item.details.filter(
-                (item) => item.team !== "Nazwa Drużyny"
-              )}
+              data={item.details.filter((item) => item.team !== 'Nazwa Drużyny')}
               index={index}
               title={item.month}
               key={index}

@@ -1,22 +1,17 @@
-import React, { FC } from "react";
-import styles from "../addQueueModal.module.scss";
-import styled from "@/utils/hooks/getAnimationClass/getAnimationStyles.module.scss";
-import { useForm, FieldErrors } from "react-hook-form";
-import useHTTPrequests from "@/utils/hooks/league/httpRequest";
-import {
-  AddLeagueMatchdayProps,
-  FormValuesDataMatch,
-} from "@/types/league.types";
-
-const AddLeagueMatchday: FC<AddLeagueMatchdayProps> = ({
-  leaguePath,
-  fetchData,
-}) => {
-  const { onSubmit } = useHTTPrequests();
+import React, { FC } from 'react';
+import styles from '../addQueueModal.module.scss';
+import styled from '@/utils/hooks/getAnimationClass/getAnimationStyles.module.scss';
+import { useForm, FieldErrors } from 'react-hook-form';
+import { AddLeagueMatchdayProps, FormValuesDataMatch } from '@/types/league.types';
+import { Button, TextForm } from '@/ui';
+import useHTTPrequest from '@/utils/hooks/httpRequest/httpRequest';
+const AddLeagueMatchday: FC<AddLeagueMatchdayProps> = ({ leaguePath, fetchData }) => {
+  const { onSubmit } = useHTTPrequest<FormValuesDataMatch>({ apiUrl: '/api/allLeague' });
 
   const form = useForm<FormValuesDataMatch>({
     defaultValues: {
-      addLeagueMatchday: "",
+      matchDay: '',
+      path: leaguePath,
     },
   });
 
@@ -24,11 +19,11 @@ const AddLeagueMatchday: FC<AddLeagueMatchdayProps> = ({
   const { errors, isSubmitSuccessful } = formState;
 
   const onError = (errors: FieldErrors<FormValuesDataMatch>) => {
-    console.log("Form errors", errors);
+    console.log('Form errors', errors);
   };
 
   const handleSubmitMatchDay = (data: FormValuesDataMatch) => {
-    onSubmit(data, leaguePath);
+    onSubmit(data, 'matchDay');
     fetchData();
     if (isSubmitSuccessful) {
       reset();
@@ -41,32 +36,18 @@ const AddLeagueMatchday: FC<AddLeagueMatchdayProps> = ({
       onSubmit={handleSubmit(handleSubmitMatchDay, onError)}
       noValidate
     >
-      <div className={styles.formSection}>
-        <label className={styles.label} htmlFor="addLeagueMatchday">
-          Dodaj nową kolejkę
-        </label>
-        <input
-          defaultValue=""
-          id="addLeagueMatchday"
-          type="text"
-          placeholder="np. 1 kolejka – 16.10.2023r."
-          className={styles.inputForm}
-          style={{ padding: 10, marginBottom: 15 }}
-          {...register("addLeagueMatchday", {
-            required: "Dodaj kolejkę",
-            validate: (fieldValue) => {
-              return fieldValue !== "" || "Niepoprawna wartość";
-            },
-          })}
-        />
-        {errors.addLeagueMatchday ? (
-          <p className={styles.error}>{errors.addLeagueMatchday?.message}</p>
-        ) : null}
+      <TextForm
+        label={'Dodaj nową kolejkę'}
+        field={'matchDay'}
+        validateText={'Uzupełnij kolejkę'}
+        placeholder={'1 kolejka 15.10.2023 r.'}
+        register={register}
+        errors={errors}
+      />
 
-        <button className={styles.sendButton} type="submit">
-          Wyślij
-        </button>
-      </div>
+      <Button sendButton type={'submit'}>
+        Wyślij
+      </Button>
     </form>
   );
 };

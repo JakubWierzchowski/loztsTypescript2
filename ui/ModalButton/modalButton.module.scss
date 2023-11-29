@@ -1,0 +1,64 @@
+@import '../../app//variable.scss';
+.modalWrapper {
+  position: absolute;
+  margin: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 95vw;
+  background-color: $white;
+  border-radius: 15px;
+  box-shadow: 0px -5px 25px -10px rgba(0, 0, 0, 0.3);
+  align-items: center;
+  padding: 10px;
+  min-height: 400px;
+}
+
+.modalSectionWrapper {
+  padding: 0 10px;
+  margin: 0;
+  border-radius: 10px 10px 10px 10px;
+  height: fit-content;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+.centerModalButton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media #{$tablet} {
+  .modalWrapper {
+    width: 80vw;
+    padding: 20px;
+  }
+  .modalCloseButton {
+    font-size: $size-ButtonMobileTablet;
+    transform: translate(-30%, 30%);
+  }
+}
+
+@media #{$desktop} {
+  .modalWrapper {
+    width: 60vw;
+  }
+
+  .modalSectionWrapper {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .modalCloseButton {
+    font-size: $size-ButtonMobileDesktop;
+  }
+}
+@media #{$bigDesktop} {
+  .modalButton {
+    font-size: $size-modalButtonMobileBigDesktop;
+  }
+  .modalCloseButton {
+    font-size: $size-ButtonMobileBigDesktop;
+  }
+}
