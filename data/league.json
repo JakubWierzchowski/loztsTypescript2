@@ -1,1 +1,544 @@
-[{"league":"liga","season":"Sezon 2023/2024","leagueDetails":[{"month":"II Liga Kobiet","details":[{"team":"UKS Dynamo Gózd","result":[],"wyniki":[],"id":2},{"team":"MKS Lewart AGS Lubartów","result":[],"wyniki":[],"id":3},{"team":"KS Sygnał Lublin","result":[],"wyniki":[],"id":4},{"team":"LUKS Fala Piotrawin","result":[],"wyniki":[],"id":5},{"team":"UKS Żaczek Fajsławice","result":[],"wyniki":[],"id":1}]}],"queueDetails":[{"id":"01631571-db26-4dd4-b897-c22ad51b11c0","day":"2023-09-16T09:57:41.566Z","matchDay":"1 kolejka  15.10.2023 r."},{"id":"ee5f5ce3-7e8e-43a9-84ac-f9f3a224dacb","day":"2023-09-16T09:58:25.691Z","matchDay":"2 kolejka 5.11.2023 r."}]},{"league":"liga2M","season":"Sezon 2023/2024","leagueDetails":[{"month":"II Liga Mężczyzn","details":[{"team":"MKS Lewart AGS I Lubartów","result":[],"wyniki":[],"id":1},{"team":"AZS Politechnika Lubelska","result":[],"wyniki":[],"id":2},{"team":"SMS Włodawa","wyniki":[],"result":[],"id":3},{"team":"MKS STS I Lubartów","result":[],"wyniki":[],"id":4},{"team":"UPKS Błękitni Leopoldów","result":[],"wyniki":[],"id":5},{"team":"KS Sygnał LALAK Lublin","result":[],"wyniki":[],"id":6},{"team":"KS Ogniwo Chełm","result":[],"wyniki":[],"id":7},{"team":"KS Cisowianka Drzewce","result":[],"wyniki":[],"id":8},{"team":"UKS Grot-Michał I Werbkowice","result":[],"wyniki":[],"id":9},{"team":"UKS Baczyński Biała Podlaska","result":[],"wyniki":[],"id":10},{"team":"KS Heksa Niedrzwica Duża","result":[],"wyniki":[],"id":11},{"team":"UKS Wola Osowińska","result":[],"wyniki":[],"id":12}]}],"queueDetails":[{"id":"ef529456-ba37-42ee-9334-dd8236280774","day":"2023-09-16T18:34:53.951Z","matchDay":"1 kolejka - 1.10.2023 r."},{"id":"beaf3913-2d53-45b5-9bcf-d994689cf6fb","day":"2023-09-16T18:35:20.510Z","matchDay":"2 kolejka - 8.10.2023 r."},{"id":"b4ea9e56-0b78-4bb8-8f99-f84a910fd176","day":"2023-10-22T09:23:43.979Z","matchDay":"3 kolejka - 22.10.2023 r."}]},{"league":"liga3M","season":"Sezon 2023/2024","leagueDetails":[{"month":"III Liga Mężczyzn","details":[{"team":"KS Sokół Zwierzyniec","result":[],"wyniki":[],"id":1},{"team":"UKS Dystans Niedźwiada","result":[],"wyniki":[],"id":2},{"team":"UKS Bobry Bobrowniki","result":[],"wyniki":[],"id":3},{"team":"UKS Żaczek Fajsławice","result":[],"wyniki":[],"id":4},{"team":"KTS Topspin I Kurów","result":[],"wyniki":[],"id":5},{"team":"MKS Lewart AGS II Lubartów","result":[],"wyniki":[],"id":6},{"team":"ULKS Dzierzkowice","result":[],"wyniki":[],"id":7},{"team":"KS Ogniwo II Chełm","result":[],"wyniki":[],"id":8},{"team":"MLKS Wola Sernicka","result":[],"wyniki":[],"id":9},{"team":"KS GOK Trzydnik Duży","result":[],"wyniki":[],"id":10},{"team":"UKS Grot-Michał II Werbkowice","result":[],"wyniki":[],"id":11},{"team":"LKS TUR Turze Rogi","result":[],"wyniki":[],"id":12}]}],"queueDetails":[{"id":"36d69443-c38f-486d-b7f7-d17da225ffc8","day":"2023-09-16T18:37:19.884Z","matchDay":"1 kolejka - 1.10.2023 r."},{"id":"7eaeb525-b3ed-43f8-a754-fc8120184bb5","day":"2023-09-16T18:37:42.522Z","matchDay":"2 kolejka  8.10.2023 r."},{"id":"6a93d389-d48a-4fd6-b4e2-e3d76945c263","day":"2023-10-22T09:26:07.193Z","matchDay":"3 kolejka - 22.10.2023 r."}]},{"league":"liga4M","season":"Sezon 2023/2024","leagueDetails":[{"month":"IV Liga Mężczyzn","details":[{"team":"MOSiR Huragan Międzyrzec Podl.","result":[],"wyniki":[],"id":1},{"team":"UKS Niemce","result":[],"wyniki":[],"id":2},{"team":"UKS Roztocze Szczebrzeszyn","result":[],"wyniki":[],"id":3},{"team":"KS GOK II Trzydnik Duży","result":[],"wyniki":[],"id":4},{"team":"LUKS Kłos Wola Skromowska","result":[],"wyniki":[],"id":5}]}],"queueDetails":[{"id":"81f5ce70-d622-44bd-8b83-4a7587c8dabd","day":"2023-09-16T10:08:58.610Z","matchDay":"1 kolejka 8.10.2023 r."},{"id":"b41c7d8e-3e41-41d6-a70b-dfccb5cae101","day":"2023-09-16T10:09:29.320Z","matchDay":"2 kolejka  29.10.2023 r."}]}]
+[
+  {
+    "league": "liga",
+    "season": "Sezon 2023/2024",
+    "leagueDetails": [
+      {
+        "month": "II Liga Kobiet",
+        "details": [
+          {
+            "team": "UKS Dynamo Gózd",
+            "result": [],
+            "wyniki": [],
+            "id": 2,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "MKS Lewart AGS Lubartów",
+            "result": [],
+            "wyniki": [],
+            "id": 3,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "KS Sygnał Lublin",
+            "result": [],
+            "wyniki": [],
+            "id": 4,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "LUKS Fala Piotrawin",
+            "result": [],
+            "wyniki": [],
+            "id": 5,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "UKS Żaczek Fajsławice",
+            "result": [],
+            "wyniki": [],
+            "id": 1,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          }
+        ]
+      }
+    ],
+    "queueDetails": [
+      {
+        "id": "01631571-db26-4dd4-b897-c22ad51b11c0",
+        "day": "2023-09-16T09:57:41.566Z",
+        "matchDay": "1 kolejka  15.10.2023 r."
+      },
+      {
+        "id": "ee5f5ce3-7e8e-43a9-84ac-f9f3a224dacb",
+        "day": "2023-09-16T09:58:25.691Z",
+        "matchDay": "2 kolejka 5.11.2023 r."
+      },
+      {
+        "id": "99079ccc-d38e-450d-868b-6a95e1fd9d59",
+        "day": "2023-11-11T22:18:54.821Z",
+        "matchDay": "3 kolejka 11.11.2023 r."
+      },
+      {
+        "id": "bffaffaa-02c7-4873-bb77-37bdfa5dc324",
+        "day": "2023-11-12T18:11:58.730Z",
+        "matchDay": "4 kolejka - 26.11.2023 r."
+      },
+      {
+        "id": "0c8e9d8d-4b37-4c7c-ba30-0c66587a77fa",
+        "day": "2023-12-18T12:48:37.870Z",
+        "matchDay": "5 kolejka - 21.01.2024 r."
+      }
+    ]
+  },
+  {
+    "league": "liga2M",
+    "season": "Sezon 2023/2024",
+    "leagueDetails": [
+      {
+        "month": "II Liga Mężczyzn",
+        "details": [
+          {
+            "team": "MKS Lewart AGS I Lubartów",
+            "result": [],
+            "wyniki": [],
+            "id": 1,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "AZS Politechnika Lubelska",
+            "result": [],
+            "wyniki": [],
+            "id": 2,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "SMS Włodawa",
+            "wyniki": [],
+            "result": [],
+            "id": 3,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "MKS STS I Lubartów",
+            "result": [],
+            "wyniki": [],
+            "id": 4,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "UPKS Błękitni Leopoldów",
+            "result": [],
+            "wyniki": [],
+            "id": 5,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "KS Sygnał LALAK Lublin",
+            "result": [],
+            "wyniki": [],
+            "id": 6,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "KS Ogniwo Chełm",
+            "result": [],
+            "wyniki": [],
+            "id": 7,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "KS Cisowianka Drzewce",
+            "result": [],
+            "wyniki": [],
+            "id": 8,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "UKS Grot-Michał I Werbkowice",
+            "result": [],
+            "wyniki": [],
+            "id": 9,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "UKS Baczyński Biała Podlaska",
+            "result": [],
+            "wyniki": [],
+            "id": 10,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "KS Heksa Niedrzwica Duża",
+            "result": [],
+            "wyniki": [],
+            "id": 11,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "UKS Wola Osowińska",
+            "result": [],
+            "wyniki": [],
+            "id": 12,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          }
+        ]
+      }
+    ],
+    "queueDetails": [
+      {
+        "id": "ef529456-ba37-42ee-9334-dd8236280774",
+        "day": "2023-09-16T18:34:53.951Z",
+        "matchDay": "1 kolejka - 1.10.2023 r."
+      },
+      {
+        "id": "ae5abfb0-285c-4dba-afa5-4be114f2c1ae",
+        "day": "2023-10-22T17:57:50.764Z",
+        "matchDay": "2 kolejka - 8.10.2023 r."
+      },
+      {
+        "id": "e1b6e44b-38db-4dc8-a2cc-fdccd1ed855f",
+        "day": "2023-10-22T17:58:47.564Z",
+        "matchDay": "3 kolejka - 22.10.2023 r."
+      },
+      {
+        "id": "6808dacb-adb4-4997-8511-8044627d3248",
+        "day": "2023-10-25T15:36:20.188Z",
+        "matchDay": "4 kolejka - 29.10.2023 r."
+      },
+      {
+        "id": "4bcb3d52-e43b-454a-b8ca-10e81bc722bd",
+        "day": "2023-10-29T19:41:47.122Z",
+        "matchDay": "5 kolejka - 11.11.2023 r."
+      },
+      {
+        "id": "553a447e-a26b-4315-b7d2-f514e6851ea2",
+        "day": "2023-11-11T22:27:28.362Z",
+        "matchDay": "6 kolejka -12.11.2023 r."
+      },
+      {
+        "id": "35d61ed0-a5b9-44d4-bad2-91e2b5273337",
+        "day": "2023-11-12T18:13:14.151Z",
+        "matchDay": "7 kolejka - 03.12.2023 r."
+      },
+      {
+        "id": "ea8f206e-7f48-4de5-a2a8-6cd0efc5c915",
+        "day": "2023-12-10T19:11:29.274Z",
+        "matchDay": "8 kolejka - 10.12.2023 r."
+      },
+      {
+        "id": "8c2473bf-f7ee-4500-9ef5-56f5b7d9c6d7",
+        "day": "2023-12-18T01:53:28.362Z",
+        "matchDay": "9 kolejka - 17.12.2023 r."
+      },
+      {
+        "id": "bf472ec8-9e53-4551-b488-372b2b62da20",
+        "day": "2024-01-07T18:50:15.967Z",
+        "matchDay": "10 kolejka - 07.01.2024 r."
+      }
+    ]
+  },
+  {
+    "league": "liga3M",
+    "season": "Sezon 2023/2024",
+    "leagueDetails": [
+      {
+        "month": "III Liga Mężczyzn",
+        "details": [
+          {
+            "team": "KS Sokół Zwierzyniec",
+            "result": [],
+            "wyniki": [],
+            "id": 1,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "UKS Dystans Niedźwiada",
+            "result": [],
+            "wyniki": [],
+            "id": 2,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "UKS Bobry Bobrowniki",
+            "result": [],
+            "wyniki": [],
+            "id": 3,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "UKS Żaczek Fajsławice",
+            "result": [],
+            "wyniki": [],
+            "id": 4,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "KTS Topspin I Kurów",
+            "result": [],
+            "wyniki": [],
+            "id": 5,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "MKS Lewart AGS II Lubartów",
+            "result": [],
+            "wyniki": [],
+            "id": 6,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "ULKS Dzierzkowice",
+            "result": [],
+            "wyniki": [],
+            "id": 7,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "KS Ogniwo II Chełm",
+            "result": [],
+            "wyniki": [],
+            "id": 8,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "MLKS Wola Sernicka",
+            "result": [],
+            "wyniki": [],
+            "id": 9,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "KS GOK Trzydnik Duży",
+            "result": [],
+            "wyniki": [],
+            "id": 10,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "UKS Grot-Michał II Werbkowice",
+            "result": [],
+            "wyniki": [],
+            "id": 11,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "LKS TUR Turze Rogi",
+            "result": [],
+            "wyniki": [],
+            "id": 12,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          }
+        ]
+      }
+    ],
+    "queueDetails": [
+      {
+        "id": "36d69443-c38f-486d-b7f7-d17da225ffc8",
+        "day": "2023-09-16T18:37:19.884Z",
+        "matchDay": "1 kolejka - 1.10.2023 r."
+      },
+      {
+        "id": "7eaeb525-b3ed-43f8-a754-fc8120184bb5",
+        "day": "2023-09-16T18:37:42.522Z",
+        "matchDay": "2 kolejka  8.10.2023 r."
+      },
+      {
+        "id": "6a93d389-d48a-4fd6-b4e2-e3d76945c263",
+        "day": "2023-10-22T09:26:07.193Z",
+        "matchDay": "3 kolejka - 22.10.2023 r."
+      },
+      {
+        "id": "e80aa1f4-bd6b-45e2-a81c-1d7673bd36f6",
+        "day": "2023-10-25T15:37:08.182Z",
+        "matchDay": "4 kolejka - 29.10.2023 r."
+      },
+      {
+        "id": "31f1add7-ac5d-4f1e-b3a0-a40a1f5f2f0c",
+        "day": "2023-10-29T19:43:08.913Z",
+        "matchDay": "5 kolejka - 11.11.2023 r."
+      },
+      {
+        "id": "5e919f95-2876-443e-88d7-c93e1ca55176",
+        "day": "2023-11-12T13:33:18.319Z",
+        "matchDay": "6 kolejka 12.11.2023"
+      },
+      {
+        "id": "124e9100-ddb9-4296-8ba4-be6741d1f2e2",
+        "day": "2023-11-12T18:10:44.007Z",
+        "matchDay": "7 kolejka - 03.12.2023 r."
+      },
+      {
+        "id": "b6939985-e2e2-4dcd-8686-fd1a80fbbba4",
+        "day": "2023-12-10T19:21:16.429Z",
+        "matchDay": "8 kolejka - 10.12.2023 r."
+      },
+      {
+        "id": "130675b0-8e9d-48da-8947-ea74f232fe84",
+        "day": "2023-12-18T02:01:14.754Z",
+        "matchDay": "9 kolejka - 17.12.2023 r."
+      },
+      {
+        "id": "d69ea2eb-7354-42aa-936c-8b9093fc3e54",
+        "day": "2024-01-07T18:50:58.745Z",
+        "matchDay": "10 kolejka - 07.01.2024 r."
+      }
+    ]
+  },
+  {
+    "league": "liga4M",
+    "season": "Sezon 2023/2024",
+    "leagueDetails": [
+      {
+        "month": "IV Liga Mężczyzn",
+        "details": [
+          {
+            "team": "MOSiR Huragan Międzyrzec Podl.",
+            "result": [],
+            "wyniki": [],
+            "id": 1,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "UKS Niemce",
+            "result": [],
+            "wyniki": [],
+            "id": 2,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "UKS Roztocze Szczebrzeszyn",
+            "result": [],
+            "wyniki": [],
+            "id": 3,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "KS GOK II Trzydnik Duży",
+            "result": [],
+            "wyniki": [],
+            "id": 4,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          },
+          {
+            "team": "LUKS Kłos Wola Skromowska",
+            "result": [],
+            "wyniki": [],
+            "id": 5,
+            "gamesNumber": 0,
+            "pkt": 0,
+            "winMatches": 0,
+            "lossMatches": 0
+          }
+        ]
+      }
+    ],
+    "queueDetails": [
+      {
+        "id": "81f5ce70-d622-44bd-8b83-4a7587c8dabd",
+        "day": "2023-09-16T10:08:58.610Z",
+        "matchDay": "1 kolejka 8.10.2023 r."
+      },
+      {
+        "id": "b41c7d8e-3e41-41d6-a70b-dfccb5cae101",
+        "day": "2023-09-16T10:09:29.320Z",
+        "matchDay": "2 kolejka  29.10.2023 r."
+      },
+      {
+        "id": "c06ceed5-33e8-4060-a9fe-4d2a463ad439",
+        "day": "2023-10-29T19:44:17.885Z",
+        "matchDay": "3 kolejka - 12.11.2023 r."
+      },
+      {
+        "id": "445a0c82-a117-4085-95bb-f8e3d947c92e",
+        "day": "2023-11-12T18:09:00.561Z",
+        "matchDay": "4 kolejka - 03.12.2023 r."
+      },
+      {
+        "id": "af078986-e911-4426-9355-89f341a15336",
+        "day": "2023-12-18T02:06:10.782Z",
+        "matchDay": "9 kolejka - 17.12.2023 r."
+      }
+    ]
+  }
+]

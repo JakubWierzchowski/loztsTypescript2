@@ -36,3 +36,19 @@
     background-color: $light;
   }
 }
+
+@media #{$tablet} {
+  .span {
+    font-size: 1.3rem;
+  }
+}
+@media #{$desktop} {
+  .span {
+    font-size: 1.7rem;
+  }
+}
+@media #{$bigDesktop} {
+  .span {
+    font-size: 2rem;
+  }
+}

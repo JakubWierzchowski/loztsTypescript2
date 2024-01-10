@@ -41,7 +41,7 @@
   padding: 8px 12px;
   box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
   background-color: #e42727;
-  font-size: 1.6rem;
+  font-size: 1.2rem;
   &:hover {
     scale: 1.1;
   }
@@ -62,5 +62,11 @@
   margin-top: 8px;
   &:hover {
     scale: 1.1;
+  }
+}
+
+@media #{$desktop} {
+  .deleteButton {
+    font-size: 1.6rem;
   }
 }

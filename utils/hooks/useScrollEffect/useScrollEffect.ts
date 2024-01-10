@@ -1,8 +1,5 @@
-import { useEffect, useState } from "react";
-
-interface MyEventListenerOptions extends EventListenerOptions {
-  passive?: boolean;
-}
+import { MyEventListenerOptions } from '@/types/hooks/useScroll.type';
+import { useEffect, useState } from 'react';
 
 export const useScrollEffect = (): number => {
   const [scrollValue, setScrollValue] = useState<number>(0);
@@ -11,10 +8,10 @@ export const useScrollEffect = (): number => {
     const onScroll = () => setScrollValue(window.scrollY);
 
     const options: MyEventListenerOptions = { passive: true };
-    window.addEventListener("scroll", onScroll, options);
+    window.addEventListener('scroll', onScroll, options);
 
     return () => {
-      window.removeEventListener("scroll", onScroll, options);
+      window.removeEventListener('scroll', onScroll, options);
     };
   }, []);
 

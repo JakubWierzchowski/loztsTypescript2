@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { LeagueDataItem } from '@/types/league.types';
+import { LeagueDataItem } from '@/types/leagues/league.types';
 import { buildPath, extractPath } from '@/utils/api/buildExtractPath';
 
 export async function GET(req: Request, res: Response) {

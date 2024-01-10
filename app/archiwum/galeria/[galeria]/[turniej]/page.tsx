@@ -2,7 +2,7 @@
 import React, { useState } from 'react';
 import ArchivesDataGallery from '@/data/archivesGallery.json';
 import useModal from '@/utils/hooks/useModal/useModal';
-import { GallerySeason } from '@/types/archivesGallery.type';
+import { GallerySeason } from '@/types/archives/archivesGallery.type';
 import Image from 'next/image';
 import styles from '@/components/ArchivesGallery/archivesGalleryTurnament.module.scss';
 import GalleryModal from '@/components/newGallery/galleryModal';
@@ -21,14 +21,6 @@ export default function GaleriaArchiwum({ params }: GalleryTournamentsProps) {
     setSlideNumber(index);
     handleOpenModal();
   };
-  const slider: number = findArchivesGallery?.link.length || 0;
-  const prevSlide = () => {
-    slideNumber === 0 ? setSlideNumber(slider) : setSlideNumber(slideNumber - 1);
-  };
-  const nextSlide = () => {
-    slideNumber === slider ? setSlideNumber(slider) : setSlideNumber(slideNumber + 1);
-  };
-  const lastSlide = findArchivesGallery?.link.length || 0;
 
   return (
     <>

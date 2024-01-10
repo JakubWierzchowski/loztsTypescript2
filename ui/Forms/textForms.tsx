@@ -1,19 +1,9 @@
 import React from 'react';
 import styles from './forms.module.scss';
 import styled from '@/utils/hooks/getAnimationClass/getAnimationStyles.module.scss';
+import { TextFormProps } from '@/types/ui/forms/text.From.type';
 
-interface FormProps {
-  validateText: string;
-  label: string;
-  field: string;
-  placeholder: string;
-  register: any;
-  errors: any;
-  isTextArea?: boolean;
-  type?: 'tekst' | 'file' | 'number';
-}
-
-const TextForm = ({ placeholder, validateText, label, field, register, errors, isTextArea, type }: FormProps) => {
+const TextForm = ({ placeholder, validateText, label, field, register, errors, isTextArea, type }: TextFormProps) => {
   return (
     <div className={`${styles.formSection} ${styled.slideOut}`}>
       <label className={styles.label} htmlFor={field}>
@@ -21,7 +11,7 @@ const TextForm = ({ placeholder, validateText, label, field, register, errors, i
       </label>
       {isTextArea ? (
         <textarea
-          type="tekst"
+          type="text"
           placeholder={placeholder}
           className={styles.textareaForm}
           id={field}
@@ -38,6 +28,12 @@ const TextForm = ({ placeholder, validateText, label, field, register, errors, i
           id={field}
           {...register(field, {
             required: validateText || 'Wpisz wartość',
+            ...(field === 'email' && {
+              pattern: {
+                value: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-0-]+)*$/,
+                message: 'Niepoprawny email',
+              },
+            }),
             validate: (fieldValue: string) => fieldValue.trim() !== '' || 'Niepoprawna wartość',
           })}
         />

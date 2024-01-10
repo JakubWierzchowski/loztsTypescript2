@@ -1,13 +1,6 @@
-import React, { ButtonHTMLAttributes } from 'react';
+import React from 'react';
 import styles from './button.module.scss';
-
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  deleteButton?: boolean;
-  sendButton?: boolean;
-  modalButton?: boolean;
-  closeModalButton?: boolean;
-  type: 'button' | 'reset' | 'submit';
-}
+import { ButtonProps } from '@/types/ui/button/button.type';
 
 const Button: React.FC<ButtonProps> = ({ deleteButton, sendButton, modalButton, closeModalButton, type, ...props }) => {
   let className = '';

@@ -9,21 +9,24 @@
   flex-direction: column;
 }
 .positionLeft {
-  margin: 0 auto;
+  display: flex;
   justify-items: center;
   position: relative;
+  height: 100%;
 }
 .positionRight {
+  position: relative;
+  display: flex;
+  justify-items: center;
   grid-column: 2 / 3;
   grid-row: 1/1;
-  margin: auto;
-  position: relative;
+  height: 100%;
 }
 
 .image {
-  text-align: center;
+  position: relative;
   margin: 0 auto;
-  object-fit: contain;
+  object-fit: cover;
   width: 75% !important;
   position: relative !important;
   height: unset !important;

@@ -6,8 +6,10 @@
   padding: 30px;
 }
 .gridItems {
-  display: grid;
-  grid-template-columns: 1fr 0.2fr;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
   grid-gap: 10px;
 }
 
@@ -20,7 +22,7 @@
   justify-content: center;
   align-items: center;
   font-size: 1.5rem;
-  min-height: 400px;
+  min-height: 200px;
 }
 
 .linkItem {
@@ -42,27 +44,4 @@
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-// @media #{$tablet} {
-//   .linkItem {
-//     font-size: $size-tableHeadTablet;
-//   }
-//   .noResults {
-//     font-size: $size-tableHeadTablet;
-//     height: 30vh;
-//   }
-// }
-
-// @media #{$desktop} {
-//   .linkItem {
-//     font-size: $size-tableHeadDesktop;
-//   }
-//   .noResults {
-//     font-size: $size-tableHeadDesktop;
-//     height: 50vh;
-//   }
-// }
-
-@media #{$bigDesktop} {
 }

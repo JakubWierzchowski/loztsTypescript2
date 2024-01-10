@@ -1,351 +1,8 @@
 [
   {
-    "month": "Październik",
-    "dataMonth": "2023-11-01",
-    "details": [
-      {
-        "title": "II, III LM - 1",
-        "link": "",
-        "data": "01.10",
-        "place": "Kluby",
-        "categories": "",
-        "datamoment": "2023-10-02",
-        "players": []
-      },
-      {
-        "title": "1. Grand Prix Polski Kadetów",
-        "link": "IGrandPrixPolskiKadetow",
-        "data": "06-08.10",
-        "place": "Kraków",
-        "categories": "Kadeci",
-        "datamomentInvite": "",
-        "datamoment": "2023-10-09",
-        "typeofTournaments": [],
-        "players": []
-      },
-      {
-        "title": "II, III LM - 2,  IV LM - 1",
-        "link": "",
-        "data": "08.10",
-        "place": "Kluby",
-        "categories": "",
-        "datamoment": "2023-10-09",
-        "players": [],
-        "datamomentInvite": "",
-        "typeofTournaments": []
-      },
-      {
-        "title": "II LK -1",
-        "link": "",
-        "data": "15.10",
-        "place": "Kluby",
-        "categories": "",
-        "datamoment": "2023-10-16",
-        "players": [],
-        "datamomentInvite": "",
-        "typeofTournaments": []
-      },
-      {
-        "title": "II, III LM - 3",
-        "link": "",
-        "data": "22.10",
-        "place": "Kluby",
-        "categories": "",
-        "datamoment": "2023-10-23",
-        "players": [],
-        "datamomentInvite": "",
-        "typeofTournaments": []
-      },
-      {
-        "title": "II, III LM - 4, IV LM - 2",
-        "link": "",
-        "data": "29.10",
-        "place": "Kluby",
-        "categories": "",
-        "datamoment": "2023-10-30",
-        "players": [],
-        "datamomentInvite": "",
-        "typeofTournaments": []
-      }
-    ]
-  },
-  {
-    "month": "Listopad",
-    "dataMonth": "2023-12-01",
-    "details": [
-      {
-        "title": "II WTK Seniorów",
-        "link": "IIWTKSeniorow",
-        "data": "05.11",
-        "place": "",
-        "categories": "Seniorzy",
-        "datamomentInvite": "2023-11-03",
-        "datamoment": "2023-11-06",
-        "typeofTournaments": [
-          {
-            "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
-          }
-        ],
-        "players": []
-      },
-      {
-        "title": "II LK - 2",
-        "link": "",
-        "data": "05.11",
-        "place": "Kluby",
-        "categories": "",
-        "datamoment": "2023-11-06",
-        "players": [],
-        "datamomentInvite": "",
-        "typeofTournaments": []
-      },
-      {
-        "title": "II, III LM - 5, II LK - 3",
-        "link": "",
-        "data": "11.11",
-        "place": "Kluby",
-        "categories": "",
-        "datamoment": "2023-11-12",
-        "players": [],
-        "datamomentInvite": "",
-        "typeofTournaments": []
-      },
-
-      {
-        "title": "II, III LM - 6, IV LM - 3",
-        "link": "",
-        "data": "12.11",
-        "place": "Kluby",
-        "categories": "",
-        "datamoment": "2023-11-13",
-        "players": [],
-        "datamomentInvite": "",
-        "typeofTournaments": []
-      },
-      {
-        "title": "II WTK Żaków",
-        "link": "IIWTKZakow",
-        "data": "18.11",
-        "place": "",
-        "categories": "Żacy",
-        "datamomentInvite": "2023-11-16",
-        "datamoment": "2023-11-17",
-        "typeofTournaments": [
-          {
-            "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
-          }
-        ],
-        "players": []
-      },
-      {
-        "title": "II WTK Kadetów",
-        "link": "IIWTKKadetow",
-        "data": "18.11",
-        "place": "",
-        "categories": "Kadeci",
-        "datamomentInvite": "2023-11-16",
-        "datamoment": "2023-11-17",
-        "typeofTournaments": [
-          {
-            "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
-          }
-        ],
-        "players": []
-      },
-      {
-        "title": "II WTK Młodzików",
-        "link": "IIWTKMlodzikow",
-        "data": "19.11",
-        "place": "",
-        "categories": "Żacy",
-        "datamomentInvite": "2023-11-17",
-        "datamoment": "2023-11-20",
-        "typeofTournaments": [
-          {
-            "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
-          }
-        ],
-        "players": []
-      },
-      {
-        "title": "II WTK Juniorów",
-        "link": "IIWTKJuniorow",
-        "data": "19.11",
-        "place": "",
-        "categories": "Juniorzy",
-        "datamomentInvite": "2023-11-17",
-        "datamoment": "2023-11-20",
-        "typeofTournaments": [
-          {
-            "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
-          }
-        ],
-        "players": []
-      },
-      {
-        "title": "2. Grand Prix Polski Seniorów",
-        "link": "IIGrandPrixPolskiSeniorow",
-        "data": "24-26.11",
-        "place": "Bilcza",
-        "categories": "Seniorzy",
-        "datamomentInvite": "",
-        "datamoment": "2023-11-27",
-        "typeofTournaments": [],
-        "players": []
-      },
-      {
-        "title": "2. Grand Prix Polski Młodzików",
-        "link": "IIGrandPrixPolskiMlodzikow",
-        "data": "24-26.11",
-        "place": "Jastrzębie-Zdrój",
-        "categories": "Młodzicy",
-        "datamomentInvite": "",
-        "datamoment": "2023-11-27",
-        "typeofTournaments": [],
-        "players": []
-      },
-      {
-        "title": "II - 4 LK",
-        "link": "",
-        "data": "26.11",
-        "place": "Kluby",
-        "categories": "",
-        "datamoment": "2023-11-27",
-        "players": [],
-        "datamomentInvite": "",
-        "typeofTournaments": []
-      }
-    ]
-  },
-  {
-    "month": "Grudzień",
-    "dataMonth": "2024-01-01",
-    "details": [
-      {
-        "title": "II, III LM - 7, IV LM - 4",
-        "data": "03.12",
-        "link": "",
-        "place": "Kluby",
-        "categories": "",
-        "datamoment": "2023-12-04",
-        "players": [],
-        "datamomentInvite": "",
-        "typeofTournaments": []
-      },
-      {
-        "title": "2. Grand Prix Polski Kadetów",
-        "link": "IIGrandPrixPolskiKadetow",
-        "data": "08-10.12",
-        "place": "Zielona Góra",
-        "categories": "Kadeci",
-        "datamomentInvite": "",
-        "datamoment": "2023-12-11",
-        "typeofTournaments": [],
-        "players": []
-      },
-      {
-        "title": "Narodowy Dzień Tenisa Stołowego z Mikołajem Skrzaci",
-        "link": "MikolajkowyTurniej2023Skrzatow",
-        "data": "09.12",
-        "place": "Wola Skromowska",
-        "categories": "Skrzaci",
-        "datamomentInvite": "2023-12-07",
-        "datamoment": "2023-12-10",
-        "typeofTournaments": [
-          {
-            "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
-          }
-        ],
-        "players": []
-      },
-      {
-        "title": "Narodowy Dzień Tenisa Stołowego z Mikołajem Żacy",
-        "link": "MikolajkowyTurniej2023Zakow",
-        "data": "09.12",
-        "place": "Wola Skromowska",
-        "categories": "Żacy",
-        "datamomentInvite": "2023-12-07",
-        "datamoment": "2023-12-10",
-        "typeofTournaments": [
-          {
-            "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
-          }
-        ],
-        "players": []
-      },
-      {
-        "title": "II, III LM - 8",
-        "link": "",
-        "data": "10.12",
-        "place": "Kluby",
-        "categories": "",
-        "datamoment": "2023-12-11",
-        "players": [],
-        "datamomentInvite": "",
-        "typeofTournaments": []
-      },
-      {
-        "title": "Grand Prix Polski Juniorów",
-        "link": "GrandPrixPolskiJuniorow",
-        "data": "15-17.12",
-        "place": "Ostróda",
-        "categories": "Juniorzy",
-        "datamomentInvite": "",
-        "datamoment": "2023-12-18",
-        "typeofTournaments": [],
-        "players": []
-      },
-      {
-        "title": "Grand Prix Polski Żaków",
-        "link": "GrandPrixPolskiZakow",
-        "data": "15-17.12",
-        "place": "Świdwin",
-        "categories": "Żacy",
-        "datamomentInvite": "",
-        "datamoment": "2023-12-18",
-        "typeofTournaments": [],
-        "players": []
-      },
-      {
-        "title": "II, III LM – 9, IV LM - 5",
-        "link": "",
-        "data": "17.12",
-        "place": "Kluby",
-        "categories": "",
-        "datamoment": "2023-12-18",
-        "players": [],
-        "datamomentInvite": "",
-        "typeofTournaments": []
-      }
-    ]
-  },
-  {
     "month": "Styczeń 2024",
     "dataMonth": "2024-02-01",
     "details": [
-      {
-        "title": "III WTK Seniorów",
-        "link": "IIIwtkSeniorow",
-        "data": "06.01",
-        "place": "Niedźwiada",
-        "categories": "Seniorzy",
-        "datamomentInvite": "2024-01-04",
-        "datamoment": "2024-01-07",
-        "typeofTournaments": [
-          {
-            "title": "WTK/DMW",
-            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
-          }
-        ],
-        "players": []
-      },
       {
         "title": "II, III LM – 10",
         "link": "",
@@ -357,7 +14,6 @@
         "datamomentInvite": "",
         "typeofTournaments": []
       },
-
       {
         "title": "II, III LM – 11",
         "link": "",
@@ -369,6 +25,78 @@
         "datamomentInvite": "",
         "typeofTournaments": []
       },
+      {
+        "title": "III WTK Seniorów",
+        "link": "IIIwtkSeniorow",
+        "data": "20.01",
+        "place": "Niedźwiada",
+        "categories": "Seniorzy",
+        "datamomentInvite": "2024-01-18",
+        "datamoment": "2024-01-21",
+        "typeofTournaments": [
+          {
+            "title": "WTK/DMW",
+            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
+          }
+        ],
+        "players": []
+      },
+      {
+        "title": "DMW młodzików młodszych",
+        "link": "DMWMlodzikowMlodszych",
+        "data": "20.01",
+        "place": "Niedźwiada",
+        "categories": "Młodzicy_Młodsi",
+        "datamomentInvite": "2024-01-18",
+        "datamoment": "2024-01-21",
+        "typeofTournaments": [
+          {
+            "title": "WTK/DMW",
+            "table": ["Wybierz kategorię", "Drużyna K + M"]
+          }
+        ],
+        "players": []
+      },
+      {
+        "title": "IMW młodzików młodszych",
+        "link": "IMWMlodzikowMlodszych",
+        "data": "21.01",
+        "place": "Niedźwiada",
+        "categories": "Młodzicy_Młodsi",
+        "datamomentInvite": "2024-01-19",
+        "datamoment": "2024-01-22",
+        "typeofTournaments": [
+          {
+            "title": "WTK/IMW",
+            "table": [
+              "Wybierz kategorię",
+              "Mężczyźni",
+              "Kobiety",
+              "Gra podwójna Mężczyzn",
+              "Gra podwójna Kobiet",
+              "Gra podwójna mieszana"
+            ]
+          }
+        ],
+        "players": []
+      },
+      {
+        "title": "Kwalifikacje Wojewódzkie DPP KiM",
+        "link": "KwalifikacjeWojewodzkieDPP",
+        "data": "21.01",
+        "place": "Niedźwiada",
+        "categories": "",
+        "datamomentInvite": "2024-01-19",
+        "datamoment": "2024-01-22",
+        "typeofTournaments": [
+          {
+            "title": "WTK/IMW",
+            "table": ["Wybierz kategorię", "Mężczyźni", "Kobiety"]
+          }
+        ],
+        "players": []
+      },
+
       {
         "title": "II LK – 5",
         "link": "",

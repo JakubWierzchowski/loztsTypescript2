@@ -1,5 +1,5 @@
 export interface DownloadData {
-  month?: string;
+  month: string;
   download?: DownloadItem[];
   apiLink?: string;
 }
@@ -31,3 +31,8 @@ export interface HandleUpdateProps {
   data: DownloadData[];
   category: string;
 }
+
+export type FormValuesCommunicats = {
+  myFile?: FileList;
+  month: string;
+};

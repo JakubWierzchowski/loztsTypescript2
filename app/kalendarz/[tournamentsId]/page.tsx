@@ -1,7 +1,6 @@
 'use client';
 import TournamentsTable from '@/components/Calendar/Tournaments/TournamentsTable';
-import React, { FC, useState, useEffect } from 'react';
-import CalendarDate from '@/data/calendarDate.json';
+import React, { useState } from 'react';
 import { CalendarTypeTournaments, CalendarTypeDetails, CalendarTournamentPageProps } from '@/types/calendar.type';
 import styles from '@/components/Calendar/table.module.scss';
 import Clock from '@/components/Calendar/Tournaments/Clock/Clock';

@@ -1,34 +1,23 @@
-@import "../../../app/variable.scss";
-.wrapper {
-  margin: 20px;
-}
-.title {
-  color: $light;
-  text-align: center;
-  margin: 40px 0 0 0;
-  transform: translateY(40%);
-  font-size: 2.4rem;
-}
+@import '../../../app/variable.scss';
 
-.wrapper2 {
-  margin: 5px;
+$colorsCategoryCalendar: (
+  'GrupaAwansowa': $primary,
+  'GrupaSpadkowa': $secondary,
+  'GrupaPółnocna': $primary,
+  'GrupaPołudniowa': $primary,
+  'IILigaKobiet': $mainHeaderTable,
+  'IILigaMężczyzn': $mainHeaderTable,
+  'IIILigaMężczyzn': $mainHeaderTable,
+  'IVLigaMężczyzn': $mainHeaderTable,
+);
+
+.tableSection {
   opacity: 0;
 }
 
-$colorsCategoryCalendar: (
-  "GrupaAwansowa": $primary,
-  "GrupaSpadkowa": $secondary,
-  "GrupaPółnocna": $primary,
-  "GrupaPołudniowa": $primary,
-  "IILigaKobiet": $primary,
-  "IILigaMężczyzn": $primary,
-  "IIILigaMężczyzn": $primary,
-  "IVLigaMężczyzn": $primary,
-);
-
 .tableTitle {
   text-align: center;
-  margin: 30px;
+  font-size: $size-TitleMobile;
   @each $category, $color in $colorsCategoryCalendar {
     &.#{$category} {
       color: $color;
@@ -37,14 +26,11 @@ $colorsCategoryCalendar: (
   &.default {
     color: $primary;
   }
-  &:first-child:first-child {
-    padding: 20px 0px 1px 0px;
-  }
 }
 
 .table {
   margin: 0 auto;
-  width: 95%;
+  width: 98%;
   border-collapse: collapse;
   border-spacing: 0;
   table-layout: fixed;
@@ -59,21 +45,20 @@ $colorsCategoryCalendar: (
     }
   }
   font-size: $size-tableHeadMobile;
-  padding: 20px 0px;
-  .th {
-    padding: 10px 0px;
-    &:first-child {
-      width: 20%;
-    }
+}
+.th {
+  padding: 5px;
+  &:first-child {
+    width: 10%;
   }
 }
-.tbody {
-  .tr {
-    &:hover {
-      background-color: $primaryHover;
-    }
+
+.tr {
+  &:hover {
+    background-color: $primaryHover;
   }
 }
+
 .td {
   border-bottom: 2px solid rgba(255, 255, 255, 0.16);
   text-align: center;
@@ -81,54 +66,25 @@ $colorsCategoryCalendar: (
   padding: 15px;
   color: $light;
   font-size: $size-tableItemsMobile;
+  word-break: normal;
   &:last-child {
     border-right: none;
   }
 }
 
-@media #{$tablet} {
-  .title {
-    font-size: 3rem;
-  }
-  .tableTitle {
-    font-size: $size-tableTitleTablet;
-  }
+@media #{$desktop} {
   .table {
     line-height: 20px;
   }
+  .th {
+    padding: 12px;
+  }
 
-  .thead {
-    font-size: $size-tableHeadTablet;
-  }
-  .td {
-    font-size: $size-tableItemsTablet;
-  }
-}
-@media #{desktop} {
-  .title {
-    font-size: 3.4rem;
-  }
-  .tableTitle {
-    font-size: $size-tableTitleDesktop;
-  }
   .thead {
     font-size: $size-tableHeadDesktop;
   }
+
   .td {
     font-size: $size-tableItemsDesktop;
-  }
-}
-@media #{$bigDesktop} {
-  .title {
-    font-size: 4rem;
-  }
-  .tableTitle {
-    font-size: $size-tableTitleBigDesktop;
-  }
-  .thead {
-    font-size: $size-tableHeadBigDesktop;
-  }
-  .td {
-    font-size: $size-tableItemsBigDesktop;
   }
 }

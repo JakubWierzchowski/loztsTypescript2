@@ -1,6 +1,8 @@
-import { WrapperProps, SpanProps } from "@/types/navBar.types";
-import styled from "styled-components";
+import { SpanProps, WrapperProps } from '@/types/navigation/navBar.types';
+import styled from 'styled-components';
 export const Wrapper = styled.nav<WrapperProps>`
+  position: relative;
+  z-index: 0 !important;
   padding-top: ${(props) => props.paddingTop};
   background-color: ${(props) => props.background};
   nav {
@@ -20,9 +22,8 @@ export const Span = styled.span<SpanProps>`
     position: absolute;
     width: 100%;
     height: 1.5px;
-    background-color: ${({ color }) =>
-      color === "true" ? "#FFFFEA" : "#100B00"};
-    color:rgb(0, 135, 253);
+    background-color: ${({ color }) => (color === 'light' ? '#FFFFEA' : '#100B00')};
+    color: ${({ color }) => (color === 'light' ? '#100B00' : '#FFFFEA ')};
     bottom: 0;
     left: 0;
     transform: scaleX(0);
@@ -36,7 +37,7 @@ export const Span = styled.span<SpanProps>`
 
 @media (min-width: 768px) {
     font-size: 1.3rem;
-    color: ${({ color }) => (color === "true" ? "#FFFFEA" : "#100B00")};
+    color: ${({ color }) => (color === 'light' ? '#FFFFEA' : '#100B00')};
   }
 @media (min-width: 1024px) {
     font-size: 1.7rem;

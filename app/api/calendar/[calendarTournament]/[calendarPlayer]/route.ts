@@ -34,10 +34,6 @@ export async function DELETE(req: Request, res: Response) {
 
   const filteredFindIndex = findIndex.filter((index) => index !== undefined);
 
-  //   const filterPlayer = filterTournament
-  //     .flat()
-  //     .filter((index) => index !== null);
-
   filterTournament.forEach((item) => {
     if (item) {
       item.players = item?.players?.filter((_, index) => {

@@ -49,15 +49,9 @@
 }
 
 @media (min-width: 768px) {
-  .title {
-    font-size: $size-TitleTablet;
-  }
   .sectionWrapper {
     flex-direction: row;
     flex-wrap: wrap;
-  }
-  .associationName {
-    font-size: $size-TextTablet;
   }
 }
 
@@ -68,15 +62,5 @@
 
   .associationName {
     font-size: $size-TextDesktop;
-  }
-}
-
-@media (min-width: 1280px) {
-  .title {
-    font-size: $size-TitleBigDesktop;
-  }
-
-  .associationName {
-    font-size: $size-TextBigDesktop;
   }
 }

@@ -2,6 +2,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
 import useModal from '@/utils/hooks/useModal/useModal';
+import { toastConfig } from '../toastOptions/toastOption';
 
 import {
   signInWithEmailAndPassword,
@@ -30,7 +31,7 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({ c
   const [error, setError] = useState('');
 
   const { handleCloseModal } = useModal();
-  const admin = user?.email === 'lozts1937@gmail.com';
+  const admin = user?.email === process.env.NEXT_PUBLIC_ADMIN;
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (res) => {
@@ -55,7 +56,6 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({ c
       })
       .then((res) => console.log(res))
       .catch((err) => setError(err.message));
-    // .finally(() => setLoading(false));
   };
 
   const signInUser = async (email: string, password: string) => {
@@ -64,43 +64,16 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
       if (signInMethods.length === 0) {
         console.log(signInMethods);
-        toast.error('Konto z takim adresem email nie zostało zarejestrowane', {
-          position: 'top-right',
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: 'light',
-        });
+        toast.error('Konto z takim adresem email nie zostało zarejestrowane', toastConfig);
 
         return;
       }
       await signInWithEmailAndPassword(auth, email, password);
-      toast.success(`Zalogowano pomyślnie ${email}!`, {
-        position: 'top-right',
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'light',
-      });
+      toast.success(`Zalogowano pomyślnie ${email}!`, toastConfig);
       console.log(email);
     } catch (error: any) {
       if (error.code === 'auth/wrong-password') {
-        toast.error('Błędne hasło!', {
-          position: 'top-right',
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: 'light',
-        });
+        toast.error('Błędne hasło!', toastConfig);
       } else {
         toast.error(`${error.code}`, {
           position: 'top-right',
@@ -119,18 +92,7 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
   const logoutUser = () => {
     signOut(auth)
-      .then(() =>
-        toast.success(`Wylogowano pomyślnie!`, {
-          position: 'top-right',
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: 'light',
-        })
-      )
+      .then(() => toast.success(`Wylogowano pomyślnie!`, toastConfig))
       .then(handleCloseModal)
       .catch(() =>
         toast.error(`Ups.. Coś poszło nie tak. Spróbuj jeszcze raz.`, {
@@ -150,31 +112,13 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({ c
     try {
       const signInMethods = await fetchSignInMethodsForEmail(auth, email);
       if (signInMethods.length === 0) {
-        toast.error('Konto z takim adresem email nie zostało zarejestrowane', {
-          position: 'top-right',
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: 'light',
-        });
+        toast.error('Konto z takim adresem email nie zostało zarejestrowane', toastConfig);
 
         return;
       }
 
       await sendPasswordResetEmail(auth, email);
-      toast.success('Link do resetowania hasła został wysłany na Twój adres email', {
-        position: 'top-right',
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: 'light',
-      });
+      toast.success('Link do resetowania hasła został wysłany na Twój adres email', toastConfig);
     } catch (error) {
       console.error('Wystąpił błąd podczas resetowania hasła:', error);
     }

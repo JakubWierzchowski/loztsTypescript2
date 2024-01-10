@@ -16,7 +16,7 @@ export default async function GaleriaArchiwum() {
           data.map((item, index) => (
             <Link href={`galeria/${item.ID}`} key={item.ID} className={styles.articleLink}>
               <div className={styles.flex}>
-                <div className={styles.imageContainter}>
+                <div className={styles.imageContainer}>
                   <Image
                     className={styles.image}
                     alt={item.text}

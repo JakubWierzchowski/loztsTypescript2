@@ -1,9 +1,8 @@
 import fs from 'fs';
-import { CalendarTypeMonth, PlayersType } from '@/types/calendar.type';
 import moment from 'moment';
 import { v4 as uuidv4 } from 'uuid';
 import { buildPath, extractPath } from '@/utils/api/buildExtractPath';
-import { Article } from '@/types/newList.type';
+import { Article } from '@/types/mainPage/newList.type';
 import { NextResponse } from 'next/server';
 
 export async function GET(req: Request, res: Response) {
