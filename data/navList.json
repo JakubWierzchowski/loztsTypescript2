@@ -61,13 +61,7 @@
         },
         {
           "li": "Archiwum",
-          "link": "/archiwum",
-          "dropDown": [
-            {
-              "liLi": "Strona archiwalna",
-              "link": "/stronaarchiwalna"
-            }
-          ]
+          "link": "/archiwum"
         }
       ]
     }

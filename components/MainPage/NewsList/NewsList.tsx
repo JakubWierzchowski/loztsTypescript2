@@ -7,15 +7,19 @@ import { useFetch } from '@/utils/hooks/mainPage/fetchDataHook';
 import IsAdmin from '@/utils/hooks/isAdmin/isAdmin';
 import { Button, ModaWithButton } from '@/ui';
 import useHTTPrequest from '@/utils/hooks/httpRequest/httpRequest';
-import { DataSubmit } from '@/types/newList.type';
+import { DataSubmit } from '@/types/mainPage/newList.type';
 
 function NewsList() {
   const { deleteRequest } = useHTTPrequest<DataSubmit>({ apiUrl: '/api/newList' });
   const { newArticle, currentInfo, fetchData, handleOpenInfo } = useFetch();
 
-  const handleDeleteArticle = (id: string) => {
-    deleteRequest(id, 'title');
-    fetchData();
+  const handleDeleteArticle = async (id: string) => {
+    try {
+      await deleteRequest(id, 'title');
+      fetchData();
+    } catch (error) {
+      console.error('Error deleting article:', error);
+    }
   };
 
   return (
@@ -23,14 +27,18 @@ function NewsList() {
       <section className={styles.wrapperArticle}>
         <div className={styles.gridLayout}>
           <h3 className={styles.articleHeader}>Aktualności</h3>
-          <ModaWithButton text={'Dodaj informację'}>
-            <NewsListModal fetchData={fetchData} />
-          </ModaWithButton>
+          <IsAdmin>
+            <ModaWithButton text={'Dodaj informację'}>
+              <>
+                <NewsListModal fetchData={fetchData} />
+              </>
+            </ModaWithButton>
+          </IsAdmin>
 
           <div className={styles.articleShortGrid}>
             <div className={styles.articleShortSection}>
               {newArticle.map((item) => (
-                <div key={item.title} className={styles.shortsItem} onClick={() => handleOpenInfo(item)}>
+                <div key={item.id} className={styles.shortsItem} onClick={() => handleOpenInfo(item)}>
                   <div className={styles.itemShortTitle}>{item.title}</div>
                   <div className={styles.itemShortData}>{item.timeadd}</div>
                 </div>

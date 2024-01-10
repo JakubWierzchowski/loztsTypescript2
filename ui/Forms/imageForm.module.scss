@@ -1,9 +1,9 @@
 @import '../../app/variable.scss';
 
 .grid {
-  display: grid;
-  grid-template-columns: 50% 50%;
-  grid-gap: 10px;
+  display: flex;
+  justify-content: space-around;
+  justify-content: center;
 }
 .previewImageContainer {
   max-width: 200px;

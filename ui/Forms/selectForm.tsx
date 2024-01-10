@@ -1,17 +1,7 @@
 import React from 'react';
 import styles from './forms.module.scss';
 import animationStyles from '@/utils/hooks/getAnimationClass/getAnimationStyles.module.scss';
-
-interface FormProps<T> {
-  validateText: string;
-  label: string;
-  field: string;
-  itemMap: keyof T;
-  register: any;
-  errors: Record<string, any>;
-  defaultValue: string;
-  data: T[] | undefined;
-}
+import { SelectFormProps } from '@/types/ui/forms/selectForm.type';
 
 const SelectForm = <T extends { [key: string]: string }>({
   validateText,
@@ -22,7 +12,7 @@ const SelectForm = <T extends { [key: string]: string }>({
   errors,
   defaultValue,
   data,
-}: FormProps<T>) => {
+}: SelectFormProps<T>) => {
   const containerClassName = `${styles.formSection} ${animationStyles.slideOut}`;
   return (
     <div className={containerClassName}>

@@ -1,23 +1,23 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import styles from './underLineSpan.module.scss';
+import { UnderLineProps } from '@/types/ui/underlineSpan/underlineSpan.type';
 
-interface UnderLineProps {
-  children: ReactNode;
-  color: 'light' | 'dark';
-}
-
-function Span({ children, color }: UnderLineProps) {
+function Span({ children, color, click, className }: UnderLineProps) {
   let colorClass = '';
 
   if (color === 'light') {
     colorClass = styles.light;
   } else if (color === 'dark') {
     colorClass = styles.dark;
-  } else if (color === 'red') {
-    colorClass = styles.red;
   }
 
-  return <span className={`${styles.span} ${colorClass}`}>{children}</span>;
+  const spanClasses = `${styles.span} ${colorClass} ${className || ''}`;
+
+  return (
+    <span className={spanClasses} onClick={click}>
+      {children}
+    </span>
+  );
 }
 
 export { Span };

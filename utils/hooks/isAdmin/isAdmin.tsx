@@ -1,9 +1,6 @@
-'use client';
-import React, { ReactNode, useContext } from 'react';
+import React, { ReactNode } from 'react';
 import { useUserContext } from '@/utils/context/AuthContext';
-interface IsAdmin {
-  children: ReactNode;
-}
+import { IsAdmin } from '@/types/hooks/isAdmin.type';
 
 function IsAdmin({ children }: IsAdmin) {
   const { admin } = useUserContext();

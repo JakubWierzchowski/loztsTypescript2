@@ -1,8 +1,7 @@
 import { FC } from 'react';
-import styles from './newListModal.module.scss';
 import { useForm } from 'react-hook-form';
 import useHTTPrequest from '@/utils/hooks/httpRequest/httpRequest';
-import { NewListModalProps, FormValues, DataSubmit } from '@/types/newList.type';
+import { NewListModalProps, FormValues, DataSubmit } from '@/types/mainPage/newList.type';
 import { TextForm, Button } from '@/ui/index';
 
 const NewsListModal: FC<NewListModalProps> = ({ fetchData, handleCloseModal }) => {
@@ -19,53 +18,51 @@ const NewsListModal: FC<NewListModalProps> = ({ fetchData, handleCloseModal }) =
   const { errors, isSubmitSuccessful } = formState;
 
   const handleUploadArticle = (data: FormValues) => {
-    onSubmit(data, 'title');
-
-    if (handleCloseModal) {
-      handleCloseModal();
-    }
-    fetchData();
-
-    if (isSubmitSuccessful) {
-      reset();
+    try {
+      onSubmit(data, 'title');
+      fetchData();
+      if (handleCloseModal) {
+        handleCloseModal();
+      }
+      if (isSubmitSuccessful) {
+        reset();
+      }
+    } catch (error) {
+      console.error('Error uploading article:', error);
     }
   };
 
   return (
-    <>
-      <section className={styles.wrapperForm}>
-        <form onSubmit={handleSubmit(handleUploadArticle)} noValidate>
-          <TextForm
-            label={'Tytuł'}
-            field={'title'}
-            validateText={'Uzupełnij tytuł'}
-            placeholder={'Wpisz tytuł'}
-            register={register}
-            errors={errors}
-          />
-          <TextForm
-            label={'Text'}
-            field={'text'}
-            validateText={'Uzupełnij tekst'}
-            placeholder={'Wpisz tekst'}
-            register={register}
-            errors={errors}
-            isTextArea
-          />
-          <TextForm
-            label={'Podpis'}
-            field={'signature'}
-            validateText={'Uzupełnij podpis'}
-            placeholder={'Podpis'}
-            register={register}
-            errors={errors}
-          />
-          <Button sendButton type={'submit'}>
-            Wyślij
-          </Button>
-        </form>
-      </section>
-    </>
+    <form onSubmit={handleSubmit(handleUploadArticle)} noValidate>
+      <TextForm
+        label={'Tytuł'}
+        field={'title'}
+        validateText={'Uzupełnij tytuł'}
+        placeholder={'Wpisz tytuł'}
+        register={register}
+        errors={errors}
+      />
+      <TextForm
+        label={'Text'}
+        field={'text'}
+        validateText={'Uzupełnij tekst'}
+        placeholder={'Wpisz tekst'}
+        register={register}
+        errors={errors}
+        isTextArea
+      />
+      <TextForm
+        label={'Podpis'}
+        field={'signature'}
+        validateText={'Uzupełnij podpis'}
+        placeholder={'Podpis'}
+        register={register}
+        errors={errors}
+      />
+      <Button sendButton type={'submit'}>
+        Wyślij
+      </Button>
+    </form>
   );
 };
 

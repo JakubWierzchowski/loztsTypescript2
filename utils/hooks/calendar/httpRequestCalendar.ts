@@ -1,29 +1,22 @@
-import { toast } from "react-toastify";
-import { useUserContext } from "@/utils/context/AuthContext";
-import { FormValuesAddPlayer } from "@/types/calendar.type";
+import { toast } from 'react-toastify';
+import { useUserContext } from '@/utils/context/AuthContext';
+import { FormValuesAddPlayer } from '@/types/calendar.type';
+import { toastConfig } from '@/utils/toastOptions/toastOption';
 
 const useHTTPrequests = () => {
   const { user } = useUserContext();
+
   async function deletePlayer(id: string, pathTournament: string) {
     try {
       const response = await fetch(`/api/calendar/${pathTournament}/${id}`, {
-        method: "DELETE",
+        method: 'DELETE',
       });
       const data = await response.json();
 
       const Player = data.filterPlayer?.find((item: string) => item);
-      toast.success(`${data.message} ${Player.player}`, {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      toast.success(`${data.message} ${Player.player}`, toastConfig);
     } catch (error) {
-      console.error("Wystąpił błąd podczas usuwania artykułu:", error);
+      console.error('Wystąpił błąd podczas usuwania artykułu:', error);
     }
   }
 
@@ -37,49 +30,22 @@ const useHTTPrequests = () => {
         users: user?.email,
       };
       const response = await fetch(`/api/calendar`, {
-        method: "POST",
+        method: 'POST',
         body: JSON.stringify(reqBody),
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
       });
       const Apidata = await response.json();
 
       if (Apidata.status === 409) {
-        toast.error(`${Apidata.message} - ${Apidata.newPlayer.player}`, {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+        toast.error(`${Apidata.message} - ${Apidata.newPlayer.player}`, toastConfig);
       }
-      toast.success(`${Apidata.message} - ${Apidata.player.player}`, {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-      });
+      toast.success(`${Apidata.message} - ${Apidata.player.player}`, toastConfig);
     } catch (e: any) {
-      if (e.message === "Error: 500") {
-        console.log("bład");
-        toast.error(`Ups.. Coś poszło nie tak`, {
-          position: "top-right",
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+      if (e.message === 'Error: 500') {
+        console.log('bład');
+        toast.error(`Ups.. Coś poszło nie tak`, toastConfig);
       }
     }
   };

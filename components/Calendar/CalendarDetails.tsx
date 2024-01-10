@@ -7,9 +7,8 @@ import styles from './table.module.scss';
 import AnimationClassHook from '@/utils/hooks/getAnimationClass/getAnimationClass';
 const CalendarDetails: React.FC<CalendarDetailsProps> = ({ details, index, month }) => {
   const myDate = moment().format('YYYY-MM-DD');
-  const slideInFirst = 'slideIn';
-  const slideInSecond = 'slideOut';
-  const { ref, getAnimationClass } = AnimationClassHook(slideInFirst, slideInSecond);
+
+  const { ref, getAnimationClass } = AnimationClassHook('slideIn', 'slideOut');
 
   return (
     <>

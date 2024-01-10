@@ -1,25 +1,11 @@
 import { useState } from 'react';
-import { ToastOptions, toast } from 'react-toastify';
-
-interface RequestOptions<T> {
-  apiUrl: string;
-  defaultFields?: Array<keyof T>;
-}
+import { toast } from 'react-toastify';
+import { toastConfig } from '@/utils/toastOptions/toastOption';
+import { RequestOptions } from '@/types/hooks/httpRequest.type';
 
 const useHTTPrequest = <T>(options: RequestOptions<T>) => {
   const { apiUrl, defaultFields = [] } = options;
   const [deleteError, setDeleteError] = useState<string | null>(null);
-
-  const toastConfig: ToastOptions = {
-    position: 'top-right',
-    autoClose: 2000,
-    hideProgressBar: false,
-    closeOnClick: true,
-    pauseOnHover: true,
-    draggable: true,
-    progress: undefined,
-    theme: 'light',
-  };
 
   async function deleteRequest(id: string, titleField: keyof T) {
     try {
@@ -27,6 +13,9 @@ const useHTTPrequest = <T>(options: RequestOptions<T>) => {
 
       const response = await fetch(`${apiUrl}/${id}`, {
         method: 'DELETE',
+        headers: {
+          'Content-Type': 'application/json',
+        },
       });
       const Apidata = await response.json();
 

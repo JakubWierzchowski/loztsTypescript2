@@ -1,5 +1,5 @@
 import { buildPath, extractPath } from '@/utils/api/buildExtractPath';
-import { LeagueDataItem } from '@/types/league.types';
+import { LeagueDataItem } from '@/types/leagues/league.types';
 
 export async function GET(req: Request, res: Response) {
   const filePath = buildPath('league.json');

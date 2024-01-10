@@ -1,5 +1,5 @@
 import { buildPath, extractPath } from '@/utils/api/buildExtractPath';
-import { LeagueDataItem } from '@/types/league.types';
+import { LeagueDataItem } from '@/types/leagues/league.types';
 import { v4 as uuidv4 } from 'uuid';
 import { NextResponse } from 'next/server';
 import fs from 'fs';

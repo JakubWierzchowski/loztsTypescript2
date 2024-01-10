@@ -1,4 +1,4 @@
-@import "../../app/variable.scss";
+@import '../../app/variable.scss';
 .season {
   padding-top: 40px;
   text-align: center;
@@ -6,18 +6,8 @@
   font-size: $size-TitleMobile;
 }
 
-@media #{$tablet} {
-  .season {
-    font-size: $size-TitleTablet;
-  }
-}
 @media #{$desktop} {
   .season {
     font-size: $size-TitleDesktop;
-  }
-}
-@media #{$bigDesktop} {
-  .season {
-    font-size: $size-TitleBigDesktop;
   }
 }

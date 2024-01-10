@@ -1,9 +1,10 @@
 {
   "pages": {
-    "/loading": [
+    "/(mainPage)/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/chunks/app/loading.js"
+      "static/css/app/(mainPage)/page.css",
+      "static/chunks/app/(mainPage)/page.js"
     ],
     "/layout": [
       "static/chunks/webpack.js",
@@ -11,17 +12,10 @@
       "static/css/app/layout.css",
       "static/chunks/app/layout.js"
     ],
-    "/(mainPage)/page": [
+    "/loading": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
-      "static/css/app/(mainPage)/page.css",
-      "static/chunks/app/(mainPage)/page.js"
-    ],
-    "/[liga]/page": [
-      "static/chunks/webpack.js",
-      "static/chunks/main-app.js",
-      "static/css/app/[liga]/page.css",
-      "static/chunks/app/[liga]/page.js"
+      "static/chunks/app/loading.js"
     ]
   }
 }

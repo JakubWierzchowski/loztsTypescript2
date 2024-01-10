@@ -1,0 +1,51 @@
+@import '../../../../app/variable.scss';
+
+.centerItems {
+  opacity: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.details {
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  position: relative;
+  z-index: 0;
+}
+
+.active {
+  font-weight: 600;
+  display: block;
+  position: relative;
+  color: #ffffff;
+  cursor: auto;
+  font-size: $size-TextMobile;
+}
+.matchDay {
+  color: white;
+  flex-wrap: wrap;
+  padding: 8px 12px;
+  margin: 8px;
+  border-radius: 20px 20px 20px 20px;
+  cursor: pointer;
+  font-size: $size-tableHeadMobile;
+  z-index: 10;
+  &:hover {
+    background-color: rgba(166, 162, 162, 0.634);
+  }
+}
+
+@media #{$desktop} {
+  .matchDay {
+    font-size: $size-tableHeadDesktop;
+  }
+  .active {
+    font-size: $size-TextDesktop;
+  }
+}
