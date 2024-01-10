@@ -1,3 +1,4 @@
 {
-  "/(mainPage)/page": "app/(mainPage)/page.js"
+  "/(mainPage)/page": "app/(mainPage)/page.js",
+  "/api/newList/route": "app/api/newList/route.js"
 }
