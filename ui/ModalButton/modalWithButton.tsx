@@ -1,11 +1,11 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import { Button } from '../Button/button';
 import useModal from '@/utils/hooks/useModal/useModal';
 import ReactModal from 'react-modal';
 import styles from './modalButton.module.scss';
 import { ModalButtonProps } from '@/types/ui/modalButton/modalWithButton.type';
 
-function ModaWithButton({ children, text }: ModalButtonProps) {
+function ModalWithButton({ children, text }: ModalButtonProps) {
   const { handleOpenModal, isOpen, handleCloseModal } = useModal();
 
   return (
@@ -28,4 +28,4 @@ function ModaWithButton({ children, text }: ModalButtonProps) {
   );
 }
 
-export { ModaWithButton };
+export { ModalWithButton };

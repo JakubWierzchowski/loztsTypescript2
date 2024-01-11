@@ -32,7 +32,7 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
   const { handleCloseModal } = useModal();
   const admin = user?.email === process.env.NEXT_PUBLIC_ADMIN;
-
+  const normalUser = user?.email;
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (res) => {
       if (res) {
@@ -75,16 +75,7 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({ c
       if (error.code === 'auth/wrong-password') {
         toast.error('Błędne hasło!', toastConfig);
       } else {
-        toast.error(`${error.code}`, {
-          position: 'top-right',
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: 'light',
-        });
+        toast.error(`${error.code}`, toastConfig);
       }
     } finally {
     }
@@ -94,18 +85,7 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({ c
     signOut(auth)
       .then(() => toast.success(`Wylogowano pomyślnie!`, toastConfig))
       .then(handleCloseModal)
-      .catch(() =>
-        toast.error(`Ups.. Coś poszło nie tak. Spróbuj jeszcze raz.`, {
-          position: 'top-right',
-          autoClose: 2000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-          progress: undefined,
-          theme: 'light',
-        })
-      );
+      .catch(() => toast.error(`Ups.. Coś poszło nie tak. Spróbuj jeszcze raz.`, toastConfig));
   };
 
   const forgotPassword = async (email: string) => {
@@ -126,6 +106,7 @@ export const UserContextProvider: React.FC<{ children: React.ReactNode }> = ({ c
 
   const contextValue: UserContextType = {
     admin,
+    normalUser,
     user,
     error,
     signInUser,

@@ -5,7 +5,7 @@ import NewsListModal from './NewListModal';
 import Logo from '../../../public/images/header/logo.png';
 import { useFetch } from '@/utils/hooks/mainPage/fetchDataHook';
 import IsAdmin from '@/utils/hooks/isAdmin/isAdmin';
-import { Button, ModaWithButton } from '@/ui';
+import { Button, ModalWithButton } from '@/ui';
 import useHTTPrequest from '@/utils/hooks/httpRequest/httpRequest';
 import { DataSubmit } from '@/types/mainPage/newList.type';
 
@@ -27,12 +27,12 @@ function NewsList() {
       <section className={styles.wrapperArticle}>
         <div className={styles.gridLayout}>
           <h3 className={styles.articleHeader}>Aktualności</h3>
-          <IsAdmin>
-            <ModaWithButton text={'Dodaj informację'}>
+          <IsAdmin isAdmin>
+            <ModalWithButton text={'Dodaj informację'}>
               <>
                 <NewsListModal fetchData={fetchData} />
               </>
-            </ModaWithButton>
+            </ModalWithButton>
           </IsAdmin>
 
           <div className={styles.articleShortGrid}>

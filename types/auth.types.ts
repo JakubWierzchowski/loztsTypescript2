@@ -1,3 +1,5 @@
+import { BlobOptions } from 'buffer';
+
 export interface ClockProps {
   isOpen: boolean;
   handleClose: () => void;
@@ -13,7 +15,8 @@ export type FormDataSingIn = {
 };
 
 export interface UserContextType {
-  admin: any;
+  admin: boolean;
+  normalUser: string;
   user: any;
   error: string;
   signInUser: (email: string, password: string) => void;

@@ -1,3 +1,5 @@
+import { BlobOptions } from 'buffer';
+
 export interface TextFormProps {
   validateText: string;
   label: string;

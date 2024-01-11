@@ -8,7 +8,7 @@ import AddCommunicats from '@/components/Communicats/AddCommunicats/AddCommunica
 import { staticBlurDataUrl } from '@/utils/staticBlurDataURL';
 import { useFetchCommunicats } from '@/utils/hooks/communicats/fetchData';
 import IsAdmin from '@/utils/hooks/isAdmin/isAdmin';
-import { ModaWithButton, Span } from '@/ui/index';
+import { ModalWithButton, Span } from '@/ui/index';
 
 export default function Communicats({}) {
   const data = CommunicatsData;
@@ -19,9 +19,9 @@ export default function Communicats({}) {
     <>
       <h2 className={styles.titleComunicats}>Komunikaty</h2>
       <IsAdmin>
-        <ModaWithButton text={'Dodaj komunikat'}>
+        <ModalWithButton text={'Dodaj komunikat'}>
           <AddCommunicats data={data} category={category} />
-        </ModaWithButton>
+        </ModalWithButton>
       </IsAdmin>
 
       <CommunicatsModal data={newFile} isOpen={isOpen} handleClose={handleCloseModal} category={category} />

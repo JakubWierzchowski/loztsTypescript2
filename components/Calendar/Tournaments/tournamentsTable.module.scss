@@ -1,26 +1,10 @@
-@import "../../../app/variable.scss";
+@import '../../../app/variable.scss';
 .clockTitle {
   text-align: center;
   margin-top: 40px;
   margin-bottom: 0px;
   color: $light;
   font-size: $size-TitleMobile;
-}
-
-@media #{$tablet} {
-  .clockTitle {
-    font-size: $size-TitleTablet;
-  }
-}
-@media #{$desktop} {
-  .clockTitle {
-    font-size: $size-TitleDesktop;
-  }
-}
-@media #{bigDesktop} {
-  .clockTitle {
-    font-size: $size-TitleBigDesktop;
-  }
 }
 
 .wrapper {
@@ -38,7 +22,6 @@
   justify-content: center;
   align-items: center;
   height: 180px;
-
   border-radius: 15px;
 }
 
@@ -59,35 +42,18 @@
   font-size: 1.8rem;
 }
 
-@media #{$tablet} {
+@media #{$desktop} {
+  .clockTitle {
+    font-size: $size-TitleDesktop;
+  }
   .wrapperSection {
     width: 100px;
   }
   .time {
-    font-size: 3.8rem;
+    font-size: 5rem;
   }
   .timeString {
     text-shadow: none;
     font-size: 1.8rem;
-  }
-}
-
-@media #{$desktop} {
-  .time {
-    font-size: 6rem;
-  }
-  .timeString {
-    text-shadow: none;
-    font-size: 2rem;
-  }
-}
-
-@media #{bigDesktop} {
-  .time {
-    font-size: 5.4rem;
-  }
-  .timeString {
-    text-shadow: none;
-    font-size: 3rem;
   }
 }
