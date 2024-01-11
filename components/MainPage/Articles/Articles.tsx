@@ -6,7 +6,7 @@ import ArticlesModal from './ArticlesModal';
 import styles from './articles.module.scss';
 
 import useFetchArticle from '@/utils/hooks/mainPage/fetchArticle';
-import { ModaWithButton } from '@/ui/ModalButton/modalWithButton';
+import { ModalWithButton } from '@/ui';
 import IsAdmin from '@/utils/hooks/isAdmin/isAdmin';
 
 const Articles = () => {
@@ -18,11 +18,11 @@ const Articles = () => {
         <article className={styles.modalContentWrapper}>
           <h2 className={styles.tittleGrid}>Najnowsze artykuły</h2>
           <IsAdmin>
-            <ModaWithButton text={'Dodaj artykuł'}>
+            <ModalWithButton text={'Dodaj artykuł'}>
               <>
                 <ArticlesModal />
               </>
-            </ModaWithButton>
+            </ModalWithButton>
           </IsAdmin>
           {articles.map((item, index) => (
             <ArticleDetails key={index} item={item} index={index} />

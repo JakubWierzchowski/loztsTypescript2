@@ -3,7 +3,7 @@ import styles from './forms.module.scss';
 import animationStyles from '@/utils/hooks/getAnimationClass/getAnimationStyles.module.scss';
 import { SelectFormProps } from '@/types/ui/forms/selectForm.type';
 
-const SelectForm = <T extends { [key: string]: string }>({
+const SelectForm = <T extends { [key: string]: string | undefined }>({
   validateText,
   label,
   field,
@@ -35,12 +35,14 @@ const SelectForm = <T extends { [key: string]: string }>({
         })}
       >
         <option value={defaultValue}>{defaultValue}</option>
-        {data &&
-          data?.map((item, index) => (
-            <option value={item[itemMap]} key={index}>
-              {item[itemMap]}
-            </option>
-          ))}
+        {data?.map(
+          (item, index) =>
+            item && (
+              <option value={item[itemMap]} key={index}>
+                {item[itemMap]}
+              </option>
+            )
+        )}
       </select>
 
       {errors?.[field] && (

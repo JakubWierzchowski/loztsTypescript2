@@ -9,7 +9,7 @@ export default async function Calendar() {
   return (
     <>
       {data?.map((item, index) => (
-        <section key={index}>
+        <section key={item.month}>
           {moment(item.dataMonth).isAfter(myDate) ? (
             <CalendarDetails details={item.details} index={index} month={item.month} />
           ) : null}
