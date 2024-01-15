@@ -1,9 +1,0 @@
-{
-  "/komunikaty/page": "app/komunikaty/page.js",
-  "/(mainPage)/page": "app/(mainPage)/page.js",
-  "/kalendarz/page": "app/kalendarz/page.js",
-  "/kalendarz/[tournamentsId]/page": "app/kalendarz/[tournamentsId]/page.js",
-  "/api/calendar/route": "app/api/calendar/route.js",
-  "/api/calendar/[calendarTournament]/route": "app/api/calendar/[calendarTournament]/route.js",
-  "/api/calendar/[calendarTournament]/[calendarPlayer]/route": "app/api/calendar/[calendarTournament]/[calendarPlayer]/route.js"
-}
