@@ -1,27 +1,15 @@
-"use client";
-import React from "react";
-import Link from "next/link";
-import { DownloadDetailsProps } from "@/types/archivesDownload.type";
-import styles from "./archivesDwonload.module.scss";
-import AnimationClassHook from "@/utils/hooks/getAnimationClass/getAnimationClass";
+'use client';
+import React from 'react';
+import Link from 'next/link';
+import { DownloadDetailsProps } from '@/types/archives/archivesDownload.type';
+import styles from './archivesDwonload.module.scss';
+import AnimationClassHook from '@/utils/hooks/getAnimationClass/getAnimationClass';
 
-const Komunikaty: React.FC<DownloadDetailsProps> = ({
-  kategoria,
-  details,
-  index,
-}) => {
-  const slideInFirst = "slideIn";
-  const slideInSecond = "slideOut";
-  const { ref, getAnimationClass } = AnimationClassHook(
-    slideInFirst,
-    slideInSecond
-  );
+const Komunikaty: React.FC<DownloadDetailsProps> = ({ category, details, index }) => {
+  const { ref, getAnimationClass } = AnimationClassHook('slideIn', 'slideOut');
   return (
-    <section
-      ref={ref}
-      className={`${styles.wrapper} ${getAnimationClass(index || 0)}`}
-    >
-      <h2 className={styles.tableTitle}>{kategoria}</h2>
+    <section ref={ref} className={`${styles.wrapper} ${getAnimationClass(index || 0)}`}>
+      <h2 className={styles.tableTitle}>{category}</h2>
       <table className={styles.table}>
         <thead className={styles.thead}>
           <tr>
@@ -42,13 +30,7 @@ const Komunikaty: React.FC<DownloadDetailsProps> = ({
               <td className={styles.td}>{index + 1}</td>
               <td className={styles.td}>{item.title}</td>
               <td className={styles.td}>
-                <Link
-                  key={index}
-                  className={styles.links}
-                  href={`${item.download}`}
-                  target="_blank"
-                  download
-                >
+                <Link key={index} className={styles.links} href={`${item.download}`} target="_blank" download>
                   <span className={styles.span}>Download</span>
                 </Link>
               </td>

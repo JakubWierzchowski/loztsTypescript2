@@ -2,13 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import ArchivesDataGallery from '@/data/archivesGallery.json';
-import { GallerySeason } from '@/types/archivesGallery.type';
+import { GallerySeason } from '@/types/archives/archivesGallery.type';
 import styles from '@/components/ArchivesGallery/archivesGallery.module.scss';
-import { archivesPropsGallery } from '@/types/archivesGallery.type';
+import { archivesPropsGallery } from '@/types/archives/archivesGallery.type';
 
 export default async function GaleriaArchiwum({ params }: archivesPropsGallery) {
   const data: GallerySeason[] = ArchivesDataGallery.archiveGallery;
-
   const findArchivesGallery = data.find((item) => item.sezon === params.galeria);
   return (
     <section className={styles.wrapper}>

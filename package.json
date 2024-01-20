@@ -7,8 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "test": "craco test --watchAll=false",
-    "test:watch": "craco test",
     "lint:check": "npx eslint \"app/**\"",
     "lint:fix": "npx eslint \"app/**\" --fix",
     "format:check": "prettier --check \"./app\"",

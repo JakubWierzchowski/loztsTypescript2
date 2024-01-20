@@ -12,11 +12,13 @@ export interface CommonClassProps {
 export interface GalleryProps {
   photos: any;
   slideNumber: number;
+  handleCloseModal: () => void;
 }
 
 export interface TransitionPhotoProps extends CommonClassProps {
   photos: Photo[];
   indexActivePhoto: number;
+  handleCloseModal: () => void;
 }
 
 export interface NavigationProps extends CommonClassProps {

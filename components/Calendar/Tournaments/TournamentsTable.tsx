@@ -1,9 +1,9 @@
-import React from "react";
-import styles from "../table.module.scss";
-import { CalendarTournamentProps } from "@/types/calendar.type";
-import { useUserContext } from "@/utils/context/AuthContext";
-import AnimationClassHook from "@/utils/hooks/getAnimationClass/getAnimationClass";
-import useHTTPrequests from "@/utils/hooks/calendar/httpRequestCalendar";
+import React from 'react';
+import styles from '../table.module.scss';
+import { CalendarTournamentProps } from '@/types/calendar.type';
+import { useUserContext } from '@/utils/context/AuthContext';
+import AnimationClassHook from '@/utils/hooks/getAnimationClass/getAnimationClass';
+import useHTTPrequests from '@/utils/hooks/calendar/httpRequestCalendar';
 const TournamentsTable: React.FC<CalendarTournamentProps> = ({
   details,
   title,
@@ -15,12 +15,7 @@ const TournamentsTable: React.FC<CalendarTournamentProps> = ({
   const { user } = useUserContext();
   const { deletePlayer } = useHTTPrequests();
 
-  const slideInFirst = "slideIn";
-  const slideInSecond = "slideOut";
-  const { ref, getAnimationClass } = AnimationClassHook(
-    slideInFirst,
-    slideInSecond
-  );
+  const { ref, getAnimationClass } = AnimationClassHook('slideIn', 'slideOut');
 
   const handleDeletePlayer = (id: string) => {
     deletePlayer(id, pathTournament);
@@ -28,10 +23,7 @@ const TournamentsTable: React.FC<CalendarTournamentProps> = ({
   };
 
   return (
-    <section
-      className={`${styles.wrapper} ${getAnimationClass(index || 0)}`}
-      ref={ref}
-    >
+    <section className={`${styles.wrapper} ${getAnimationClass(index || 0)}`} ref={ref}>
       <h2 className={styles.tableTitle}>{title}</h2>
 
       <table className={styles.table}>
@@ -66,10 +58,7 @@ const TournamentsTable: React.FC<CalendarTournamentProps> = ({
                 {timeDone ? (
                   <div>Czas minął</div>
                 ) : user?.email === item.users ? (
-                  <button
-                    className={styles.deleteButton}
-                    onClick={() => item.id && handleDeletePlayer(item.id)}
-                  >
+                  <button className={styles.deleteButton} onClick={() => item.id && handleDeletePlayer(item.id)}>
                     Usuń
                   </button>
                 ) : (

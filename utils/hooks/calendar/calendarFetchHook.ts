@@ -1,11 +1,10 @@
-import { useState, useEffect } from "react";
-import { CalendarTypeMonth, CalendarTypeDetails } from "@/types/calendar.type";
-import CalendarDate from "@/data/calendarDate.json";
+import { useState, useEffect } from 'react';
+import { CalendarTypeMonth, CalendarTypeDetails } from '@/types/calendar.type';
+import CalendarDate from '@/data/calendarDate.json';
 export const useFetchCalendar = (pathTournament: string) => {
-  const data: CalendarTypeMonth[] | CalendarTypeMonth = CalendarDate;
-  const findTournaments: (CalendarTypeDetails | undefined)[] = data.map(
-    (item) =>
-      item.details.find((tournament) => tournament.link === pathTournament)
+  const data: CalendarTypeMonth[] = CalendarDate;
+  const findTournaments: (CalendarTypeDetails | undefined)[] = data.map((item) =>
+    item.details.find((tournament) => tournament.link === pathTournament)
   );
   const [actualData, setActualData] = useState(findTournaments);
 
@@ -21,7 +20,7 @@ export const useFetchCalendar = (pathTournament: string) => {
       const data = await response.json();
       setActualData(data);
     } catch (error) {
-      console.error("Wystąpił błąd podczas pobierania danych:", error);
+      console.error('Wystąpił błąd podczas pobierania danych:', error);
     }
   }
   useEffect(() => {

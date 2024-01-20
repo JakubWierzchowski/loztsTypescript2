@@ -12,10 +12,8 @@ const nextConfig = {
   },
 
   images: {
-    unoptimized: true,
+    domains: ['firebasestorage.googleapis.com'],
   },
 };
 
 module.exports = nextConfig;
-
-// trailingSlash: true,

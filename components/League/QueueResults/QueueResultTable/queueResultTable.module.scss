@@ -1,11 +1,11 @@
-@import "../../../../app/variable.scss";
+@import '../../../../app/variable.scss';
 
-.resultSection {
+.resultTable {
   opacity: 0;
 }
 .table {
   margin: 0 auto;
-  width: 95%;
+  width: 98%;
   border-collapse: collapse;
   border-spacing: 0;
   table-layout: fixed;
@@ -17,28 +17,29 @@
   color: $white;
   background-color: #0092f385;
   font-size: $size-tableHeadMobile;
-  padding: 20px 0px;
 }
 
 .th {
-  padding: 10px 0px;
+  padding: 5px;
   &:first-child {
-    width: 20%;
+    width: 10%;
   }
 }
 
 .tr {
   &:hover {
-    background-color: $primaryHover;
+    background-color: #0092f31f;
   }
 }
+
 .td {
   border-bottom: 2px solid rgba(255, 255, 255, 0.16);
   text-align: center;
   margin: 0 auto;
-  padding: 15px;
+  padding: 8px 12px;
   color: $light;
   font-size: $size-tableItemsMobile;
+  word-break: break-word;
   &:last-child {
     border-right: none;
   }
@@ -56,82 +57,23 @@
   text-decoration: none;
   font-size: $size-tableItemsMobile;
 }
-.deleteButton {
-  color: white;
-  border: 0;
-  border-radius: 8px;
-  padding: 4px 8px;
-  background-color: #e42727;
-  cursor: pointer;
-  box-shadow: 0 0 15px 4px rgba(0, 0, 0, 0.06);
-  font-size: $size-tableItemsMobile;
-  font-family: "Montserrat", sans-serif;
-}
-
-@media #{$tablet} {
-  .title {
-    font-size: 3rem;
-  }
-  .tableTitle {
-    font-size: $size-tableTitleTablet;
-  }
+@media #{$desktop} {
   .table {
     line-height: 20px;
   }
-
-  .thead {
-    font-size: $size-tableHeadTablet;
-  }
-  .td {
-    font-size: $size-tableItemsTablet;
-  }
-  .links {
-    font-size: $size-tableItemsTablet;
-  }
-  .deleteButton {
-    padding: 8px 12px;
-    font-size: $size-tableItemsMobile;
-  }
-}
-@media #{desktop} {
-  .title {
-    font-size: 3.4rem;
-  }
-
-  .tableTitle {
-    font-size: $size-tableTitleDesktop;
+  .th {
+    padding: 12px;
   }
 
   .thead {
     font-size: $size-tableHeadDesktop;
   }
+
   .td {
     font-size: $size-tableItemsDesktop;
   }
+
   .links {
     font-size: $size-tableItemsDesktop;
-  }
-  .deleteButton {
-    font-size: $size-tableItemsDesktop;
-  }
-}
-@media #{$bigDesktop} {
-  .title {
-    font-size: 4rem;
-  }
-  .tableTitle {
-    font-size: $size-tableTitleBigDesktop;
-  }
-  .thead {
-    font-size: $size-tableHeadBigDesktop;
-  }
-  .td {
-    font-size: $size-tableItemsBigDesktop;
-  }
-  .links {
-    font-size: $size-tableItemsBigDesktop;
-  }
-  .deleteButton {
-    font-size: $size-tableItemsBigDesktop;
   }
 }

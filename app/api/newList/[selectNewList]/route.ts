@@ -1,6 +1,6 @@
 import fs from 'fs';
 import { buildPath, extractPath } from '@/utils/api/buildExtractPath';
-import { Article } from '@/types/newList.type';
+import { Article } from '@/types/mainPage/newList.type';
 
 export async function GET(req: Request, res: Response) {
   const filePath = buildPath('article.json');

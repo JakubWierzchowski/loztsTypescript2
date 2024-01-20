@@ -9,12 +9,16 @@ import { UserContextProvider } from '@/utils/context/AuthContext';
 import { Suspense } from 'react';
 import Loading from './loading';
 import Footer from '@/components/Footer/footer';
+import Head from 'next/head';
+import Navigation from '../components/Navigation/navigationPhase';
 const montserrat = Montserrat({ subsets: ['latin'], display: 'swap' });
 
 export const metadata: Metadata = {
   title: 'Lozts',
-  description: 'Lubelski Okręgowy Związek tenisa Stołowego',
+  description: 'Lubelski Okręgowy Związek Tenisa Stołowego',
   icons: '/images/header/logo.png',
+  category: 'sport',
+  keywords: ['lozts', 'tenis', 'tenis-stołowy', 'sport'],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -24,7 +28,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <body className={montserrat.className}>
           <UserContextProvider>
             <Suspense fallback={<Loading />}>
-              <Navi />
+              <Navigation />
               {children}
               <Footer />
             </Suspense>

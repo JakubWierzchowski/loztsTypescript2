@@ -1,14 +1,13 @@
-'use client';
-import React, { ReactNode, useContext } from 'react';
+import React from 'react';
 import { useUserContext } from '@/utils/context/AuthContext';
-interface IsAdmin {
-  children: ReactNode;
-}
+import { IsAdmin } from '@/types/hooks/isAdmin.type';
 
-function IsAdmin({ children }: IsAdmin) {
-  const { admin } = useUserContext();
+function IsAdmin({ children, isAdmin }: IsAdmin) {
+  const { admin, normalUser } = useUserContext();
 
-  return <>{admin ? children : null}</>;
+  const typeOfUser = isAdmin ? admin : normalUser;
+
+  return <>{typeOfUser ? children : null}</>;
 }
 
 export default IsAdmin;

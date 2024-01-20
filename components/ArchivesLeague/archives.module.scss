@@ -1,4 +1,4 @@
-@import "../../app//variable.scss";
+@import '../../app//variable.scss';
 .wrapper {
   width: 100%;
   position: relative;
@@ -13,6 +13,11 @@
   -webkit-font-smoothing: antialiased;
 }
 
+.title {
+  text-align: center;
+  color: rgb(218, 218, 218);
+}
+
 .flexItem {
   cursor: pointer;
   list-style: none;
@@ -22,7 +27,7 @@
   }
 
   &:after {
-    content: ">";
+    content: '>';
     position: absolute;
     left: 40px;
     transition: transform 0.2s ease-in-out;
@@ -51,7 +56,7 @@
     }
 
     &:after {
-      content: ">";
+      content: '>';
       position: absolute;
       left: 40px;
       transition: transform 0.2s ease-in-out;
@@ -135,7 +140,7 @@
   text-decoration: none;
   font-size: 1.6rem;
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     width: 100%;
     height: 1.5px;

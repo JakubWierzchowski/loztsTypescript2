@@ -3,6 +3,7 @@ $primaryHover: #048c3423;
 $secondary: #e4051d;
 $tertiary: #7bb2d9;
 $hoverColor: #f0f0f028;
+$mainHeaderTable: #007429;
 
 $dark: #100b00;
 $light: #ffffea;
@@ -15,11 +16,11 @@ $size-headingMobile: 5.3rem;
 $size-smallTitle: 3rem;
 $size-smallTitleMobile: 2rem;
 
-$size-mobileText: 1rem;
+$size-mobileText: 1rem; // do usuniecia
 $size-TextMobile: 1.4rem;
-$size-TextTablet: 1.8rem;
-$size-TextDesktop: 2.2rem;
-$size-TextBigDesktop: 2.6rem;
+$size-TextTablet: 1.8rem; // do usuniecia
+$size-TextDesktop: 2rem;
+$size-TextBigDesktop: 2.6rem; // do usuniecia
 
 $size-tableTitleMobile: 1.8rem;
 $size-tableTitleTablet: 2.4rem;
@@ -27,14 +28,14 @@ $size-tableTitleDesktop: 3rem;
 $size-tableTitleBigDesktop: 3.6rem;
 
 $size-tableHeadMobile: 1.2rem;
-$size-tableHeadTablet: 1.2rem;
+$size-tableHeadTablet: 1.2rem; //do usuniecia
 $size-tableHeadDesktop: 1.6rem;
-$size-tableHeadBigDesktop: 2rem;
+$size-tableHeadBigDesktop: 2rem; //do usuniecia
 
-$size-tableItemsMobile: 1rem;
-$size-tableItemsTablet: 1.2rem;
-$size-tableItemsDesktop: 1.4rem;
-$size-tableItemsBigDesktop: 1.8rem;
+$size-tableItemsMobile: 1.2rem;
+$size-tableItemsTablet: 1.2rem; //do usuniecia
+$size-tableItemsDesktop: 1.6rem;
+$size-tableItemsBigDesktop: 1.8rem; //do usuniecia
 
 $size-modalButtonMobile: 1.4rem; //do usuniecia
 $size-modalButtonMobileTablet: 1.6rem; //do usuniecia
@@ -43,6 +44,7 @@ $size-modalButtonMobileBigDesktop: 2rem; //do usuniecia
 
 $size-formFieldItems: 2rem;
 $size-formFieldError: 1.4rem;
+
 $size-TitleMobile: 2.6rem;
 $size-TitleDesktop: 3rem;
 
@@ -58,7 +60,7 @@ $size-ButtonMobileBigDesktop: 1.8rem; //do usuniecia
 
 // $size-TitleMobile: 2.6rem;
 $size-TitleTablet: 3.2rem; //do usuniecia
-$size-TitleDesktop: 3.8rem; //do usuniecia
+// $size-TitleDesktop: 3.8rem; //do usuniecia
 $size-TitleBigDesktop: 4.4rem; //do usuniecia
 
 $tablet: '(min-width: 768px)';

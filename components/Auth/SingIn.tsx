@@ -1,10 +1,13 @@
-import { useForm } from "react-hook-form";
-import { useUserContext } from "@/utils/context/AuthContext";
-import styles from "./auth.module.scss";
-import { FormDataSingIn } from "@/types/auth.types";
+import { useForm } from 'react-hook-form';
+import { useUserContext } from '@/utils/context/AuthContext';
+import styles from './auth.module.scss';
+import { FormDataSingIn } from '@/types/auth.types';
+import { Button, TextForm } from '@/ui';
+import { useState } from 'react';
 
 function SignInForm() {
-  const { signInUser, error, user } = useUserContext();
+  const [showPassword, setShowPassword] = useState(false);
+  const { signInUser } = useUserContext();
   const {
     register,
     handleSubmit,
@@ -17,49 +20,40 @@ function SignInForm() {
 
   return (
     <>
-      <h2>Logowanie</h2>
+      <h3>Logowanie</h3>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-        <div className={styles.formSection}>
-          <label className={styles.label} htmlFor="email">
-            Użytkownik
-          </label>
+        <TextForm
+          validateText={'Pole jest wymagane'}
+          label={'Email'}
+          field={'email'}
+          placeholder={'Wpisz adres email'}
+          type={'text'}
+          register={register}
+          errors={errors}
+        />
+
+        <TextForm
+          validateText={'Pole jest wymagane'}
+          label={'Hasło'}
+          field={'password'}
+          placeholder={'Wpisz hasło'}
+          type={showPassword ? 'text' : 'password'}
+          register={register}
+          errors={errors}
+        />
+        <div className={styles.checkboxContainer}>
           <input
-            className={styles.inputForm}
-            placeholder="Wpisz email"
-            id="email"
-            {...register("email", {
-              required: "Pole wymagane",
-              pattern: {
-                value:
-                  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-0-]+)*$/,
-                message: "Niepoprawny email",
-              },
-            })}
+            type="checkbox"
+            id="show-password"
+            checked={showPassword}
+            onChange={(e) => setShowPassword(e.target.checked)}
           />
-          {errors.email ? (
-            <p className={styles.error}>{errors.email?.message}</p>
-          ) : null}
+          <label htmlFor="show-password">Pokaż hasło</label>
         </div>
-        <div className={styles.formSection}>
-          <label className={styles.label} htmlFor="password">
-            Hasło
-          </label>
-          <input
-            type="password"
-            placeholder="Wpisz hasło"
-            className={styles.inputForm}
-            id="password"
-            {...register("password", {
-              required: "Pole wymagane",
-            })}
-          />
-          {errors.password ? (
-            <p className={styles.error}>{errors.password?.message}</p>
-          ) : null}
-        </div>
-        <button type="submit" className={styles.sendButton}>
+
+        <Button sendButton type={'submit'}>
           Wyślij
-        </button>
+        </Button>
       </form>
     </>
   );

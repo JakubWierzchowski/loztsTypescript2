@@ -23,7 +23,11 @@ export interface CalendarTypeDetails {
 
 export interface CalendarTypeTournaments {
   title: string;
-  table: string[];
+  table: Categories[];
+}
+
+export interface Categories {
+  [key: string]: string;
 }
 export interface PlayersType {
   id: string;
@@ -46,15 +50,9 @@ export interface ClockProps {
 export interface ClockDetailsProps {
   setTimeDone: (value: boolean) => void;
   settimeToMuch: (value: boolean) => void;
-  timeToMuch: boolean;
+  timeToMuch?: boolean;
   findTournaments: (CalendarTypeDetails | undefined)[];
-}
-
-export interface CountdownProps {
-  days: number | string;
-  hours: number | string;
-  mins: number | string;
-  seconds: number | string;
+  setLoading: (isLoading: boolean) => void;
 }
 
 export interface ListProps {
@@ -89,7 +87,6 @@ export interface CalendarTournamentPageProps {
 }
 
 export interface ModalAddPlayerProps {
-  isOpen: boolean;
   handleClose: () => void;
   findTournaments: (CalendarTypeDetails | undefined)[];
   tournaments: string;
@@ -101,16 +98,3 @@ export type FormValuesAddPlayer = {
   klub: string;
   kategoria: string;
 };
-
-// export type FormValuesSubmit = {
-//   matchDay: string;
-// };
-
-// export type FormValuesFirebase = {
-//   host: string;
-//   guest: string;
-//   hostScore: string;
-//   guestScore: string;
-//   queueNumber: string;
-//   img?: FileList;
-// };

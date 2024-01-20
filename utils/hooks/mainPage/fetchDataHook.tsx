@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Article } from '@/types/newList.type';
+import { Article } from '@/types/mainPage/newList.type';
 
 export const useFetch = () => {
   const [newArticle, setNewArticle] = useState<Article[]>([]);

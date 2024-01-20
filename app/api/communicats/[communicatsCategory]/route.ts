@@ -14,34 +14,6 @@ export async function GET(req: Request, res: Response) {
   return new Response(JSON.stringify(filterCategory));
 }
 
-// export async function DELETE(req: Request, res: Response) {
-//   const filePath = buildPath("download.json");
-//   const downloadData = extractPath<DownloadData[] | any>(filePath);
-//   const { id } = await req.json();
-//   const url = new URL(req.url);
-//   const newUrl = url.pathname.replace("/api/communicats/", "");
-//   const filterCategory: any = downloadData.find(
-//     (item: DownloadItem) => item.month === newUrl
-//   );
-
-//   const deletedPlayer = filterCategory.details.find(
-//     (file: any) => file.id === id
-//   );
-//   const index = filterCategory.details.findIndex((file: any) => file.id === id);
-//   if (index !== -1) {
-//     filterCategory.details.splice(index, 1);
-
-//     fs.writeFileSync(
-//       path.join(process.cwd(), "data/download.json"),
-//       JSON.stringify(downloadData)
-//     );
-//     return NextResponse.json(
-//       { message: "Usunięto komunikat:", deletedPlayer },
-//       { status: 200 }
-//     );
-//   }
-// }
-
 export async function DELETE(req: Request, res: Response) {
   const filePath = buildPath('download.json');
   const downloadData = extractPath<DownloadData[] | any>(filePath);
