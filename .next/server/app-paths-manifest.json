@@ -1,6 +1,0 @@
-{
-  "/(mainPage)/page": "app/(mainPage)/page.js",
-  "/[liga]/page": "app/[liga]/page.js",
-  "/api/newList/route": "app/api/newList/route.js",
-  "/api/allLeague/[league]/route": "app/api/allLeague/[league]/route.js"
-}
