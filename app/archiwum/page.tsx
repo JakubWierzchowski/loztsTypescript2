@@ -1,15 +1,15 @@
 import React from 'react';
 import Link from 'next/link';
-import ArchivesData from '../../data/archives.json';
-import { Archive } from '@/types/archives.type';
-import styles from '../../components/ArchivesLeague/archives.module.scss';
+import ArchivesData from '@/data/archives.json';
+import { Archive } from '@/types/archives/archives.type';
+import styles from '@/components/ArchivesLeague/archives.module.scss';
 
 export default async function Calendar() {
   const data: Archive[] = ArchivesData.archives;
   return (
     <section className={styles.wrapper}>
-      {data.map((item, index) => (
-        <details key={index} className={styles.mainDiv}>
+      {data.map((item) => (
+        <details key={item.month} className={styles.mainDiv}>
           <summary className={styles.flexItem}>{item.month}</summary>
           <div className={styles.details}>
             <div className={styles.textAnimation}>

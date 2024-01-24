@@ -1,9 +1,6 @@
+@import '../../../app//variable.scss';
 .navBarWrapper {
-  //   animation: 0.3s ease-in 1 forwards ${showBox};
-  margin-top: 50px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  grid-gap: 1rem;
+  display: none;
 }
 
 .imageWrapper {
@@ -32,4 +29,22 @@
   text-decoration: none;
   cursor: pointer;
   color: #000000;
+}
+
+@media #{$tablet} {
+  .navBarWrapper {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-gap: 1rem;
+  }
+}
+
+@media #{$desktop} {
+  .navBarWrapper {
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 1rem;
+  }
 }

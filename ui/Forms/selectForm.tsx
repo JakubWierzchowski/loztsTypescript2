@@ -1,19 +1,9 @@
 import React from 'react';
 import styles from './forms.module.scss';
 import animationStyles from '@/utils/hooks/getAnimationClass/getAnimationStyles.module.scss';
+import { SelectFormProps } from '@/types/ui/forms/selectForm.type';
 
-interface FormProps<T> {
-  validateText: string;
-  label: string;
-  field: string;
-  itemMap: keyof T;
-  register: any;
-  errors: Record<string, any>;
-  defaultValue: string;
-  data: T[] | undefined;
-}
-
-const SelectForm = <T extends { [key: string]: string }>({
+const SelectForm = <T extends { [key: string]: string | undefined }>({
   validateText,
   label,
   field,
@@ -22,7 +12,7 @@ const SelectForm = <T extends { [key: string]: string }>({
   errors,
   defaultValue,
   data,
-}: FormProps<T>) => {
+}: SelectFormProps<T>) => {
   const containerClassName = `${styles.formSection} ${animationStyles.slideOut}`;
   return (
     <div className={containerClassName}>
@@ -45,12 +35,14 @@ const SelectForm = <T extends { [key: string]: string }>({
         })}
       >
         <option value={defaultValue}>{defaultValue}</option>
-        {data &&
-          data?.map((item, index) => (
-            <option value={item[itemMap]} key={index}>
-              {item[itemMap]}
-            </option>
-          ))}
+        {data?.map(
+          (item, index) =>
+            item && (
+              <option value={item[itemMap]} key={index}>
+                {item[itemMap]}
+              </option>
+            )
+        )}
       </select>
 
       {errors?.[field] && (

@@ -5,16 +5,13 @@ import styles from '@/components/Communicats/communicats.module.scss';
 import CommunicatsData from '@/data/download.json';
 import CommunicatsModal from '@/components/Communicats/CommunicatsModal';
 import AddCommunicats from '@/components/Communicats/AddCommunicats/AddCommunicats';
-import { useUserContext } from '@/utils/context/AuthContext';
 import { staticBlurDataUrl } from '@/utils/staticBlurDataURL';
 import { useFetchCommunicats } from '@/utils/hooks/communicats/fetchData';
 import IsAdmin from '@/utils/hooks/isAdmin/isAdmin';
-import { Span } from '@/ui/index';
+import { ModalWithButton, Span } from '@/ui/index';
 
-export default function Communicats() {
+export default function Communicats({}) {
   const data = CommunicatsData;
-  const { user } = useUserContext();
-
   const { isOpen, handleOpenModal, handleCloseModal } = useModal();
   const { category, newFile, setCategory } = useFetchCommunicats();
 
@@ -22,15 +19,12 @@ export default function Communicats() {
     <>
       <h2 className={styles.titleComunicats}>Komunikaty</h2>
       <IsAdmin>
-        <AddCommunicats data={data} category={category} />
-        {/* <CommunicatsModal
-          data={newFile}
-          isOpen={isOpen}
-          handleClose={handleCloseModal}
-          user={user}
-          category={category}
-        /> */}
+        <ModalWithButton text={'Dodaj komunikat'}>
+          <AddCommunicats data={data} category={category} />
+        </ModalWithButton>
       </IsAdmin>
+
+      <CommunicatsModal data={newFile} isOpen={isOpen} handleClose={handleCloseModal} category={category} />
 
       <section className={styles.wrapper}>
         {data.map((item, index) =>

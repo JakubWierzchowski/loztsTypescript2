@@ -1,65 +1,57 @@
 'use client';
 import React, { FC } from 'react';
-import UploadIcon from '@/public/uploadWhite.png';
-import Image from 'next/legacy/image';
-
-import styles from '@/components/Communicats/AddCommunicats/addcommunicats.module.scss';
-import { HandleUpdateProps } from '@/types/communicats.type';
+import { FormValuesCommunicats, HandleUpdateProps } from '@/types/communicats.type';
 import useHTTPrequest from '@/utils/hooks/communicats/httpRequest';
-import { Button } from '@/ui';
+import { Button, ImageForm, SelectForm } from '@/ui';
+import { useForm, FieldErrors } from 'react-hook-form';
 
 const Additems: FC<HandleUpdateProps> = ({ data, category }) => {
-  const { handleUpload, selectedFile, setSelectedImage, setSelectedFile, handleInputChange, month } =
-    useHTTPrequest(category);
-  return (
-    <section className={styles.wrapper}>
-      <form onSubmit={handleUpload} className="form">
-        <div className={styles.customInputWrapper}>
-          <label className={styles.formfieldFile}>
-            <Image width={50} height={50} src={UploadIcon} className="icon" alt="icon" />
-            {!selectedFile ? (
-              <div className={styles.inputText}>Wybierz plik</div>
-            ) : (
-              <div className={styles.inputText}>{selectedFile.name}</div>
-            )}
-            `{' '}
-            <input
-              className="displayNonInput"
-              type="file"
-              hidden
-              onChange={({ target }) => {
-                if (target.files) {
-                  const file = target.files[0];
-                  setSelectedImage(URL.createObjectURL(file));
-                  setSelectedFile(file);
-                }
-              }}
-            />
-          </label>
-        </div>
+  const { onSubmit } = useHTTPrequest();
 
-        <select
-          onChange={handleInputChange}
-          required
-          id="Month"
-          name="Month"
-          value={month}
-          className={styles.selectItem}
-        >
-          <option className={styles.option} value="Wybierz kategorię">
-            Wybierz kategorię
-          </option>
-          {data.map((item, index) => (
-            <option value={item.month} key={index} className={styles.option}>
-              {item.month}
-            </option>
-          ))}
-        </select>
-        <Button sendButton type={'submit'}>
-          Wyślij
-        </Button>
-      </form>
-    </section>
+  const form = useForm<FormValuesCommunicats>({
+    defaultValues: {
+      myFile: undefined,
+      month: 'Wybierz kategorię',
+    },
+  });
+  const { register, handleSubmit, formState, watch } = form;
+  const { errors } = formState;
+
+  const onError = (errors: FieldErrors<FormValuesCommunicats>) => {
+    console.log('Form errors', errors);
+  };
+
+  const handleSubmitFile = (data: FormValuesCommunicats) => {
+    onSubmit(data);
+  };
+
+  const dataMonth = data.map((item) => ({ month: item.month }));
+
+  return (
+    <form onSubmit={handleSubmit(handleSubmitFile, onError)}>
+      <ImageForm
+        validateText={'Wybierz plik!'}
+        field={'myFile'}
+        register={register}
+        errors={errors}
+        watch={watch}
+        file
+        text={'Wybierz plik'}
+      />
+      <SelectForm
+        validateText="Wybierz kategorię"
+        label="Kategoria:"
+        field="month"
+        itemMap="month"
+        defaultValue="Wybierz kategorię"
+        register={register}
+        errors={errors}
+        data={dataMonth}
+      />
+      <Button sendButton type={'submit'}>
+        Wyślij
+      </Button>
+    </form>
   );
 };
 export default Additems;

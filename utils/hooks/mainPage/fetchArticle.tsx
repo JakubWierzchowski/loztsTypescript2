@@ -1,4 +1,4 @@
-import { ArticleItem } from '@/types/articles.type';
+import { ArticleItem } from '@/types/mainPage/articles.type';
 import { db } from '@/utils/firebase/firebase-config';
 import { collection, onSnapshot, orderBy, query } from 'firebase/firestore';
 import { useEffect, useState } from 'react';

@@ -1,29 +1,10 @@
 @import '../../app//variable.scss';
-// export const showBox = keyframes`
-//   0% {
-//      opacity: 0;
-//     transform: translateX(-2%);
-//   }
-//   100% {
-//     opacity: 100%;
-//     transform: translateX(0);
-//   }
-//  `;
 
 .titleComunicats {
   margin-top: 40px;
   text-align: center;
   color: $light;
   font-size: $size-TitleMobile;
-  @media #{$tablet} {
-    font-size: $size-TitleTablet;
-  }
-  @media #{$desktop} {
-    font-size: $size-TitleDesktop;
-  }
-  @media #{$bigDesktop} {
-    font-size: $size-TitleBigDesktop;
-  }
 }
 
 .wrapper {
@@ -98,7 +79,11 @@
     transform: translate(0%, 80%);
     width: 12em;
   }
+  .titleComunicats {
+    font-size: $size-TitleDesktop;
+  }
 }
+
 @media #{$bigDesktop} {
   .wrapper {
     margin: 40px 20px;

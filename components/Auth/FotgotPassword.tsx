@@ -1,8 +1,9 @@
-import { useEffect } from "react";
-import { useForm } from "react-hook-form";
-import { useUserContext } from "@/utils/context/AuthContext";
-import styles from "./auth.module.scss";
-import { FormDataForgotPassword } from "@/types/auth.types";
+import { useEffect } from 'react';
+import { useForm } from 'react-hook-form';
+import { useUserContext } from '@/utils/context/AuthContext';
+import styles from './auth.module.scss';
+import { FormDataForgotPassword } from '@/types/auth.types';
+import { Button, TextForm } from '@/ui';
 
 function FotgotPassword() {
   const { forgotPassword } = useUserContext();
@@ -25,32 +26,21 @@ function FotgotPassword() {
 
   return (
     <>
-      <h2>Nie pamiętasz hasła?</h2>
+      <h3>Nie pamiętasz hasła?</h3>
       <form onSubmit={handleSubmit(onSubmit)} className={styles.form}>
-        <div className={styles.formSection}>
-          <label className={styles.label} htmlFor="email">
-            Użytkownik
-          </label>
-          <input
-            placeholder="Wpisz adres email"
-            className={styles.inputForm}
-            id="email"
-            {...register("email", {
-              required: "Pole wymagane",
-              pattern: {
-                value:
-                  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-0-]+)*$/,
-                message: "Niepoprawny email",
-              },
-            })}
-          />
-          {errors.email ? (
-            <p className={styles.error}>{errors.email?.message}</p>
-          ) : null}
-        </div>
-        <button type="submit" className={styles.sendButton}>
+        <TextForm
+          validateText={'Pole jest wymagane'}
+          label={'Email'}
+          field={'email'}
+          placeholder={'Wpisz adres email'}
+          type={'text'}
+          register={register}
+          errors={errors}
+        />
+
+        <Button sendButton type={'submit'}>
           Wyślij
-        </button>
+        </Button>
       </form>
     </>
   );
