@@ -8,12 +8,17 @@ This is a refreshed version of the previous website (currently www.lozts.pl), wh
 </ol>
 
 These features are accessible only from the administrator's account. Below are some images showing how it looks in practice:
-<img width="1357" alt="Zrzut ekranu 2023-05-27 o 13 00 06" src="https://github.com/JakubWierzchowski/loztsNextJs/assets/72977410/772caee8-1c49-4e89-9506-e3059e714dc0">
-<img width="1472" alt="Zrzut ekranu 2023-05-27 o 13 00 31" src="https://github.com/JakubWierzchowski/loztsNextJs/assets/72977410/b3ad6a71-e026-40e6-806c-daf801312072">
-<img width="1502" alt="Zrzut ekranu 2023-05-27 o 13 00 48" src="https://github.com/JakubWierzchowski/loztsNextJs/assets/72977410/1880861f-96d8-4723-b37d-e2a17bb24dfa">
+
+<img width="923" alt="Zrzut ekranu 2024-01-24 o 12 35 45" src="https://github.com/JakubWierzchowski/loztsTypescript2/assets/72977410/9135f00d-32d6-4681-a3d7-6699aca142ee">
+
+<img width="923" alt="Zrzut ekranu 2024-01-24 o 12 36 43" src="https://github.com/JakubWierzchowski/loztsTypescript2/assets/72977410/e8ef75ab-e126-4088-9c58-6bab689daed5">
+<img width="1511" alt="Zrzut ekranu 2024-01-24 o 12 33 36" src="https://github.com/JakubWierzchowski/loztsTypescript2/assets/72977410/946eeb0c-7792-4b04-8c62-162aab13da52">
+<img width="909" alt="Zrzut ekranu 2024-01-24 o 12 34 45" src="https://github.com/JakubWierzchowski/loztsTypescript2/assets/72977410/138372f4-c77f-4412-9e55-280392c90ec8">
 <img width="1507" alt="Zrzut ekranu 2023-05-27 o 13 23 43" src="https://github.com/JakubWierzchowski/loztsNextJs/assets/72977410/52637e9d-2eba-4b7b-8f41-9ee5871d0a60">
-<img width="1509" alt="Zrzut ekranu 2023-05-27 o 13 23 54" src="https://github.com/JakubWierzchowski/loztsNextJs/assets/72977410/033c4528-a322-4b8d-99d2-08c9e16f269c">
-<img width="1460" alt="Zrzut ekranu 2023-05-27 o 13 24 15" src="https://github.com/JakubWierzchowski/loztsNextJs/assets/72977410/9924dc89-b227-4ffd-bc03-c9408d8e33ab">
-<img width="1508" alt="Zrzut ekranu 2023-05-27 o 13 24 23" src="https://github.com/JakubWierzchowski/loztsNextJs/assets/72977410/9f8fbbb0-361f-496c-b29a-d5776fb98b25">
+
 
 To make the project work correctly, you need to create a Firebase account and run the command npm install.
+
+
+
+
